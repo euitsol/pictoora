@@ -22,7 +22,8 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
             cd www
-            cd pictoora.com
+            cd staging.pictoora.com
+            cd public_html
             git fetch --all
             git reset --hard origin/main
             /usr/local/php82/bin/php-cli artisan optimize:clear
