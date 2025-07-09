@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  laravel-deploy:
+  deploy-stagging:
 
     runs-on: ubuntu-latest
 
