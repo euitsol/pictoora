@@ -2027,7 +2027,7 @@
             </div>
         </div>
     </footer>
-
+    @include('cookie-consent::index')
     <script>
         $(document).ready(function() {
             // Smooth scrolling for navigation links
