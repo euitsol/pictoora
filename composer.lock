@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6991c9dc1084cb4cbe3c94ac24e6d28b",
+    "content-hash": "92d0371859e6e231c0d8284b139368a4",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -4427,28 +4427,28 @@
         },
         {
             "name": "spatie/laravel-csp",
-            "version": "3.13.1",
+            "version": "2.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-csp.git",
-                "reference": "dccf75bee8556e1bd0ae13abf505497a141fccf7"
+                "reference": "15e40c28d46076b3d5a4268b63040b3900cc05d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-csp/zipball/dccf75bee8556e1bd0ae13abf505497a141fccf7",
-                "reference": "dccf75bee8556e1bd0ae13abf505497a141fccf7",
+                "url": "https://api.github.com/repos/spatie/laravel-csp/zipball/15e40c28d46076b3d5a4268b63040b3900cc05d3",
+                "reference": "15e40c28d46076b3d5a4268b63040b3900cc05d3",
                 "shasum": ""
             },
             "require": {
-                "illuminate/http": "^11.36.1|^12.0",
-                "illuminate/support": "^11.36.1|^12.0",
-                "php": "^8.3",
+                "illuminate/http": "^9.0|^10.0|^11.36.1|^12",
+                "illuminate/support": "^9.0|^10.0|^11.36.1|^12",
+                "php": "^8.1",
                 "spatie/laravel-package-tools": "^1.17"
             },
             "require-dev": {
-                "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^9.9|^10.0",
-                "pestphp/pest": "^3.0",
+                "mockery/mockery": "^1.6.12",
+                "orchestra/testbench": "^7.0|^8.0|^9.9|^10",
+                "pestphp/pest": "^1.23.0|^2.36.0|^3",
                 "roave/security-advisories": "dev-master"
             },
             "type": "library",
@@ -4460,6 +4460,9 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
                     "Spatie\\Csp\\": "src"
                 }
@@ -4480,12 +4483,6 @@
                     "email": "freek@spatie.be",
                     "homepage": "https://spatie.be",
                     "role": "Developer"
-                },
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
                 }
             ],
             "description": "Add CSP headers to the responses of a Laravel app",
@@ -4500,7 +4497,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-csp/tree/3.13.1"
+                "source": "https://github.com/spatie/laravel-csp/tree/2.10.3"
             },
             "funding": [
                 {
@@ -4508,7 +4505,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-06-23T13:39:38+00:00"
+            "time": "2025-02-14T13:23:32+00:00"
         },
         {
             "name": "spatie/laravel-medialibrary",
@@ -8570,16 +8567,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.23.0",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "9ab851dba4faa51a3c3223dd3d07044129021024"
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/9ab851dba4faa51a3c3223dd3d07044129021024",
-                "reference": "9ab851dba4faa51a3c3223dd3d07044129021024",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
                 "shasum": ""
             },
             "require": {
@@ -8590,7 +8587,7 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.76.0",
+                "friendsofphp/php-cs-fixer": "^3.82.2",
                 "illuminate/view": "^11.45.1",
                 "larastan/larastan": "^3.5.0",
                 "laravel-zero/framework": "^11.45.0",
@@ -8635,7 +8632,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-07-03T10:37:47+00:00"
+            "time": "2025-07-10T18:09:32+00:00"
         },
         {
             "name": "laravel/sail",
