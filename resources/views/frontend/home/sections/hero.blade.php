@@ -44,7 +44,7 @@
                 </div>
                 <div
                     class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold">
-                    Only 2 Minutes!
+                    Only 2 Minutes to Customize!
                 </div>
             </div>
         </div>
