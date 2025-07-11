@@ -24,7 +24,7 @@ class FontendBaseController extends Controller
         }
 
         if(empty($image)) {
-            $image = url(config('app.image'));
+            $image = asset(config('app.image'));
         }
 
         $siteName = config('app.name');
