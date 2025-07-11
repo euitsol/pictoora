@@ -39,7 +39,7 @@
 
             <div class="relative fade-in md:block hidden">
                 <div class="floating">
-                    <img src="{{ asset('frontend/img/hero.png') }}" alt="Personalized Storybook"
+                    <img src="{{ asset('frontend/img/hero.webp') }}" alt="Personalized Storybook"
                         class="rounded-2xl shadow-2xl">
                 </div>
                 <div
