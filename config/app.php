@@ -123,4 +123,17 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'aliases' => [
+        'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
+        'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
+        'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+        'SEO'           => Artesaos\SEOTools\Facades\SEOTools::class,
+    ],
+
+    'description' => env('APP_DESCRIPTION', 'Create magical, personalized storybooks for your child with Pictoora'),
+    'keywords' => env('APP_KEYWORDS', 'pictoora, personalized storybooks, children books'),
+    'image' => env('APP_IMAGE', '/frontend/img/logo.png'),
+
 ];

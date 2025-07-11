@@ -3,8 +3,9 @@
 namespace {{ namespace }};
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\FontendBaseController;
 
-class {{ class }}
+class {{ class }} extends FontendBaseController
 {
-    //
+
 }
