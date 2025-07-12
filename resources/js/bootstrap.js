@@ -1,6 +1,10 @@
 import axios from 'axios';
-import { createIcons, Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart } from 'lucide';
+import { createIcons, Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart, Users, Shield, Truck, MapPin, ShieldCheck, Eye, Award } from 'lucide';
 import $ from 'jquery';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
+window.Swiper = Swiper;
 
 window.$ = window.jQuery = $;
 
@@ -19,6 +23,13 @@ createIcons({
         ShieldUser,
         Star,
         Heart,
+        Users,
+        Shield,
+        Truck,
+        MapPin,
+        ShieldCheck,
+        Eye,
+        Award,
     } // List all imported icons
 });
 
