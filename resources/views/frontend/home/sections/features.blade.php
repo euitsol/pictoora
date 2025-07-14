@@ -1,7 +1,7 @@
 <section id="features" class="py-20 bg-white">
     <div class="container mx-auto px-6">
         <div class="flex flex-col items-center mb-10 fade-in visible">
-            <h2 class="text-4xl font-bold mb-4 gradient-text text-center">Why Families Love Our Personalized Storybooks
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 gradient-text text-center">Why Families Love Our Personalized Storybooks
             </h2>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

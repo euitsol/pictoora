@@ -1,7 +1,7 @@
 <section id="reviews" class="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="container mx-auto px-6">
         <div class="flex flex-col items-center mb-10 fade-in visible">
-            <h2 class="text-4xl font-bold mb-4 gradient-text text-center">"I Actually Cried When I Saw It" Reviews That
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 gradient-text text-center">"I Actually Cried When I Saw It" Reviews That
                 Inspire</h2>
         </div>
         <div class="swiper reviews-swiper">

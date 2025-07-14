@@ -1,7 +1,7 @@
 <section class="py-12 bg-white border-t border-gray-100">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold gradient-text mb-2">As Seen In...</h2>
+            <h2 class="text-2xl md:text-4xl font-bold gradient-text mb-2">As Seen In...</h2>
             <div class="w-32 h-0.5 bg-gradient-to-r from-yellow-400 to-purple-400 mx-auto"></div>
         </div>
         <div class="swiper logo-slider">

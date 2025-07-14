@@ -5,7 +5,7 @@
                 <img src="{{ asset('frontend/img/story.webp') }}" alt="Child in story" class="rounded-2xl shadow-xl">
             </div>
             <div class="fade-in visible">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gradient-text">
+                <h2 class="text-2xl md:text-4xl font-bold mb-6 gradient-text">
                     They Are Not Just in the Story —
                     <span class="text-gray-800">They Are the Story</span>
                 </h2>
