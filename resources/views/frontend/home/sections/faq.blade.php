@@ -1,7 +1,7 @@
 <section id="faq" class="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16 fade-in visible">
-            <h2 class="text-2xl md:text-4xl font-bold mb-4 gradient-text">Frequently Asked Questions</h2>
+            <h2 class="text-4xl md:text-4xl font-bold mb-4 gradient-text">Frequently Asked Questions</h2>
         </div>
 
         <div class="max-w-3xl mx-auto">

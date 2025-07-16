@@ -1,7 +1,7 @@
 <section id="products" class="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16 fade-in visible">
-            <h2 class="text-2xl md:text-4xl font-bold mb-4 gradient-text p-0 md:p-2">Inspiring Tales Begin Here</h2>
+            <h2 class="text-4xl md:text-4xl font-bold mb-4 gradient-text p-0 md:p-2">Inspiring Tales Begin Here</h2>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

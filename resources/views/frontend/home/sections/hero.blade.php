@@ -22,10 +22,10 @@
                     Bring your child's imagination to life with fully personalized storybooks —
                     where their face, name, and spirit become the heart of every adventure.
                 </p>
-                <button
+                <a href="{{ route('books.index') }}"
                     class="w-full md:w-fit lg:w-fit bg-yellow-400 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-300 transition-all pulse-button">
                     Bring Their Story to Life
-                </button>
+                </a>
 
                 <!-- Trust Indicators -->
                 {{-- <div class="flex flex-wrap justify-start gap-1 lg:gap-6 text-lg text-white md:mt-12 mt-4">
