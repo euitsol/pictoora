@@ -4,7 +4,7 @@
         <div class="text-center flex flex-col gap-4 md:gap-0 mb-6">
             <h3 class="text-xs md:text-xl md:leading-10 uppercase font-bold">
                 Design Stunning, Lifelike Characters</h3>
-            <h1 class="text-2xl md:text-4xl">Customize Style, Emotion & Perspective with Ease</h1>
+            <h1 class="text-2xl md:text-4xl font-bold">Customize Style, Emotion & Perspective with Ease</h1>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="flex flex-col items-center">
