@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('discountPopupLastShown', time);
     }
 
-    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const THIRTY_MINUTES = 5 * 60 * 1000;
     const now = Date.now();
     const lastShown = getLastShownTime();
     if (!lastShown || now - lastShown > THIRTY_MINUTES) {
