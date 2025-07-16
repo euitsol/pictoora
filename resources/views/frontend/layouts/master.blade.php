@@ -17,6 +17,7 @@
         @include('frontend.includes.header')
         @yield('content')
         @include('frontend.includes.footer')
+        @include('frontend.includes.discount-popup')
         @include('frontend.includes.script-bundle')
     </body>
 </html>

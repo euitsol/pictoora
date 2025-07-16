@@ -3,7 +3,7 @@
     <div class="container mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div class="relative fade-in md:hidden lg:hidden block mt-12">
+            <div class="relative fade-in lg:hidden block mt-12">
                 <div class="">
                     <img src="{{ asset('frontend/img/hero.webp') }}" alt="Personalized Storybook"
                         class="rounded-2xl shadow-2xl">
