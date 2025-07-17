@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createIcons, Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart, Users, Shield, Truck, MapPin, ShieldCheck, Eye, Award, ChevronDown, Gift, CheckCircle, Mail } from 'lucide';
+import { createIcons, Calendar,Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart, Users, Shield, Truck, MapPin, ShieldCheck, Eye, Award, ChevronUp, ChevronDown, Gift, CheckCircle, Mail, Funnel, FunnelX, BookOpen, Languages } from 'lucide';
 import $ from 'jquery';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
@@ -30,10 +30,16 @@ createIcons({
         ShieldCheck,
         Eye,
         Award,
+        ChevronUp,
         ChevronDown,
         Gift,
         CheckCircle,
         Mail,
+        Funnel,
+        FunnelX,
+        BookOpen,
+        Languages,
+        Calendar,
     } // List all imported icons
 });
 

@@ -8,8 +8,8 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#products" class="hover:text-white transition-colors">Stories</a></li>
+                    <li><a href="{{ route('home.index') }}" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="{{ route('books.index') }}" class="hover:text-white transition-colors">Stories</a></li>
                     <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
                     <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
                 </ul>

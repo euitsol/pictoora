@@ -13,9 +13,11 @@
         @include('frontend.includes.style-bundle')
     </head>
 
-    <body>
+    <body class="">
         @include('frontend.includes.header')
-        @yield('content')
+        <div class="min-h-screen mt-20">
+            @yield('content')
+        </div>
         @include('frontend.includes.footer')
         @include('frontend.includes.discount-popup')
         @include('frontend.includes.script-bundle')

@@ -2,12 +2,14 @@
     <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <div class=" -mt-2">
-                <img class="h-16 object-cover" src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
+                <a href="{{ route('home.index') }}">
+                    <img class="h-16 object-cover" src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
+                </a>
             </div>
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Home</a>
-                <a href="#products" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Books</a>
+                <a href="{{ route('home.index') }}" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Home</a>
+                <a href="{{ route('books.index') }}" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Books</a>
                 <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Features</a>
                 <a href="#faq" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">FAQ</a>
                 <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors font-semibold antialiased">Track Order</a>
@@ -20,8 +22,8 @@
 
         <!-- Mobile Menu -->
         <div class="md:hidden mobile-menu hidden bg-blue-50 mt-4 mobile-menu" id="mobile-menu">
-            <a href="#home" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Home</a>
-            <a href="#products" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Books</a>
+            <a href="{{ route('home.index') }}" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Home</a>
+            <a href="{{ route('books.index') }}" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Books</a>
             <a href="#features" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Features</a>
             <a href="#faq" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">FAQ</a>
             <a href="#contact" class="block text-gray-700 hover:text-blue-600 transition-colors py-4 px-1 my-2 font-semibold antialiased">Track Order</a>

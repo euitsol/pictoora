@@ -1,4 +1,4 @@
-<section id="home" class="hero gradient-bg min-h-screen flex items-center relative hero-section mt-20 sm:p-3">
+<section id="home" class="hero gradient-bg min-h-screen flex items-center relative hero-section sm:p-3">
     <div class="absolute inset-0 gradient-bg"></div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
