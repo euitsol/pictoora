@@ -2,9 +2,9 @@
     <div class="container mx-auto px-6">
     <div class="flex flex-col gap-10 md:gap-16 w-full h-full p-9 md:p-[70px]">
         <div class="text-center flex flex-col gap-4 md:gap-0 mb-6">
+            <h2 class="text-4xl md:text-4xl font-bold p-2">Customize Style, Emotion & Perspective with Ease</h2>
             <h3 class="text-lg md:text-xl md:leading-10 uppercase font-bold p-1">
                 Design Stunning, Lifelike Characters</h3>
-            <h1 class="text-4xl md:text-4xl font-bold">Customize Style, Emotion & Perspective with Ease</h1>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div class="flex flex-col items-center">
