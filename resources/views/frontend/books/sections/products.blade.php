@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -159,7 +159,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -202,7 +202,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -242,7 +242,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -284,7 +284,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>
@@ -292,7 +292,7 @@
 
     <div class="book-card bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 rounded-lg overflow-hidden shadow-md border-0" data-book="" data-story="adventure" data-age="6-8" data-title="the dragon slayer">
         <div class="relative">
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <img src="{{ asset('frontend/img/book/book-4.webp') }}" alt="The dragon slayer" class="book-image h-96 w-full object-cover">
             </a>
             <span class="absolute top-3 left-3 bg-indigo-500/70 text-white text-xs font-semibold px-2 py-1 rounded">Bestseller</span>
@@ -325,7 +325,7 @@
                 </div>
             </div>
 
-            <a href="">
+            <a href="{{ route('book-details.index') }}">
                 <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
             </a>
         </div>

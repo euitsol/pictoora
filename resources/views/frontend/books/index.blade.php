@@ -89,7 +89,7 @@
     <div class="bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 shadow-sm">
         @include('frontend.books.sections.filter')
     </div>
-    <div class="bg-white shadow-sm container mx-auto px-4 py-8">
+    <div class="bg-white container mx-auto px-4 py-8">
         @include('frontend.books.sections.products')
     </div>
 

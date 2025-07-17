@@ -11,9 +11,9 @@
                 <div class="p-6">
                     <h3 class="text-lg md:text-xl font-semibold mb-2">Dino Time-Machine</h3>
                     <div class="text-lg md:text-2xl font-bold text-purple-600 mb-4">$50.00</div>
-                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                    <a href="{{ route('book-details.index') }}" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
                         Customize
-                    </button>
+                    </a>
                 </div>
             </div>
             @endfor
