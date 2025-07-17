@@ -48,7 +48,7 @@
                                 <span class="text-lg text-gray-500 line-through ml-2">$34.99</span>
                             </div>
                             <div
-                                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80">
+                                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-600/70 text-white">
                                 30% OFF</div>
                         </div>
                         <div class="space-y-4">
@@ -68,6 +68,10 @@
                                 <div>
                                     <span class="text-gray-600">Delivery:</span>
                                     <p class="font-semibold">Instant</p>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Language:</span>
+                                    <p class="font-semibold">English, French, German, Spanish, Italian, Portuguese</p>
                                 </div>
                             </div>
                             <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-px w-full"></div>
@@ -111,13 +115,13 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white shadow-2xl">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
+    <section class=" bg-white shadow-2xl hidden">
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center">
                 <h2 class="text-4xl font-bold mb-4 gradient-text text-gray-700">Preview & Demo</h2>
                 <p class="text-xl text-gray-600">Get a glimpse of how your child's story will look and feel</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="rounded-lg border bg-card text-card-foreground shadow-2xl p-6 border-purple-200">
                     <div class="flex flex-col space-y-1.5 p-6">
                         <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center">
@@ -138,8 +142,7 @@
                                     type='video/ogg' />
                                 <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en"
                                     default>
-                                <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt"
-                                    srclang="de">
+                                <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt" srclang="de">
                                 <p>Your user agent does not support the HTML5 Video element.</p>
                             </video>
                         </div>
@@ -170,93 +173,228 @@
         </div>
     </section>
 
+    @include('frontend.home.sections.expressions')
 
-    <section class="py-16 bg-gradient-to-r from-purple-50 to-blue-50">
+    @include('frontend.home.sections.faq')
+
+    <section class="related-books py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto rounded-2xl shadow-2xl bg-white/80 p-8 border border-purple-100">
-                <div class="flex flex-col items-center mb-8">
-                    <div class="bg-purple-100 p-3 rounded-full shadow-md mb-3">
-                        <i data-lucide="ruler" class="w-8 h-8 text-purple-600"></i>
-                    </div>
-                    <h2 class="text-4xl md:text-4xl font-bold text-center gradient-text mb-2">Appearance of the Book</h2>
-                    <div class="h-1 w-16 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mb-4"></div>
-                    <p class="text-lg text-gray-700 text-center max-w-2xl">Do you want to hold your own story in your hands?
-                        Then consider printing your book and bringing your creation to life!</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="flex justify-center">
-                        <div
-                            class="relative bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl shadow-lg p-6 w-64 h-80 flex flex-col items-center justify-center">
-                            <div
-                                class="relative w-40 h-56 bg-white rounded-lg shadow-md flex flex-col items-center justify-center">
-                                <img src="{{ asset('frontend/img/book/book-7.webp') }}" alt="Book Cover"
-                                    class="w-full h-full object-cover rounded-lg" />
+            <h2 class="text-4xl font-bold mb-8 gradient-text text-center">More exciting stories from us</h2>
+            <div class="swiper related-books-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="book-card bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 rounded-lg overflow-hidden shadow-md border-0"
+                            data-book="" data-story="adventure" data-age="4-6" data-title="the great princess">
+                            <div class="relative">
+                                <a href="">
+                                    <img src="{{ asset('frontend/img/book/book-2.webp') }}" alt="The great princess"
+                                        class="book-image h-96 w-full object-cover">
+                                </a>
                                 <span
-                                    class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs px-2 py-1 rounded shadow">Customize
-                                    Your Own Children's Book</span>
+                                    class="absolute top-3 left-3 bg-teal-500/70 text-white text-xs font-semibold px-2 py-1 rounded">NEW</span>
+                                <span
+                                    class="discount-badge absolute top-3 right-3 bg-amber-500/70 text-white text-xs font-bold px-2 py-1 rounded">25%
+                                    OFF</span>
                             </div>
-                            <span
-                                class="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-200 text-purple-700 text-xs px-2 py-1 rounded shadow rotate-90">11.69
-                                inches</span>
-                            <span
-                                class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-blue-200 text-blue-700 text-xs px-2 py-1 rounded shadow">8.27
-                                inches</span>
+                            <div class="p-4">
+                                <a href="">
+                                    <h3 class="font-semibold text-lg mb-2 line-clamp-2">The great princess</h3>
+                                </a>
+                                <p class="text-gray-600 text-sm mb-3 line-clamp-2">A magical journey into the world of
+                                    princesses</p>
+                                <div class="flex items-center mb-3">
+                                    <div class="flex items-center">
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <span class="ml-2 text-sm text-gray-600">(4.8)</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Age 4-6</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Girl</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-gray-500 line-through text-sm">$24.99</span>
+                                        <span class="font-bold text-lg text-purple-600 ml-2">$18.74</span>
+                                    </div>
+                                </div>
+                                <a href="{{ route('book-details.index') }}">
+                                    <button
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-8 md:mt-0 md:pl-8">
-                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Quality and Details</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">format_size</span>
-                                <span>
-                                    <strong>Large A4 Format (8.27 x 11.69 inches):</strong>
-                                    Perfect for colorful
-                                    illustrations and an optimal reading experience.
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">book</span>
-                                <span>
-                                    <strong>Durable
-                                        Hardcover Finish:</strong> Remains beautiful, even after countless page
-                                    turns.
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">palette</span>
-                                <span>
-                                    <strong>Premium Color Quality:</strong> Brilliant and vibrant colors bring the story
-                                    to life.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">description</span>
-                                <span>
-                                    <strong>High-Quality Coated Paper:</strong> For a luxurious appearance and extra
-                                    protection against stains.
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">auto_awesome</span>
-                                <span>
-                                    <strong>24 Pages Full of Magic:</strong>
-                                    Enough space for a beautiful story and enchanting images.
-                                </span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="material-symbols-outlined mr-2 text-purple-600">brush</span>
-                                <span>
-                                    <strong>Matte
-                                        or Glossy Cover:</strong> Choose the desired finish for the hardcover cover
-                                    yourself.
-                                </span>
-                            </li>
-                        </ul>
+                    <div class="swiper-slide">
+                        <div class="book-card bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 rounded-lg overflow-hidden shadow-md border-0"
+                            data-book="" data-story="adventure" data-age="6-8" data-title="the policeman BOB">
+                            <div class="relative">
+                                <a href="">
+                                    <img src="{{ asset('frontend/img/book/book-3.webp') }}" alt="The policeman BOB"
+                                        class="book-image h-96 w-full object-cover">
+                                </a>
+                                <span
+                                    class="absolute top-3 left-3 bg-teal-500/70 text-white text-xs font-semibold px-2 py-1 rounded">NEW</span>
+                            </div>
+                            <div class="p-4">
+                                <a href="">
+                                    <h3 class="font-semibold text-lg mb-2 line-clamp-2">The policeman BOB</h3>
+                                </a>
+                                <p class="text-gray-600 text-sm mb-3 line-clamp-2">A journey into the world of policemen
+                                </p>
+                                <div class="flex items-center mb-3">
+                                    <div class="flex items-center">
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <span class="ml-2 text-sm text-gray-600">(4.8)</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Age 6-8</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Boy</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="font-bold text-lg text-purple-600 ml-2">$18.74</span>
+                                    </div>
+                                </div>
+                                <a href="{{ route('book-details.index') }}">
+                                    <button
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-card bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 rounded-lg overflow-hidden shadow-md border-0"
+                            data-book="" data-story="adventure" data-age="6-8" data-title="the dragon slayer">
+                            <div class="relative">
+                                <a href="">
+                                    <img src="{{ asset('frontend/img/book/book-4.webp') }}" alt="The dragon slayer"
+                                        class="book-image h-96 w-full object-cover">
+                                </a>
+                                <span
+                                    class="absolute top-3 left-3 bg-indigo-500/70 text-white text-xs font-semibold px-2 py-1 rounded">Bestseller</span>
+                            </div>
+                            <div class="p-4">
+                                <a href="">
+                                    <h3 class="font-semibold text-lg mb-2 line-clamp-2">The dragon slayer</h3>
+                                </a>
+                                <p class="text-gray-600 text-sm mb-3 line-clamp-2">A journey into the world of dragons</p>
+                                <div class="flex items-center mb-3">
+                                    <div class="flex items-center">
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <span class="ml-2 text-sm text-gray-600">(4.8)</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Age 6-8</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Boy</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Girl</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="font-bold text-lg text-purple-600 ml-2">$18.74</span>
+                                    </div>
+                                </div>
+                                <a href="{{ route('book-details.index') }}">
+                                    <button
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-card bg-gradient-to-r from-purple-50 to-blue-50 border-b border-purple-200 rounded-lg overflow-hidden shadow-md border-0"
+                            data-book="" data-story="adventure" data-age="6-8" data-title="the tiger king">
+                            <div class="relative">
+                                <a href="">
+                                    <img src="{{ asset('frontend/img/book/book-5.webp') }}" alt="The tiger king"
+                                        class="book-image h-96 w-full object-cover">
+                                </a>
+                                <span
+                                    class="absolute top-3 left-3 bg-teal-500/70 text-white text-xs font-semibold px-2 py-1 rounded">New</span>
+                                <span
+                                    class="discount-badge absolute top-3 right-3 bg-amber-500/70 text-white text-xs font-bold px-2 py-1 rounded">25%
+                                    OFF</span>
+                            </div>
+                            <div class="p-4">
+                                <a href="">
+                                    <h3 class="font-semibold text-lg mb-2 line-clamp-2">The tiger king</h3>
+                                </a>
+                                <p class="text-gray-600 text-sm mb-3 line-clamp-2">A journey into the world of tigers</p>
+                                <div class="flex items-center mb-3">
+                                    <div class="flex items-center">
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                        <span class="ml-2 text-sm text-gray-600">(4.8)</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Age 6-8</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Boy</span>
+                                        <span class="bg-white text-gray-800 text-xs px-2 py-1 rounded">Girl</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="line-through text-gray-500 text-sm mr-2">$24.99</span>
+                                        <span class="font-bold text-lg text-purple-600 ml-2">$18.74</span>
+                                    </div>
+                                </div>
+                                <a href="{{ route('book-details.index') }}">
+                                    <button
+                                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
-@endsection
 
-@push('scripts')
-@endpush
+    @push('scripts')
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                if (document.querySelector('.related-books-swiper')) {
+                    new Swiper('.related-books-swiper', {
+                        loop: true,
+                        speed: 800,
+                        slidesPerView: 'auto',
+                        autoplay: {
+                            delay: 2000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true
+                        },
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+    @endpush
+@endsection

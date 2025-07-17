@@ -6,7 +6,7 @@
             <h3 class="text-lg md:text-xl md:leading-10 uppercase font-bold p-1">
                 Design Stunning, Lifelike Characters</h3>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-12">
             <div class="flex flex-col items-center">
                 <div class="flex">
                     <img class="aspect-square rounded-full w-[157px] h-[157px] relative m-2" src="https://placehold.co/157x157">
