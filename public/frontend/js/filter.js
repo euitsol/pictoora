@@ -177,6 +177,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Function to update all UI elements based on filter state
         function updateUI() {
+            //Story
+            $(".story-desktop").each(function () {
+                $(this).prop("checked", filters.story.includes($(this).val()));
+            });
+
+            $(".story-mobile").each(function () {
+                $(this).prop("checked", filters.story.includes($(this).val()));
+            });
+
             // Name
             $("#name-desktop").val(filters.name);
             $("#name-mobile").val(filters.name);
@@ -187,14 +196,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Gender
             $("#boy-desktop").prop("checked", filters.genders.includes("boy"));
-            $("#girl-desktop").prop(
-                "checked",
-                filters.genders.includes("girl")
-            );
-            $("#boy-mobile").prop("checked", filters.genders.includes("boy"));
-            $("#girl-mobile").prop("checked", filters.genders.includes("girl"));
+            $("#girl-desktop").prop("checked", filters.genders.includes("girl"));
             updateCheckboxStyle($("#boy-desktop"));
             updateCheckboxStyle($("#girl-desktop"));
+
+            $("#boy-mobile").prop("checked", filters.genders.includes("boy"));
+            $("#girl-mobile").prop("checked", filters.genders.includes("girl"));
             updateCheckboxStyle($("#boy-mobile"));
             updateCheckboxStyle($("#girl-mobile"));
 
@@ -242,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Clear All Filters (Desktop)
             $("#clear-all-desktop").on("click", function () {
                 filters = {
-                    story: false,
+                    story: [],
                     name: "",
                     age: "",
                     genders: [],
@@ -270,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Clear All Filters (Mobile)
             $("#clear-all-mobile").on("click", function () {
                 filters = {
-                    story: false,
+                    story: [],
                     name: "",
                     age: "",
                     genders: [],
@@ -285,10 +292,41 @@ document.addEventListener("DOMContentLoaded", function () {
             // Filter Interactions (Delegated Events for dynamic content)
             $(document).on("change", ".story-desktop, .story-mobile",
                 function () {
-                    filters.story = $(this).is(":checked");
+                    if ($(this).is(":checked")) {
+                        filters.story.push($(this).val());
+                    } else {
+                        filters.story = filters.story.filter(
+                            (story) => story !== $(this).val()
+                        );
+                    }
+
                     updateUI();
                 }
             );
+
+            $(document).on("change", "#boy-mobile, #girl-mobile", function () {
+                if ($(this).is(":checked")) {
+                    filters.genders.push($(this).val());
+                } else {
+                    filters.genders = filters.genders.filter(
+                        (g) => g !== $(this).val()
+                    );
+                }
+
+                updateUI();
+            });
+
+            $(document).on("change", "#boy-desktop, #girl-desktop", function () {
+                if ($(this).is(":checked")) {
+                    filters.genders.push($(this).val());
+                } else {
+                    filters.genders = filters.genders.filter(
+                        (g) => g !== $(this).val()
+                    );
+                }
+
+                updateUI();
+            });
 
             $(document).on("input", "#name-desktop, #name-mobile", function () {
                 filters.name = $(this).val();

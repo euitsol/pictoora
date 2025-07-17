@@ -48,25 +48,25 @@
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="dinosaur-story"
                             class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
-                            checked>
+                            value="dinosaur">
                         <label for="dinosaur-story" class="text-lg font-normal cursor-pointer text-gray-700">
                             Dinosaur Stories
                         </label>
                     </div>
 
                     <div class="flex items-center space-x-2">
-                        <input type="checkbox" id="prince-story"
+                        <input type="checkbox" id="princess-story"
                             class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
-                            checked>
-                        <label for="prince-story" class="text-lg font-normal cursor-pointer text-gray-700">
-                            Prince Stories
+                            value="princess">
+                        <label for="princess-story" class="text-lg font-normal cursor-pointer text-gray-700">
+                            Princess Stories
                         </label>
                     </div>
 
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="policeman-story"
                             class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
-                            checked>
+                            value="policeman">
                         <label for="policeman-story" class="text-lg font-normal cursor-pointer text-gray-700">
                             Policeman Stories
                         </label>
@@ -94,14 +94,16 @@
                 <div class="flex flex-col gap-2">
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="boy-desktop"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            value="boy">
                         <label for="boy-desktop" class="text-lg font-normal capitalize cursor-pointer text-gray-700">
                             Boy
                         </label>
                     </div>
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="girl-desktop"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            value="girl">
                         <label for="girl-desktop" class="text-lg font-normal capitalize cursor-pointer text-gray-700">
                             Girl
                         </label>
@@ -176,7 +178,7 @@
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="dinosaurs-story-mobile"
                             class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile"
-                            checked>
+                            value="dinosaurs">
                         <label for="dinosaurs-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
                             Dinosaur Stories
                         </label>
@@ -184,7 +186,8 @@
 
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="princes-story-mobile"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile"
+                            value="princess">
                         <label for="princes-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
                             Princes Stories
                         </label>
@@ -192,7 +195,8 @@
 
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="policeman-story-mobile"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile"
+                            value="policeman">
                         <label for="policeman-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
                             Policeman Stories
                         </label>
@@ -230,14 +234,16 @@
                 <div class="grid grid-cols-2 gap-3">
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="boy-mobile"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            value="boy">
                         <label for="boy-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
                             Boy
                         </label>
                     </div>
                     <div class="flex items-center space-x-2">
                         <input type="checkbox" id="girl-mobile"
-                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            value="girl">
                         <label for="girl-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
                             Girl
                         </label>
