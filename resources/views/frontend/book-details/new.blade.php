@@ -19,8 +19,7 @@
                             Bestseller</div>
                     </div>
                 </div>
-                <div
-                    class="space-y-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-200 shadow-2xl">
+                <div class="space-y-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-200 shadow-2xl">
                     <div>
                         <div
                             class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-secondary/80 mb-3 bg-purple-100 text-purple-700">
@@ -47,11 +46,10 @@
                                 <span class="text-3xl font-bold text-purple-600">$24.99</span>
                                 <span class="text-lg text-gray-500 line-through ml-2">$34.99</span>
                             </div>
-                            <div
-                                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-600/70 text-white">
+                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-600/70 text-white">
                                 30% OFF</div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="p-4">
                             <div class="grid grid-cols-2 gap-4 text-sm">
                                 <div>
                                     <span class="text-gray-600">Format:</span>
@@ -75,20 +73,20 @@
                                 </div>
                             </div>
                             <div data-orientation="horizontal" role="none" class="shrink-0 bg-border h-px w-full"></div>
-                            <div class="space-y-3">
+                            <div class="mt-4 mb-2">
                                 <button
-                                    class="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-11 rounded-md px-8 w-full bg-purple-600 hover:bg-purple-700 text-white py-6">
+                                    class="flex items-center justify-center gap-2 w-full py-4 rounded-md bg-purple-600 hover:bg-purple-700 text-white">
                                     Create Your Child's Story Now
                                     <i data-lucide="arrow-right" class="w-5 h-5 text-white"></i>
                                 </button>
-                                <div class="flex space-x-2">
+                                <div class="flex mt-2">
                                     <button
-                                        class="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-input hover:bg-accent hover:from-purple-50 hover:to-blue-50 border h-11 rounded-md px-8 flex-1 bg-transparent border-purple-200">
+                                        class="m-2 flex items-center justify-center gap-2 hover:bg-purple-50 hover:text-purple-700 border rounded-md py-2 w-full flex-1 bg-transparent border-purple-200">
                                         <i data-lucide="heart" class="w-5 h-5 text-purple-600"></i>
                                         Save
                                     </button>
                                     <button
-                                        class="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-input hover:bg-accent hover:from-purple-50 hover:to-blue-50 border h-11 rounded-md px-8 flex-1 bg-transparent border-purple-200">
+                                        class="m-2 flex items-center justify-center gap-2 hover:bg-purple-50 hover:text-purple-700 border rounded-md py-2 w-full flex-1 bg-transparent border-purple-200">
                                         <i data-lucide="share2" class="w-5 h-5 text-purple-600"></i>
                                         Share
                                     </button>
@@ -115,13 +113,13 @@
         </div>
     </section>
 
-    <section class=" bg-white shadow-2xl hidden">
+    <section class=" bg-white shadow-2xl">
         <div class="container mx-auto px-4 py-12">
             <div class="text-center">
                 <h2 class="text-4xl font-bold mb-4 gradient-text text-gray-700">Preview & Demo</h2>
                 <p class="text-xl text-gray-600">Get a glimpse of how your child's story will look and feel</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 mt-6">
                 <div class="rounded-lg border bg-card text-card-foreground shadow-2xl p-6 border-purple-200">
                     <div class="flex flex-col space-y-1.5 p-6">
                         <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center">
