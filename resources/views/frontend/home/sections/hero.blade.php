@@ -18,7 +18,7 @@
                     Turning Little Faces into
                     <span class="text-yellow-300">Big Adventures</span>
                 </h1>
-                <p class="text-sm md:text-xl lg:text-2xl mb-8 text-gray-100 leading-relaxed text-justify">
+                <p class="text-sm md:text-xl lg:text-xl mb-8 text-gray-100 leading-relaxed text-justify">
                     Bring your child's imagination to life with fully personalized storybooks —
                     where their face, name, and spirit become the heart of every adventure.
                 </p>
