@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="text-white fade-in">
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-center md:text-left">
                     Turning Little Faces into
                     <span class="text-yellow-300">Big Adventures</span>
                 </h1>
