@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             { value: "it", label: "Italian" },
             { value: "pt", label: "Portuguese (Brazil)" },
             { value: "es", label: "Spanish" },
+            { value: "cs", label: "Czech" },
+            {value: "pl", label: "Polish"}
         ];
 
         const ageRanges = [

@@ -92,7 +92,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center space-x-4 text-sm text-gray-600">
+                    <div class="grid grid-cols-1 md:grid-cols-3 items-center space-x-4 text-sm text-gray-600">
                         <div class="flex items-center">
                             <i data-lucide="check" class="w-5 h-5 text-green-500 mr-1"></i>
                             30-day money-back guarantee
@@ -106,43 +106,6 @@
                             Safe and secure payment
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-gradient-to-r from-purple-50 to-blue-50">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto rounded-2xl shadow-2xl bg-white/80 p-8 border border-purple-100">
-                <div class="flex flex-col items-center mb-6">
-                    <div class="bg-purple-100 p-3 rounded-full shadow-md mb-3">
-                        <i data-lucide="book-open" class="w-8 h-8 text-purple-600"></i>
-                    </div>
-                    <h2 class="text-4xl md:text-4xl font-bold text-center gradient-text mb-2">Story Description</h2>
-                    <div class="h-1 w-16 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mb-4"></div>
-                </div>
-                <div class="prose prose-lg mx-auto text-gray-700 text-justify">
-                    <p>
-                        <span class="font-bold text-purple-600">Luna</span> is a brave and curious young girl who loves
-                        exploring the magical world around her.
-                        This personalized story adapts to your child's <span class="font-semibold text-blue-600">name,
-                            appearance, and interests</span>,
-                        creating a truly unique adventure that will captivate their imagination and boost their confidence.
-                    </p>
-                    <p>
-                        In this tale, your child will become the <span class="font-bold text-purple-600">hero</span> of
-                        their own story, discovering magical creatures,
-                        solving puzzles, and learning valuable lessons about <span
-                            class="font-semibold text-blue-600">friendship, courage, and believing in themselves</span>.
-                        Each page is beautifully illustrated and personalized to make your child the star's adventure in
-                        life.
-                    </p>
-                    <p>
-                        The story is carefully crafted to be age-appropriate while maintaining engagement through
-                        interactive elements and choices that affect the outcome.
-                        Your child will love seeing their <span class="font-bold text-purple-600">name and likeness</span>
-                        throughout the magical adventure.
-                    </p>
                 </div>
             </div>
         </div>
