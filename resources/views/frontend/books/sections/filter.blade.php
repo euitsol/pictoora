@@ -1,7 +1,7 @@
 <!-- Header with toggle button -->
 <div class="container mx-auto px-4 py-8">
     <div class="flex items-center justify-between md:py-4 lg:py-4">
-        <div class="flex items-center gap-3">
+        <div class="items-center gap-3 hidden md:flex">
             <h2 class="flex items-center gap-2 text-xl font-semibold gradient-text">
                 <i data-lucide="funnel" class="w-4 h-4 mr-1 text-purple-600"></i>
                 Filters
@@ -17,7 +17,7 @@
                 <i data-lucide="funnel" class="w-4 h-4 mr-1 text-purple-600"></i>
                 Filters
                 <span id="mobile-active-filter-badge"
-                    class="hidden ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs px-1.5 py-0.5 rounded-full"></span>
+                    class="hidden ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs h-4 w-4 rounded-full"></span>
             </button>
         </div>
 
@@ -37,20 +37,40 @@
     </div>
     <!-- Desktop Collapsible Filter Content -->
     <div id="desktop-filter-content" class="hidden md:block collapsible-content open md:border-t border-purple-200">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:items-start md:mt-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:items-start md:mt-6">
             <!-- Story Filter -->
             <div class="flex flex-col gap-3">
                 <div class="flex items-center gap-2 text-lg font-medium text-purple-700">
                     <i data-lucide="book-open" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Story
                 </div>
-                <div class="flex items-center space-x-2">
-                    <input type="checkbox" id="story-desktop"
-                        class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        checked>
-                    <label for="story-desktop" class="text-lg font-normal cursor-pointer text-gray-700">
-                        Include stories
-                    </label>
+                <div class="grid grid-cols-1 gap-2 items-center space-x-2">
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="dinosaur-story"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
+                            checked>
+                        <label for="dinosaur-story" class="text-lg font-normal cursor-pointer text-gray-700">
+                            Dinosaur Stories
+                        </label>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="prince-story"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
+                            checked>
+                        <label for="prince-story" class="text-lg font-normal cursor-pointer text-gray-700">
+                            Prince Stories
+                        </label>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="policeman-story"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-desktop"
+                            checked>
+                        <label for="policeman-story" class="text-lg font-normal cursor-pointer text-gray-700">
+                            Policeman Stories
+                        </label>
+                    </div>
                 </div>
             </div>
 
@@ -133,14 +153,15 @@
 <!-- Mobile Sheet Content -->
 <div id="mobile-sheet-content" class="sheet-content bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="sheet-header">
-        <h2 class="sheet-title gradient-text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-filter h-5 w-5 text-purple-600">
-                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-            </svg>
-            Filters
-        </h2>
+        <div class="items-center gap-3 flex justify-between">
+            <h2 class="flex items-center gap-2 text-xl font-semibold gradient-text sheet-title">
+                <i data-lucide="funnel" class="w-4 h-4 mr-1 text-purple-600"></i>
+                Filters
+            </h2>
+            <button type="button" class="flex items-center gap-2" id="mobile-sheet-close">
+                <i data-lucide="x" class="w-4 h-4 mr-1 text-purple-600"></i>
+            </button>
+        </div>
     </div>
     <div class="sheet-body">
         <!-- Filter Content for Mobile -->
@@ -148,50 +169,51 @@
             <!-- Story Filter -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2 text-sm font-medium text-purple-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-book-open h-4 w-4">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 4 0 0 0-3-3H2z" />
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 4 0 0 1 3-3h7z" />
-                    </svg>
+                    <i data-lucide="book-open" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Story
                 </div>
-                <div class="flex items-center space-x-2">
-                    <input type="checkbox" id="story-mobile"
-                        class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        checked>
-                    <label for="story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
-                        Include stories
-                    </label>
+                <div class="grid grid-cols-1 gap-2 items-center space-x-2">
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="dinosaurs-story-mobile"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile"
+                            checked>
+                        <label for="dinosaurs-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
+                            Dinosaur Stories
+                        </label>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="princes-story-mobile"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile">
+                        <label for="princes-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
+                            Princes Stories
+                        </label>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="policeman-story-mobile"
+                            class="peer h-4 w-4 shrink-0 rounded-sm border border-purple-300 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 story-mobile">
+                        <label for="policeman-story-mobile" class="text-sm font-normal capitalize cursor-pointer text-gray-700">
+                            Policeman Stories
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <!-- Name Filter -->
-            <div class="space-y-3">
+            {{-- <div class="space-y-3">
                 <div class="flex items-center gap-2 text-sm font-medium text-purple-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-search h-4 w-4">
-                        <circle cx="11" cy="11" r="8" />
-                        <path d="m21 21-4.3-4.3" />
-                    </svg>
+                    <i data-lucide="search" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Name
                 </div>
                 <input type="text" id="name-mobile" placeholder="Search by name..."
                     class="flex h-10 w-full rounded-md border border-purple-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 focus:border-purple-500 focus:ring-purple-200">
-            </div>
+            </div> --}}
 
             <!-- Age Filter -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2 text-sm font-medium text-purple-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-calendar h-4 w-4">
-                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                        <line x1="16" x2="16" y1="2" y2="6" />
-                        <line x1="8" x2="8" y1="2" y2="6" />
-                        <line x1="3" x2="21" y1="10" y2="10" />
-                    </svg>
+                    <i data-lucide="calendar" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Age
                 </div>
                 <div id="age-mobile-buttons" class="grid grid-cols-3 sm:grid-cols-5 gap-2">
@@ -202,14 +224,7 @@
             <!-- Gender Filter -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2 text-sm font-medium text-purple-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-users h-4 w-4">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
+                    <i data-lucide="users" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Gender
                 </div>
                 <div class="grid grid-cols-2 gap-3">
@@ -233,27 +248,14 @@
             <!-- Language Filter -->
             <div class="space-y-3">
                 <div class="flex items-center gap-2 text-sm font-medium text-purple-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-languages h-4 w-4">
-                        <path d="m5 8 6 6" />
-                        <path d="m4 14 6-6 2-3" />
-                        <path d="M2 5h12" />
-                        <path d="M7 2h1" />
-                        <path d="m22 22-5-10-5 10" />
-                        <path d="M14 18h6" />
-                    </svg>
+                    <i data-lucide="languages" class="w-4 h-4 mr-1 text-purple-600"></i>
                     Language
                 </div>
                 <div class="relative">
                     <button id="language-dropdown-trigger-mobile"
                         class="flex h-10 w-full items-center justify-between whitespace-nowrap rounded-md border border-purple-300 bg-white px-3 py-2 text-left text-sm font-normal ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-gray-700 hover:bg-purple-50 hover:text-purple-700">
                         <span id="selected-languages-mobile" class="truncate">Languages</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-chevron-down ml-2 h-4 w-4 shrink-0 opacity-50">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
+                        <i data-lucide="chevron-down" class="w-4 h-4 mr-1 text-purple-600"></i>
                     </button>
                     <div id="language-dropdown-content-mobile"
                         class="absolute z-10 w-full mt-1 bg-white border border-purple-200 rounded-md shadow-lg hidden">

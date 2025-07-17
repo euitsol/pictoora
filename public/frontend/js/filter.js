@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Filter state
         let filters = {
-            story: true,
+            story: [],
             name: "",
             age: "",
             genders: [],
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Function to calculate active filter count
         function getActiveFilterCount() {
             let count = 0;
-            if (filters.story) count++;
+            if (filters.story.length > 0) count += filters.story.length;
             if (filters.name.trim()) count++;
             if (filters.age) count++;
             if (filters.genders.length > 0) count += filters.genders.length;
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // const $desktopSummary = $("#active-filter-summary-desktop .flex");
 
             if (count > 0) {
-                $desktopBadge.text(`${count} active`).removeClass("hidden");
-                $mobileBadge.text(count).removeClass("hidden");
+                // $desktopBadge.text(`${count} active`).removeClass("hidden");
+                // $mobileBadge.text(count).removeClass("hidden");
                 // $desktopSummary.parent().removeClass("hidden");
-                $("#clear-all-desktop").removeClass("hidden");
+                // $("#clear-all-desktop").removeClass("hidden");
             } else {
                 $desktopBadge.addClass("hidden");
                 $mobileBadge.addClass("hidden");
@@ -177,12 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Function to update all UI elements based on filter state
         function updateUI() {
-            // Story
-            $("#story-desktop").prop("checked", filters.story);
-            $("#story-mobile").prop("checked", filters.story);
-            updateCheckboxStyle($("#story-desktop"));
-            updateCheckboxStyle($("#story-mobile"));
-
             // Name
             $("#name-desktop").val(filters.name);
             $("#name-mobile").val(filters.name);
@@ -243,8 +237,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     $span.text("Hide Filters");
                     $icon.css('transform', 'rotate(0deg)');
                 }
-
-                // lucide.createIcons(); // Re-render Lucide icons
             });
 
             // Clear All Filters (Desktop)
@@ -270,6 +262,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 $("#mobile-sheet-content").removeClass("open");
             });
 
+            $("#mobile-sheet-close").on("click", function () {
+                $("#mobile-sheet-overlay").removeClass("open");
+                $("#mobile-sheet-content").removeClass("open");
+            });
+
             // Clear All Filters (Mobile)
             $("#clear-all-mobile").on("click", function () {
                 filters = {
@@ -286,9 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // Filter Interactions (Delegated Events for dynamic content)
-            $(document).on(
-                "change",
-                "#story-desktop, #story-mobile",
+            $(document).on("change", ".story-desktop, .story-mobile",
                 function () {
                     filters.story = $(this).is(":checked");
                     updateUI();
@@ -300,43 +295,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 updateUI();
             });
 
-            $(document).on(
-                "click",
-                "#age-desktop-buttons button, #age-mobile-buttons button",
-                function () {
+            $(document).on("click", "#age-desktop-buttons button, #age-mobile-buttons button", function () {
                     const value = $(this).data("value");
                     filters.age = filters.age === value ? "" : value;
                     updateUI();
                 }
             );
 
-            $(document).on(
-                "change",
-                "#boy-desktop, #girl-desktop, #boy-mobile, #girl-mobile",
-                function () {
-                    const gender = $(this)
-                        .attr("id")
-                        .replace("-desktop", "")
-                        .replace("-mobile", "");
-                    if ($(this).is(":checked")) {
-                        if (!filters.genders.includes(gender)) {
-                            filters.genders.push(gender);
-                        }
-                    } else {
-                        filters.genders = filters.genders.filter(
-                            (g) => g !== gender
-                        );
-                    }
+            // $(document).on(
+            //     "change",
+            //     "#boy-desktop, #girl-desktop, #boy-mobile, #girl-mobile",
+            //     function () {
+            //         const gender = $(this)
+            //             .attr("id")
+            //             .replace("-desktop", "")
+            //             .replace("-mobile", "");
+            //         if ($(this).is(":checked")) {
+            //             if (!filters.genders.includes(gender)) {
+            //                 filters.genders.push(gender);
+            //             }
+            //         } else {
+            //             filters.genders = filters.genders.filter(
+            //                 (g) => g !== gender
+            //             );
+            //         }
 
-                    updateUI();
-                }
-            );
+            //         updateUI();
+            //     }
+            // );
 
             // Language Dropdown Toggle
-            $(document).on(
-                "click",
-                "#language-dropdown-trigger-desktop",
-                function (e) {
+            $(document).on("click", "#language-dropdown-trigger-desktop", function (e) {
                     e.stopPropagation();
                     $("#language-dropdown-content-desktop").toggleClass(
                         "hidden"
@@ -349,10 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     ); // Re-render full list
                 }
             );
-            $(document).on(
-                "click",
-                "#language-dropdown-trigger-mobile",
-                function (e) {
+            $(document).on("click", "#language-dropdown-trigger-mobile", function (e) {
                     e.stopPropagation();
                     $("#language-dropdown-content-mobile").toggleClass(
                         "hidden"
@@ -402,10 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // Language Item Selection
-            $(document).on(
-                "click",
-                "#language-list-desktop li, #language-list-mobile li",
-                function () {
+            $(document).on("click", "#language-list-desktop li, #language-list-mobile li", function () {
                     const value = $(this).data("value");
                     if (filters.languages.includes(value)) {
                         filters.languages = filters.languages.filter(
@@ -429,28 +412,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
                 }
             );
-
-            // Media query for responsive display
-            function checkMediaQuery() {
-                if (window.matchMedia("(max-width: 768px)").matches) {
-                    // Mobile view
-                    $(".md\\:hidden").removeClass("hidden");
-                    $(".hidden.md\\:flex").addClass("hidden");
-                    $("#desktop-filter-content").addClass("hidden"); // Ensure desktop content is hidden
-                } else {
-                    // Desktop view
-                    $(".md\\:hidden").addClass("hidden");
-                    $(".hidden.md\\:flex").removeClass("hidden");
-                    $("#desktop-filter-content").removeClass("hidden"); // Ensure desktop content is visible
-                    // Close mobile sheet if open
-                    $("#mobile-sheet-overlay").removeClass("open");
-                    $("#mobile-sheet-content").removeClass("open");
-                }
-            }
-
-            // Initial check and listen for changes
-            checkMediaQuery();
-            $(window).on("resize", checkMediaQuery);
         });
     });
 });
