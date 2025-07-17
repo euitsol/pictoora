@@ -6,7 +6,7 @@
 @section('content')
     <section class="bg-white">
         <div class="container mx-auto px-4 py-12">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-12">
                 <div class="relative">
                     <div class="rounded-2xl p-4 md:p-6 lg:p-8 shadow-2xl bg-gradient-to-r from-purple-50 to-blue-50">
                         <div class="rounded-2xl p-2 md:p-4 lg:p-6 shadow-2xl flex items-center justify-center">
@@ -19,7 +19,8 @@
                             Bestseller</div>
                     </div>
                 </div>
-                <div class="space-y-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-200 shadow-2xl">
+                <div
+                    class="space-y-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-200 shadow-2xl">
                     <div>
                         <div
                             class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-secondary/80 mb-3 bg-purple-100 text-purple-700">
@@ -46,7 +47,8 @@
                                 <span class="text-3xl font-bold text-purple-600">$24.99</span>
                                 <span class="text-lg text-gray-500 line-through ml-2">$34.99</span>
                             </div>
-                            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-600/70 text-white">
+                            <div
+                                class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-amber-600/70 text-white">
                                 30% OFF</div>
                         </div>
                         <div class="p-4">
@@ -79,33 +81,41 @@
                                     Create Your Child's Story Now
                                     <i data-lucide="arrow-right" class="w-5 h-5 text-white"></i>
                                 </button>
-                                <div class="flex mt-2">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4 mt-2">
                                     <button
                                         class="m-2 flex items-center justify-center gap-2 hover:bg-purple-50 hover:text-purple-700 border rounded-md py-2 w-full flex-1 bg-transparent border-purple-200">
                                         <i data-lucide="heart" class="w-5 h-5 text-purple-600"></i>
-                                        Save
+                                        Keepsake Forever
                                     </button>
                                     <button
                                         class="m-2 flex items-center justify-center gap-2 hover:bg-purple-50 hover:text-purple-700 border rounded-md py-2 w-full flex-1 bg-transparent border-purple-200">
-                                        <i data-lucide="share2" class="w-5 h-5 text-purple-600"></i>
-                                        Share
+                                        <i data-lucide="printer" class="w-5 h-5 text-purple-600"></i>
+                                        Over 20,000 Books Printed
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 items-center space-x-4 text-sm text-gray-600">
-                        <div class="flex items-center">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500 mr-1"></i>
-                            30-day money-back guarantee
-                        </div>
-                        <div class="flex items-center">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500 mr-1"></i>
-                            Instant digital delivery
-                        </div>
-                        <div class="flex items-center">
-                            <i data-lucide="check" class="w-5 h-5 text-green-500 mr-1"></i>
-                            Safe and secure payment
+                    <div class="bg-gradient-to-r from-purple-100 to-blue-100 rounded-2xl p-6 shadow-xl mt-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-amber-100 rounded-full p-3 mb-2">
+                                    <i data-lucide="badge-check" class="w-8 h-8 text-amber-500"></i>
+                                </div>
+                                <span class="font-semibold">30-day money-back guarantee</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-blue-100 rounded-full p-3 mb-2">
+                                    <i data-lucide="truck" class="w-8 h-8 text-blue-500"></i>
+                                </div>
+                                <span class="font-semibold">Instant digital delivery</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="bg-green-100 rounded-full p-3 mb-2">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-green-500"></i>
+                                </div>
+                                <span class="font-semibold">Safe and secure payment</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,7 +150,8 @@
                                     type='video/ogg' />
                                 <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en"
                                     default>
-                                <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt" srclang="de">
+                                <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt"
+                                    srclang="de">
                                 <p>Your user agent does not support the HTML5 Video element.</p>
                             </video>
                         </div>
