@@ -14,9 +14,9 @@
                 </div>
             </div>
             <div class="text-white fade-in">
-                <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-center md:text-left">
+                <h1 class="hero-text text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-center md:text-left">
                     Turning Little Faces into
-                    <span class="text-yellow-300">Big Adventures</span>
+                    <span class="text-yellow-300 hero-span">Big Adventures</span>
                 </h1>
                 <p class="text-sm md:text-xl lg:text-xl mb-8 text-gray-100 leading-relaxed text-justify">
                     Bring your child's imagination to life with fully personalized storybooks —

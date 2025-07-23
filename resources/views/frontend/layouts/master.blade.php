@@ -10,13 +10,18 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
         @include('frontend.includes.style-bundle')
     </head>
 
     <body class="">
         @include('frontend.includes.header')
-        <div class="min-h-screen mt-20">
-            @yield('content')
+        <div id="wrapper">
+            <div class="min-h-screen mt-20" id="content">
+                @yield('content')
+            </div>
         </div>
         @include('frontend.includes.footer')
         @include('frontend.includes.discount-popup')

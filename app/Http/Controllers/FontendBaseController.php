@@ -107,18 +107,15 @@ class FontendBaseController extends Controller
                 'height' => 60
             ],
             'sameAs' => [
-                'https://www.linkedin.com/in/al-kafi-sohag/',
-                'https://github.com/al-kafi-sohag',
-                'https://wa.me/8801773301138'
+
             ],
             'contactPoint' => [
                 [
                     '@type' => 'ContactPoint',
-                    'telephone' => '+8801773301138',
                     'contactType' => 'customer service',
-                    'email' => 'ceo@scrapeniche.com',
+                    'email' => 'info@pictoora.com',
                     'areaServed' => 'Worldwide',
-                    'availableLanguage' => ['English', 'Bengali']
+                    'availableLanguage' => ['English']
                 ]
             ]
         ]);
