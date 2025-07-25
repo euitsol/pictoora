@@ -102,7 +102,7 @@ class FontendBaseController extends Controller
             'url' => $siteUrl,
             'logo' => [
                 '@type' => 'ImageObject',
-                'url' => asset('frontend/img/logos/logo.png'),
+                'url' => asset('frontend/img/logos/logo.webp'),
                 'width' => 600,
                 'height' => 60
             ],

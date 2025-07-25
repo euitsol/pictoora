@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between">
             <div class=" -mt-2">
                 <a href="{{ route('home.index') }}">
-                    <img class="h-16 object-cover" src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
+                    <img class="h-16 object-cover" src="{{ asset('frontend/img/logo.webp') }}" alt="Logo">
                 </a>
             </div>
             <!-- Desktop Menu -->

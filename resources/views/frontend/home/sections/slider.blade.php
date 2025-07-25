@@ -7,19 +7,19 @@
         <div class="swiper logo-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="{{ asset('frontend/img/slider/bbc.png') }}" alt="BBC" class="h-12 object-fit-contain">
+                    <img src="{{ asset('frontend/img/slider/bbc.webp') }}" alt="BBC" class="h-12 object-fit-contain">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('frontend/img/slider/forbes.png') }}" alt="Forbes" class="h-12 object-fit-contain">
+                    <img src="{{ asset('frontend/img/slider/forbes.webp') }}" alt="Forbes" class="h-12 object-fit-contain">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('frontend/img/slider/the-wall-street-journal.png') }}" alt="WSJ" class="h-12 object-fit-contain">
+                    <img src="{{ asset('frontend/img/slider/the-wall-street-journal.webp') }}" alt="WSJ" class="h-12 object-fit-contain">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('frontend/img/slider/marketwatch.png') }}" alt="MarketWatch" class="h-12 object-fit-contain">
+                    <img src="{{ asset('frontend/img/slider/marketwatch.webp') }}" alt="MarketWatch" class="h-12 object-fit-contain">
                 </div>
                 <div class="swiper-slide">
-                    <img src="{{ asset('frontend/img/slider/forbes.png') }}" alt="Forbes" class="h-12 object-fit-contain">
+                    <img src="{{ asset('frontend/img/slider/forbes.webp') }}" alt="Forbes" class="h-12 object-fit-contain">
                 </div>
             </div>
         </div>

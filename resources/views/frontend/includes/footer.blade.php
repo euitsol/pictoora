@@ -2,7 +2,7 @@
     <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-8">
             <div>
-                <div class="text-2xl font-bold mb-4"><img src="{{ asset('frontend/img/logo-white.png') }}" alt="{{ config('app.name') }}"></div>
+                <div class="text-2xl font-bold mb-4"><img src="{{ asset('frontend/img/logo-white.webp') }}" alt="{{ config('app.name') }}"></div>
                 <p class="text-gray-400">Creating personalized adventures that inspire young minds and create lasting memories.</p>
             </div>
             <div>

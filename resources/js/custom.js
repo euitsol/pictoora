@@ -118,4 +118,37 @@ $(function () {
             });
         }
     });
+
+    //Expression Section
+    gsap.fromTo('.scroll-trigger-left',
+        { x: -300, opacity: 0 },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.scroll-trigger-left',
+                start: 'top 95%',
+                end: 'center center',
+                scrub: 1,
+                markers: false,
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
+    // Right section animation
+    gsap.fromTo('.scroll-trigger-right',
+        { x: 300, opacity: 0 },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.scroll-trigger-right',
+                start: 'top 95%',
+                end: 'center center',
+                scrub: 1,
+                markers: false,
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
 });
