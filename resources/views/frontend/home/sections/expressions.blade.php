@@ -1,4 +1,4 @@
-<section class="h-auto w-full text-white gradient-bg mt-12">
+<section class="h-auto w-full text-white gradient-bg mt-12 fade-in">
     <div class="container mx-auto px-6">
     <div class="flex flex-col gap-10 md:gap-16 w-full h-full p-9 md:p-[70px]">
         <div class="text-center flex flex-col gap-4 md:gap-0 mb-6">

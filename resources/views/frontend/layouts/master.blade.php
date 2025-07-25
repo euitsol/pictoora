@@ -17,13 +17,15 @@
     </head>
 
     <body class="">
-        @include('frontend.includes.header')
         <div id="wrapper">
-            <div class="min-h-screen mt-20" id="content">
-                @yield('content')
+            <div id="content">
+                @include('frontend.includes.header')
+                <div class="min-h-screen mt-20">
+                    @yield('content')
+                </div>
+                @include('frontend.includes.footer')
             </div>
         </div>
-        @include('frontend.includes.footer')
         @include('frontend.includes.discount-popup')
         @include('frontend.includes.script-bundle')
     </body>

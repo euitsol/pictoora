@@ -1,4 +1,4 @@
-<section class="py-12 md:py-12 lg:py-20 bg-white">
+<section class="py-12 md:py-12 lg:py-20 bg-white fade-in">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl md:text-4xl font-bold gradient-text text-center mb-8">Trusted by Thousands of Families</h2>
         <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">

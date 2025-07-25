@@ -1,4 +1,4 @@
-<section class="py-12 md:py-12 lg:py-20 bg-gradient-to-r from-purple-50 to-blue-50">
+<section class="py-12 md:py-12 lg:py-20 bg-gradient-to-r from-purple-50 to-blue-50 fade-in">
     <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="fade-in visible">

@@ -5,7 +5,7 @@
         </div>
 
         <div class="max-w-3xl mx-auto">
-            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in visible">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4  visible">
                 <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
                     <h3 class="text-lg font-semibold">How long does it take to create my book?</h3>
                     <i data-lucide="chevron-down" class="transition-transform"></i>
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in visible">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4  visible">
                 <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
                     <h3 class="text-lg font-semibold">What photo quality do I need?</h3>
                     <i data-lucide="chevron-down" class="transition-transform rotate-180"></i>
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in visible">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4  visible">
                 <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
                     <h3 class="text-lg font-semibold">Can I preview the book before ordering?</h3>
                     <i data-lucide="chevron-down" class="transition-transform"></i>
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in visible">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4  visible">
                 <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
                     <h3 class="text-lg font-semibold">What if I'm not satisfied?</h3>
                     <i data-lucide="chevron-down" class="transition-transform"></i>
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in visible">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4  visible">
                 <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
                     <h3 class="text-lg font-semibold">Are the books suitable for all ages?</h3>
                     <i data-lucide="chevron-down" class="transition-transform"></i>

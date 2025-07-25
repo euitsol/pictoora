@@ -34,13 +34,31 @@ $(function () {
         autoSplit: true,
         onSplit(self) {
             return gsap.from(self.chars, {
-                // a returned animation gets cleaned up and time-synced on each onSplit() call
                 yPercent: 100,
                 opacity: 0,
                 stagger: 0.05,
                 duration: 1,
-                onComplete: () => self.revert(), // revert the element to its original (unsplit) state
+                onComplete: () => self.revert(),
             });
         },
+    });
+
+    // GSAP ScrollTrigger fade-in for all .fade-in elements
+    gsap.utils.toArray('.fade-in').forEach((el, i) => {
+        gsap.fromTo(el,
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: .5,
+                ease: 'power2.out',
+                delay: 0.1 * i,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
     });
 });

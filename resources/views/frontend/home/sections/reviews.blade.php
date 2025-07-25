@@ -1,6 +1,6 @@
 <section id="reviews" class="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="container mx-auto px-6">
-        <div class="flex flex-col items-center mb-10 fade-in visible">
+        <div class="flex flex-col items-center mb-10 visible">
             <h2 class="text-4xl md:text-4xl font-bold mb-4 gradient-text text-center">"I Actually Cried When I Saw It" Reviews That
                 Inspire</h2>
         </div>
@@ -8,7 +8,7 @@
             <div class="swiper-wrapper">
                 @for ($i = 0; $i < 6; $i++)
                     <div class="swiper-slide">
-                        <div class="bg-white p-8 rounded-xl shadow-lg card-hover fade-in visible h-full flex flex-col justify-between">
+                        <div class="bg-white p-8 rounded-xl shadow-lg card-hover visible h-full flex flex-col justify-between">
                             <div class="flex flex-col items-center">
                                 <img src="/frontend/img/book/book-1.webp" alt="Reviewed Book"
                                     class="w-24 h-24 rounded-xl object-cover mb-4">

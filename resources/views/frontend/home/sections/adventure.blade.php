@@ -1,4 +1,4 @@
-<section id="adventure" class="py-16 px-4 bg-white">
+<section id="adventure" class="py-16 px-4 bg-white fade-in">
     <div class="container mx-auto">
         <div class="text-center mt-2 mb-12">
             <h2 class="text-4xl md:text-4xl font-bold text-gray-900 mb-6 gradient-text p-0 md:p-2">Their Wildest Adventures Begin Here</h2>

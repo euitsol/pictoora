@@ -3,7 +3,7 @@
     <div class="container mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div class="relative fade-in lg:hidden block mt-12">
+            <div class="relative lg:hidden block mt-12">
                 <div class="">
                     <img src="{{ asset('frontend/img/hero.webp') }}" alt="Personalized Storybook"
                         class="rounded-2xl shadow-2xl">
@@ -13,7 +13,7 @@
                     Only 2 Minutes to Customize!
                 </div>
             </div>
-            <div class="text-white fade-in">
+            <div class="text-white">
                 <h1 class="hero-text text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-center md:text-left">
                     Turning Little Faces into
                     <span class="text-yellow-300 hero-span">Big Adventures</span>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="relative fade-in lg:block hidden">
+            <div class="relative  lg:block hidden">
                 <div class="floating">
                     <img src="{{ asset('frontend/img/hero.webp') }}" alt="Personalized Storybook"
                         class="rounded-2xl shadow-2xl">
