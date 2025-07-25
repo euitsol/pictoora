@@ -1,4 +1,4 @@
-<section class="h-auto w-full text-white gradient-bg mt-12 fade-in">
+<section class="h-auto w-full text-white gradient-bg mt-12 fade-in-1">
     <div class="container mx-auto px-6">
     <div class="flex flex-col gap-10 md:gap-16 w-full h-full p-9 md:p-[70px]">
         <div class="text-center flex flex-col gap-4 md:gap-0 mb-6">
@@ -7,7 +7,7 @@
                 Design Stunning, Lifelike Characters</h3>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-12">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center scroll-trigger-left">
                 <div class="flex">
                     <img class="aspect-square rounded-full w-[157px] h-[157px] relative m-2" src="https://placehold.co/157x157">
                     <img class="aspect-square rounded-full w-[126px] h-[126px] relative top-10 md:top-8 m-2" src="https://placehold.co/126x126">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="text-lg md:text-2xl leading-8 relative right-16 bottom-8 md:bottom-0 md:top-3">Endless Visual Styles</div>
             </div>
-            <div class="flex flex-col pt-8 md:pt-0">
+            <div class="flex flex-col pt-8 md:pt-0 scroll-trigger-center">
                 <div class="text-lg md:text-2xl leading-8 relative bottom-12 md:bottom-10 left-28 w-fit">Expressive Faces</div>
                 <div class="h-0 w-full">
                     <img class="w-16 h-16 md:w-28 md:h-28 relative bottom-12 left-44 m-2" src="{{ asset('frontend/img/expression/indicator-2.svg') }}">
@@ -35,7 +35,7 @@
                     <img class="aspect-square rounded-full max-w-[162px] relative right-11 bottom-2 m-2" src="https://placehold.co/162x162">
                 </div>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center scroll-trigger-right">
                 <div class="flex">
                     <div>
                         <img class="aspect-square rounded-full max-w-[126px] relative m-2" src="https://placehold.co/126x126">

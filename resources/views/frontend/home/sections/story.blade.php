@@ -1,10 +1,10 @@
-<section class="py-12 md:py-12 lg:py-20 bg-gradient-to-r from-purple-50 to-blue-50 fade-in">
+<section class="py-12 md:py-12 lg:py-20 bg-gradient-to-r from-purple-50 to-blue-50 fade-in-1">
     <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="fade-in visible">
+            <div class="fade-in-2 visible">
                 <img src="{{ asset('frontend/img/story.webp') }}" alt="Child in story" class="rounded-2xl shadow-xl">
             </div>
-            <div class="fade-in visible">
+            <div class="fade-in-3 visible">
                 <h2 class="text-4xl md:text-4xl font-bold mb-6 gradient-text">
                     They Are Not Just in the Story —
                     <span class="text-gray-800">They Are the Story</span>
