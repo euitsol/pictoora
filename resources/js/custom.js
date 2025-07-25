@@ -61,4 +61,63 @@ $(function () {
             }
         );
     });
+
+    //Spinning Icons
+    // gsap.to(".spinning-icon-1", {
+    //     rotation: 360,
+    //     duration: 4,
+    //     repeat: 1,
+    //     ease: "none",
+    //     transformOrigin: "center"
+    // });
+
+    // gsap.to(".spinning-icon-2", {
+    //     rotation: 360,
+    //     duration: 5,
+    //     repeat: 1,
+    //     ease: "none",
+    //     transformOrigin: "center"
+    // });
+
+    // gsap.to(".spinning-icon-3", {
+    //     rotation: 360,
+    //     duration: 6,
+    //     repeat: 1,
+    //     ease: "none",
+    //     transformOrigin: "center"
+    // });
+
+    // gsap.to(".spinning-icon-4", {
+    //     rotation: 360,
+    //     duration: 7,
+    //     repeat: 1,
+    //     ease: "none",
+    //     transformOrigin: "center"
+    // });
+
+    gsap.to('.stats-section', {
+        scrollTrigger: {
+            trigger: '.stats-section',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8
+    });
+
+    // Create spinning animations for each icon
+    for (let i = 1; i <= 4; i++) {
+        gsap.to(`.spinning-icon-${i}`, {
+            scrollTrigger: {
+                trigger: `.spinning-icon-${i}`,
+                start: 'top 90%',
+                once: true,
+                toggleActions: 'play none none none'
+            },
+            rotation: 360,
+            duration: 1,
+            ease: 'power2.out'
+        });
+    }
 });

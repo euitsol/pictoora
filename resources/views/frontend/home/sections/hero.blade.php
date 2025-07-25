@@ -50,7 +50,7 @@
 
                 <div class="grid grid-cols-4 lg:grid-cols-4 gap-2 text-center mt-8 mb-8 md:mb-0">
                     <div class="flex flex-col items-center gap-2 p-3">
-                        <div class="bg-orange-500/20 p-3 rounded-full">
+                        <div class="bg-orange-500/20 p-3 rounded-full spinning-icon-1">
                            <i data-lucide="users" class="text-orange-500 h-6 w-6 md:h-10 md:w-10"></i>
                         </div>
                         <div>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-center gap-2 p-3">
-                        <div class="bg-green-500/20 p-3 rounded-full">
+                        <div class="bg-green-500/20 p-3 rounded-full spinning-icon-2">
                             <i data-lucide="shield" class="text-green-500 h-6 w-6 md:h-10 md:w-10"></i>
                         </div>
                         <div>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-center gap-2 p-3">
-                        <div class="bg-yellow-500/20 p-3 rounded-full">
+                        <div class="bg-yellow-500/20 p-3 rounded-full spinning-icon-3">
                             <i data-lucide="star" class="text-yellow-500 h-6 w-6 md:h-10 md:w-10"></i>
                         </div>
                         <div>
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-center gap-2 p-3">
-                        <div class="bg-teal-500/20 p-3 rounded-full">
+                        <div class="bg-teal-500/20 p-3 rounded-full spinning-icon-4">
                             <i data-lucide="truck" class="text-teal-500 h-6 w-6 md:h-10 md:w-10"></i>
                         </div>
                         <div>

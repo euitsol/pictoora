@@ -20,7 +20,7 @@
         <div id="wrapper">
             <div id="content">
                 @include('frontend.includes.header')
-                <div class="min-h-screen mt-20">
+                <div class="min-h-screen">
                     @yield('content')
                 </div>
                 @include('frontend.includes.footer')
