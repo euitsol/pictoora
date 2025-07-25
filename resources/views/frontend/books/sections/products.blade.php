@@ -36,7 +36,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -76,7 +76,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -117,7 +117,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -160,7 +160,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -203,7 +203,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -243,7 +243,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -285,7 +285,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
@@ -326,7 +326,7 @@
             </div>
 
             <a href="{{ route('book-details.index') }}">
-                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Customize</button>
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors">Upload Photo</button>
             </a>
         </div>
     </div>
