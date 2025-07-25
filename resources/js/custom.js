@@ -34,7 +34,7 @@ $(function () {
         autoSplit: true,
         onSplit(self) {
             return gsap.from(self.chars, {
-                yPercent: 100,
+                xPercent: 100,
                 opacity: 0,
                 stagger: 0.05,
                 duration: 1,
@@ -120,35 +120,39 @@ $(function () {
     });
 
     //Expression Section
-    gsap.fromTo('.scroll-trigger-left',
-        { x: -300, opacity: 0 },
-        {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: '.scroll-trigger-left',
-                start: 'top 95%',
-                end: 'center center',
-                scrub: 1,
-                markers: false,
-                toggleActions: "play none none reverse"
+    gsap.utils.toArray('[class*="scroll-trigger-left"]').forEach((el) => {
+        gsap.fromTo(el,
+            { x: -300, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 95%',
+                    end: 'center center',
+                    scrub: 1,
+                    markers: false,
+                    toggleActions: "play none none reverse"
+                }
             }
-        }
-    );
+        );
+    });
     // Right section animation
-    gsap.fromTo('.scroll-trigger-right',
-        { x: 300, opacity: 0 },
-        {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: '.scroll-trigger-right',
-                start: 'top 95%',
-                end: 'center center',
-                scrub: 1,
-                markers: false,
-                toggleActions: "play none none reverse"
+    gsap.utils.toArray('[class*="scroll-trigger-right"]').forEach((el) => {
+        gsap.fromTo(el,
+            { x: 300, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 95%',
+                    end: 'center center',
+                    scrub: 1,
+                    markers: false,
+                    toggleActions: "play none none reverse"
+                }
             }
-        }
-    );
+        );
+    });
 });
