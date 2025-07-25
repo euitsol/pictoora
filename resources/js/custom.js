@@ -55,7 +55,7 @@ $(function () {
                 delay: 0.1 * i,
                 scrollTrigger: {
                     trigger: el,
-                    start: 'top 85%',
+                    start: 'top 90%',
                     toggleActions: 'play none none none',
                 },
             }
