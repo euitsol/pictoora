@@ -44,22 +44,27 @@ $(function () {
     });
 
     // GSAP ScrollTrigger fade-in for all .fade-in elements
-    gsap.utils.toArray('.fade-in').forEach((el, i) => {
-        gsap.fromTo(el,
-            { opacity: 0, y: 40 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: .5,
-                ease: 'power2.out',
-                delay: 0.1 * i,
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top 90%',
-                    toggleActions: 'play none none none',
-                },
-            }
-        );
+    gsap.utils.toArray('[class*="fade-in-"]').forEach((el) => {
+        const match = el.className.match(/fade-in-(\d+)/);
+        if (match) {
+            const delay = parseInt(match[1], 10) * 0.05; // 0.1 seconds delay for each element
+
+            gsap.fromTo(el,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    delay: delay,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 90%',
+                        toggleActions: 'play none none none',
+                    },
+                }
+            );
+        }
     });
 
     //Spinning Icons
@@ -95,29 +100,22 @@ $(function () {
     //     transformOrigin: "center"
     // });
 
-    gsap.to('.stats-section', {
-        scrollTrigger: {
-            trigger: '.stats-section',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-        },
-        opacity: 1,
-        y: 0,
-        duration: 0.8
-    });
-
     // Create spinning animations for each icon
-    for (let i = 1; i <= 4; i++) {
-        gsap.to(`.spinning-icon-${i}`, {
-            scrollTrigger: {
-                trigger: `.spinning-icon-${i}`,
-                start: 'top 90%',
-                once: true,
-                toggleActions: 'play none none none'
-            },
-            rotation: 360,
-            duration: 1,
-            ease: 'power2.out'
-        });
-    }
+
+    gsap.utils.toArray('[class*="spinning-icon-"]').forEach((el) => {
+        const match = el.className.match(/spinning-icon-(\d+)/);
+        if (match) {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%',
+                    once: true,
+                    toggleActions: 'play none none none'
+                },
+                rotation: 360,
+                duration: 1,
+                ease: 'power2.out'
+            });
+        }
+    });
 });
