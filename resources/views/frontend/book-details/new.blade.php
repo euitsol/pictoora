@@ -204,9 +204,9 @@
                         </div>
 
                         <div>
-                            <h1 class="hero-title font-bold gradient-text leading-tight mb-4">
+                            <h2 class="hero-title font-bold gradient-text leading-tight mb-4">
                                 The Magical Adventure of Luna
-                            </h1>
+                            </h2>
 
                             <div class="flex items-center gap-2 mb-3">
                                 <div class="flex items-center">
@@ -279,11 +279,11 @@
                             <div class="h-px w-full bg-gray-200 mb-4"></div>
 
                             <!-- CTA Button -->
-                            <button
+                            <a href="{{ route('personalize.index') }}"
                                 class="cta-button w-full py-4 md:py-3 text-base md:text-lg font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
                                 <span class="px-2">Create Your Child's Story Now</span>
                                 <i data-lucide="arrow-right" class="w-5 h-5 ml-2 arrow-icon flex-shrink-0"></i>
-                            </button>
+                            </a>
 
                             <!-- Enhanced Feature Cards -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">

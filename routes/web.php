@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomePageController;
 use App\Http\Controllers\Frontend\BooksPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
+use App\Http\Controllers\Frontend\PersonalizePageController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,3 +23,6 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
 });
 
 
+Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
+    Route::get('/personalize/{slug?}', 'index')->name('index');
+});
