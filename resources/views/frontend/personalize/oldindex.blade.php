@@ -1,5 +1,6 @@
 @extends('frontend.layouts.master')
 
+
 @push('styles')
     <style>
         .skin-tone-button {
@@ -37,6 +38,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -51,81 +53,24 @@
             transform: translateY(-2px);
         }
 
-        .image-preview-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .image-preview-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-preview-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
-            opacity: 0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-preview-item:hover .image-preview-overlay {
-            opacity: 1;
-        }
-
-        .remove-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            color: white;
-            border-radius: 50%;
-            width: 28px;
-            height: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .remove-btn:hover {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         @media (max-width: 768px) {
             .grid-cols-4 {
                 grid-template-columns: repeat(4, 1fr);
             }
+
             .grid-cols-6 {
                 grid-template-columns: repeat(4, 1fr);
             }
+
             .grid-cols-8 {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
     </style>
 @endpush
+
+
 @section('content')
-    <!-- Selected Book Section -->
     <section class="bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -164,12 +109,14 @@
         </div>
     </section>
 
-    <!-- Main Form Section -->
     <section class="bg-white mb-6">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
                 <div class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg p-6 border border-gray-200">
+
+                    <!-- Main Grid -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
                         <!-- Left: Multi-Step Personalization Form -->
                         <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
                             <div class="flex items-center space-x-2 mb-6">
@@ -180,8 +127,10 @@
                             <!-- Progress Bar -->
                             <div class="mb-8">
                                 <div class="flex items-center justify-between mb-2">
-                                    <span class="text-sm font-medium text-gray-700">Step <span id="currentStep">1</span> of 3</span>
-                                    <span class="text-sm text-gray-500"><span id="progressPercent">33</span>% Complete</span>
+                                    <span class="text-sm font-medium text-gray-700">Step <span id="currentStep">1</span> of
+                                        3</span>
+                                    <span class="text-sm text-gray-500"><span id="progressPercent">33</span>%
+                                        Complete</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2">
                                     <div id="progressBar"
@@ -196,6 +145,7 @@
                             </div>
 
                             <form id="personalizationForm" class="space-y-8">
+
                                 <!-- Step 1: Child Details -->
                                 <div id="step1" class="step-content">
                                     <div class="space-y-6">
@@ -206,7 +156,8 @@
 
                                         <!-- Name -->
                                         <div>
-                                            <label for="childName" class="block text-sm font-medium text-gray-700 mb-2">Child's Name *</label>
+                                            <label for="childName"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Child's Name *</label>
                                             <input type="text" id="childName" name="childName"
                                                 placeholder="e.g., Emma, Alex, Sam"
                                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
@@ -234,7 +185,8 @@
                                         <!-- Gender & Skin Tone -->
                                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
-                                                <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
+                                                <label for="gender"
+                                                    class="block text-sm font-medium text-gray-700 mb-2">Gender</label>
                                                 <select id="gender" name="gender"
                                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
                                                     <option value="">Select gender</option>
@@ -245,7 +197,8 @@
                                             </div>
 
                                             <div>
-                                                <label class="block text-sm font-medium text-gray-700 mb-3">Skin Tone</label>
+                                                <label class="block text-sm font-medium text-gray-700 mb-3">
+                                                    Skin Tone</label>
                                                 <div class="flex space-x-4 justify-center" id="skinToneButtons">
                                                     <div class="text-center">
                                                         <div class="skin-tone-button" style="background: linear-gradient(135deg, #ffdbac);" data-value="#ffdbac"></div>
@@ -260,7 +213,8 @@
                                                         <p class="text-xs text-gray-600 mt-2">Dark</p>
                                                     </div>
                                                 </div>
-                                                <p class="text-xs text-gray-500 mt-2 text-center">Helps us create accurate illustrations</p>
+                                                <p class="text-xs text-gray-500 mt-2 text-center">Helps us create accurate
+                                                    illustrations</p>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +228,9 @@
                                             <span>Personal Dedication</span>
                                         </h3>
                                         <div>
-                                            <label for="dedication" class="block text-sm font-medium text-gray-700 mb-2">Write a heartfelt message</label>
+                                            <label for="dedication"
+                                                class="block text-sm font-medium text-gray-700 mb-2">Write a heartfelt
+                                                message</label>
                                             <textarea id="dedication" name="dedication" rows="6" maxlength="200"
                                                 placeholder="Dear Emma, may this magical adventure inspire you to dream big and believe in yourself. You are capable of amazing things! Love, Mom & Dad"
                                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"></textarea>
@@ -292,18 +248,19 @@
                                             <i data-lucide="camera" class="h-6 w-6 text-green-500"></i>
                                             <span>Upload Photos</span>
                                         </h3>
-
-                                        <!-- Upload Area -->
                                         <div id="uploadArea"
                                             class="upload-area rounded-lg p-8 text-center cursor-pointer border-2 border-dashed border-gray-300 hover:border-purple-400 transition-all duration-300 bg-gray-50 hover:bg-purple-50">
                                             <i data-lucide="upload" class="h-16 w-16 text-gray-400 mx-auto mb-4"></i>
-                                            <p class="text-lg font-medium text-gray-700 mb-2">Upload 1-2 photos of your child</p>
-                                            <p class="text-sm text-gray-500 mb-4">Drag and drop files here, or click to browse</p>
+                                            <p class="text-lg font-medium text-gray-700 mb-2">Upload 1-2 photos of your
+                                                child</p>
+                                            <p class="text-sm text-gray-500 mb-4">Drag and drop files here, or click to
+                                                browse</p>
                                             <button type="button" id="browseBtn"
                                                 class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium">
                                                 Choose Files
                                             </button>
-                                            <input type="file" id="photoInput" multiple accept="image/*" class="hidden">
+                                            <input type="file" id="photoInput" multiple accept="image/*"
+                                                class="hidden">
                                             <div class="mt-6 text-xs text-gray-500 space-y-1">
                                                 <p>• Min. 500x500px recommended</p>
                                                 <p>• Clear, front-facing photos</p>
@@ -311,20 +268,20 @@
                                                 <p>• JPG, PNG (max 10MB each)</p>
                                             </div>
                                         </div>
-
-                                        <!-- Image Preview Container -->
-                                        <div id="imagePreview" class="grid grid-cols-2 sm:grid-cols-2 gap-6"></div>
+                                        <div id="imagePreview" class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
 
                                         <!-- Copyright Agreement -->
                                         <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
                                             <input type="checkbox" id="copyright" name="copyright"
                                                 class="mt-1 h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
                                             <div>
-                                                <label for="copyright" class="text-sm font-medium text-gray-700 cursor-pointer">
+                                                <label for="copyright"
+                                                    class="text-sm font-medium text-gray-700 cursor-pointer">
                                                     Image Rights & Ownership Agreement
                                                 </label>
                                                 <p class="text-xs text-gray-600 mt-1">
-                                                    I confirm I own the rights to the uploaded images and grant permission to
+                                                    I confirm I own the rights to the uploaded images and grant permission
+                                                    to
                                                     use them solely for creating my custom book.
                                                 </p>
                                             </div>
@@ -356,7 +313,7 @@
 
                         <!-- Right: Swiper Slider -->
                         <div class="lg:col-span-1 bg-white rounded-lg shadow-lg p-6">
-                            <div>
+                            <div class="">
                                 <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
                                     <i data-lucide="sparkles" class="h-5 w-5 text-purple-500"></i>
                                     See the Magic
@@ -385,7 +342,6 @@
                                     <div class="swiper-button-next"></div>
                                 </div>
                             </div>
-
                             <div class="flex flex-col gap-6 rounded-xl border py-6 bg-green-50 border-green-200 shadow-lg mt-6">
                                 <div class="p-6 text-center">
                                     <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -393,6 +349,7 @@
                                     </div>
                                     <h3 class="font-semibold text-green-800 mb-2">Your Privacy Matters</h3>
                                     <p class="text-sm text-green-700">All photos are processed securely and deleted after book creation. We never store or share your personal images.</p>
+
                                 </div>
                             </div>
                         </div>
@@ -402,319 +359,131 @@
         </div>
     </section>
 @endsection
+
 @push('scripts')
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // OOP Structure for Personalization Form
-        class PersonalizationForm {
-            constructor() {
-                this.currentStep = 1;
-                this.totalSteps = 3;
-                this.selectedAge = null;
-                this.selectedSkinTone = null;
-                this.uploadedFiles = [];
-                this.maxFiles = 2;
-                this.maxFileSize = 10 * 1024 * 1024; // 10MB
+        $(document).ready(function() {
+            // Initialize variables
+            let currentStep = 1;
+            const totalSteps = 3;
+            let selectedAge = null;
+            let selectedSkinTone = null;
+            let uploadedFiles = [];
 
-                this.init();
-            }
 
-            init() {
-                // Initialize Lucide icons first
-                setTimeout(() => {
-                    lucide.createIcons();
-                }, 100);
-
-                this.bindEvents();
-                this.initializeSkinToneButtons();
-                this.showStep(1);
-                this.initializeSwiper();
-            }
-
-            bindEvents() {
-                const self = this;
-
-                // Age button events
-                $(document).on('click', '.age-btn', function(e) {
-                    e.preventDefault();
-                    self.handleAgeSelection($(this));
-                });
-
-                // Character count for dedication
-                $('#dedication').on('input', function() {
-                    self.updateCharacterCount();
-                });
-
-                // File upload events - Separate handlers to avoid conflicts
-                $('#browseBtn').off('click').on('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Browse button clicked');
-                    self.triggerFileInput();
-                });
-
-                // Only bind to the upload area itself, not its children
-                $('#uploadArea').off('click').on('click', function(e) {
-                    // Only trigger if the click is directly on the upload area or its direct children
-                    // but not on the browse button
-                    if (e.target.id !== 'browseBtn' && !$(e.target).closest('#browseBtn').length) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        console.log('Upload area clicked');
-                        self.triggerFileInput();
-                    }
-                });
-
-                $('#photoInput').off('change').on('change', function(e) {
-                    console.log('File input changed');
-                    self.handleFileSelect(e);
-                });
-
-                // Drag and drop events
-                $('#uploadArea')
-                    .off('dragover').on('dragover', function(e) {
-                        self.handleDragOver(e);
-                    })
-                    .off('dragleave').on('dragleave', function(e) {
-                        self.handleDragLeave(e);
-                    })
-                    .off('drop').on('drop', function(e) {
-                        self.handleDrop(e);
-                    });
-
-                // Remove image events
-                $(document).on('click', '.remove-image-btn', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    self.removeImage($(this));
-                });
-
-                // Navigation events
-                $('#nextBtn').off('click').on('click', function(e) {
-                    e.preventDefault();
-                    self.nextStep();
-                });
-
-                $('#prevBtn').off('click').on('click', function(e) {
-                    e.preventDefault();
-                    self.prevStep();
-                });
-
-                $('#previewBtn').off('click').on('click', function(e) {
-                    e.preventDefault();
-                    self.previewBook();
-                });
-            }
-
-            initializeSkinToneButtons() {
-                const self = this;
-                $('.skin-tone-button').on('click', function() {
+            // Initialize skin tone buttons
+            function initializeSkinToneButtons() {
+                $('.skin-tone-button').click(function() {
                     $('.skin-tone-button').removeClass('selected');
                     $(this).addClass('selected');
-                    self.selectedSkinTone = $(this).data('value');
+                    selectedSkinTone = $(this).data('value');
                 });
             }
 
-            handleAgeSelection($element) {
+            // Age button click handler
+            $(document).on('click', '.age-btn', function() {
                 $('.age-btn').removeClass('bg-purple-500 text-white border-purple-500');
-                $element.addClass('bg-purple-500 text-white border-purple-500');
-                this.selectedAge = $element.data('age');
-                console.log('Selected age:', this.selectedAge);
-            }
+                $(this).addClass('bg-purple-500 text-white border-purple-500');
+                selectedAge = $(this).data('age');
+            });
 
-            updateCharacterCount() {
-                const count = $('#dedication').val().length;
+            // Character count for dedication
+            $('#dedication').on('input', function() {
+                const count = $(this).val().length;
                 $('#charCount').text(count);
-
                 if (count > 180) {
                     $('#charCount').addClass('text-red-500');
                 } else {
                     $('#charCount').removeClass('text-red-500');
                 }
-            }
+            });
 
-            triggerFileInput() {
-                console.log('Triggering file input...');
-                const fileInput = document.getElementById('photoInput');
-                if (fileInput) {
-                    // Create a new click event to ensure it works
-                    const event = new MouseEvent('click', {
-                        view: window,
-                        bubbles: false,
-                        cancelable: true
-                    });
-                    fileInput.dispatchEvent(event);
-                } else {
-                    console.error('File input not found!');
-                }
-            }
+            // File upload handling
+            $('#browseBtn, #uploadArea').click(function() {
+                $('#photoInput').click();
+            });
 
-            handleFileSelect(e) {
-                console.log('File selected:', e.target.files);
+            $('#photoInput').change(function(e) {
                 const files = Array.from(e.target.files);
-                if (files.length > 0) {
-                    this.processFiles(files);
-                }
-            }
+                handleFileUpload(files);
+            });
 
-            handleDragOver(e) {
+            // Drag and drop functionality
+            $('#uploadArea').on('dragover', function(e) {
                 e.preventDefault();
-                e.stopPropagation();
-                $('#uploadArea').addClass('border-purple-500 bg-purple-50');
-            }
+                $(this).addClass('border-purple-500 bg-purple-50');
+            });
 
-            handleDragLeave(e) {
+            $('#uploadArea').on('dragleave', function(e) {
                 e.preventDefault();
-                e.stopPropagation();
-                $('#uploadArea').removeClass('border-purple-500 bg-purple-50');
-            }
+                $(this).removeClass('border-purple-500 bg-purple-50');
+            });
 
-            handleDrop(e) {
+            $('#uploadArea').on('drop', function(e) {
                 e.preventDefault();
-                e.stopPropagation();
-                $('#uploadArea').removeClass('border-purple-500 bg-purple-50');
+                $(this).removeClass('border-purple-500 bg-purple-50');
                 const files = Array.from(e.originalEvent.dataTransfer.files);
-                console.log('Files dropped:', files);
-                this.processFiles(files);
-            }
+                handleFileUpload(files);
+            });
 
-            processFiles(files) {
-                console.log('Processing files:', files);
+            function handleFileUpload(files) {
                 const imageFiles = files.filter(file => file.type.startsWith('image/'));
 
-                if (imageFiles.length === 0) {
-                    this.showAlert('Please select image files only (JPG, PNG)', 'error');
+                if (imageFiles.length > 2) {
+                    alert('Please select maximum 2 photos');
                     return;
                 }
 
-                // Validate file count
-                if (this.uploadedFiles.length + imageFiles.length > this.maxFiles) {
-                    this.showAlert(`Please select maximum ${this.maxFiles} photos`, 'error');
-                    return;
-                }
-
-                // Validate file size
-                const oversizedFiles = imageFiles.filter(file => file.size > this.maxFileSize);
-                if (oversizedFiles.length > 0) {
-                    this.showAlert('Please select images smaller than 10MB', 'error');
-                    return;
-                }
-
-                // Add files
-                this.uploadedFiles = [...this.uploadedFiles, ...imageFiles];
-                console.log('Uploaded files:', this.uploadedFiles);
-                this.displayImagePreview();
-                this.clearFileInput();
+                uploadedFiles = imageFiles;
+                displayImagePreview(imageFiles);
             }
 
-            displayImagePreview() {
+            function displayImagePreview(files) {
                 const previewContainer = $('#imagePreview');
                 previewContainer.empty();
 
-                this.uploadedFiles.forEach((file, index) => {
+                files.forEach((file, index) => {
                     const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const previewItem = this.createPreviewItem(e.target.result, index, file.name);
-                        previewContainer.append(previewItem);
-                        // Re-initialize icons for the new content
-                        lucide.createIcons();
+                    reader.onload = function(e) {
+                        const preview = $(`
+                    <div class="relative group">
+                        <img src="${e.target.result}" class="w-full h-32 object-cover rounded-lg">
+                        <button type="button" class="remove-image absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" data-index="${index}">
+                            <i data-lucide="x" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                `);
+                        previewContainer.append(preview);
                     };
                     reader.readAsDataURL(file);
                 });
             }
 
-            createPreviewItem(src, index, filename) {
-                return $(`
-                    <div class="image-preview-item" data-index="${index}">
-                        <div class="relative group">
-                            <img src="${src}" alt="Preview ${index + 1}" class="w-full h-40 object-cover rounded-lg">
-                            <div class="image-preview-overlay">
-                                <div class="text-white text-center">
-                                    <i data-lucide="image" class="h-8 w-8 mx-auto mb-2"></i>
-                                    <p class="text-sm font-medium">${filename}</p>
-                                </div>
-                            </div>
-                            <button type="button" class="remove-image-btn remove-btn" data-index="${index}">
-                                <i data-lucide="x" class="h-4 w-4"></i>
-                            </button>
-                        </div>
-                        <div class="mt-3 text-center">
-                            <p class="text-sm font-medium text-gray-700">Photo ${index + 1}</p>
-                            <p class="text-xs text-gray-500">${this.formatFileSize(this.uploadedFiles[index].size)}</p>
-                        </div>
-                    </div>
-                `);
-            }
-
-            formatFileSize(bytes) {
-                if (bytes === 0) return '0 Bytes';
-                const k = 1024;
-                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-                const i = Math.floor(Math.log(bytes) / Math.log(k));
-                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-            }
-
-            removeImage($element) {
-                const index = parseInt($element.data('index'));
-                console.log('Removing image at index:', index);
-                this.uploadedFiles.splice(index, 1);
-                this.displayImagePreview();
-                this.clearFileInput();
-            }
-
-            clearFileInput() {
+            // Remove image
+            $(document).on('click', '.remove-image', function() {
+                const index = $(this).data('index');
+                uploadedFiles.splice(index, 1);
                 $('#photoInput').val('');
-            }
+                displayImagePreview(uploadedFiles);
+            });
 
-            showAlert(message, type = 'info') {
-                // Create a modern alert notification
-                const alertClass = type === 'error' ? 'bg-red-100 border-red-500 text-red-700' : 'bg-blue-100 border-blue-500 text-blue-700';
-                const iconName = type === 'error' ? 'alert-circle' : 'info';
-
-                const alert = $(`
-                    <div class="fixed top-4 right-4 z-50 ${alertClass} border-l-4 p-4 rounded-lg shadow-lg max-w-sm transform transition-all duration-300 translate-x-full opacity-0">
-                        <div class="flex items-center">
-                            <i data-lucide="${iconName}" class="h-5 w-5 mr-3"></i>
-                            <p class="font-medium">${message}</p>
-                        </div>
-                    </div>
-                `);
-
-                $('body').append(alert);
-                lucide.createIcons();
-
-                // Animate in
-                setTimeout(() => {
-                    alert.removeClass('translate-x-full opacity-0');
-                }, 100);
-
-                // Remove after 4 seconds
-                setTimeout(() => {
-                    alert.addClass('translate-x-full opacity-0');
-                    setTimeout(() => alert.remove(), 300);
-                }, 4000);
-            }
-
-            showStep(step) {
+            // Navigation functions
+            function showStep(step) {
                 $('.step-content').addClass('hidden');
                 $(`#step${step}`).removeClass('hidden');
 
                 // Update progress
-                const progress = (step / this.totalSteps) * 100;
+                const progress = (step / totalSteps) * 100;
                 $('#progressBar').css('width', progress + '%');
                 $('#currentStep').text(step);
                 $('#progressPercent').text(Math.round(progress));
 
-                this.updateNavigationButtons(step);
-
-                // Re-initialize Lucide icons for the new step content
-                setTimeout(() => {
-                    lucide.createIcons();
-                }, 200);
+                // Update navigation buttons
+                updateNavigationButtons(step);
             }
 
-            updateNavigationButtons(step) {
+            function updateNavigationButtons(step) {
                 const prevBtn = $('#prevBtn');
                 const nextBtn = $('#nextBtn');
                 const previewBtn = $('#previewBtn');
@@ -723,7 +492,7 @@
                     prevBtn.addClass('hidden');
                     nextBtn.removeClass('hidden');
                     previewBtn.addClass('hidden');
-                } else if (step === this.totalSteps) {
+                } else if (step === totalSteps) {
                     prevBtn.removeClass('hidden');
                     nextBtn.addClass('hidden');
                     previewBtn.removeClass('hidden');
@@ -734,118 +503,82 @@
                 }
             }
 
-            validateStep(step) {
+            function validateStep(step) {
                 switch (step) {
                     case 1:
-                        return this.validateStep1();
+                        const childName = $('#childName').val().trim();
+                        if (!childName) {
+                            alert('Please enter your child\'s name');
+                            return false;
+                        }
+                        if (!selectedAge) {
+                            alert('Please select an age');
+                            return false;
+                        }
+                        return true;
                     case 2:
-                        return this.validateStep2();
+                        const dedication = $('#dedication').val().trim();
+                        if (!dedication) {
+                            alert('Please write a dedication message');
+                            return false;
+                        }
+                        return true;
                     case 3:
-                        return this.validateStep3();
+                        if (uploadedFiles.length === 0) {
+                            alert('Please upload at least one photo');
+                            return false;
+                        }
+                        if (!$('#copyright').is(':checked')) {
+                            alert('Please agree to the image rights agreement');
+                            return false;
+                        }
+                        return true;
                     default:
                         return true;
                 }
             }
 
-            validateStep1() {
-                const childName = $('#childName').val().trim();
-                if (!childName) {
-                    this.showAlert('Please enter your child\'s name', 'error');
-                    $('#childName').focus();
-                    return false;
+            // Navigation button handlers
+            $('#nextBtn').click(function() {
+                if (validateStep(currentStep)) {
+                    currentStep++;
+                    showStep(currentStep);
                 }
-                if (!this.selectedAge) {
-                    this.showAlert('Please select an age', 'error');
-                    return false;
+            });
+
+            $('#prevBtn').click(function() {
+                currentStep--;
+                showStep(currentStep);
+            });
+
+            $('#previewBtn').click(function() {
+                if (validateStep(currentStep)) {
+                    // Here you would typically submit the form or show preview
+                    alert('Preview functionality would be implemented here!');
                 }
-                return true;
-            }
+            });
 
-            validateStep2() {
-                const dedication = $('#dedication').val().trim();
-                if (!dedication) {
-                    this.showAlert('Please write a dedication message', 'error');
-                    $('#dedication').focus();
-                    return false;
-                }
-                if (dedication.length > 200) {
-                    this.showAlert('Dedication message must be 200 characters or less', 'error');
-                    $('#dedication').focus();
-                    return false;
-                }
-                return true;
-            }
+            initializeSkinToneButtons();
+            showStep(1);
+        });
 
-            validateStep3() {
-                if (this.uploadedFiles.length === 0) {
-                    this.showAlert('Please upload at least one photo', 'error');
-                    return false;
-                }
-                if (!$('#copyright').is(':checked')) {
-                    this.showAlert('Please agree to the image rights agreement', 'error');
-                    $('#copyright').focus();
-                    return false;
-                }
-                return true;
-            }
-
-            nextStep() {
-                if (this.validateStep(this.currentStep)) {
-                    this.currentStep++;
-                    this.showStep(this.currentStep);
-                }
-            }
-
-            prevStep() {
-                this.currentStep--;
-                this.showStep(this.currentStep);
-            }
-
-            previewBook() {
-                if (this.validateStep(this.currentStep)) {
-                    const formData = this.collectFormData();
-                    console.log('Form Data:', formData);
-                    this.showAlert('Preview functionality would redirect to preview page!', 'info');
-                }
-            }
-
-            collectFormData() {
-                return {
-                    childName: $('#childName').val().trim(),
-                    age: this.selectedAge,
-                    gender: $('#gender').val(),
-                    skinTone: this.selectedSkinTone,
-                    dedication: $('#dedication').val().trim(),
-                    photos: this.uploadedFiles,
-                    copyright: $('#copyright').is(':checked')
-                };
-            }
-
-            initializeSwiper() {
-                setTimeout(() => {
-                    new Swiper(".mySwiper", {
-                        loop: true,
-                        spaceBetween: 20,
-                        autoplay: {
-                            delay: 3000,
-                            disableOnInteraction: false,
-                        },
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev"
-                        },
-                    });
-                }, 100);
-            }
-        }
-
-        // Initialize the form when document is ready
-        $(document).ready(function() {
-            new PersonalizationForm();
+        // Initialize Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+            });
         });
     </script>
+
+
 @endpush
+
