@@ -129,9 +129,9 @@
 @endpush
 @section('content')
     <!-- Selected Book Section -->
-    <section class="bg-white">
+    {{-- <section class="bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
                 <div
                     class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg mt-8 p-6 border border-gray-200">
                     <div class="flex items-center space-x-2 mb-4">
@@ -166,20 +166,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Main Form Section -->
     <section class="bg-white mb-6">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
                 <div
-                    class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg p-6 border border-gray-200">
+                    {{-- class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg p-6 border border-gray-200"> --}}
+                    class=" rounded-lg ">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <!-- Left: Multi-Step Personalization Form -->
-                        <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
-                            <div class="flex items-center space-x-2 mb-6">
+                        <div class="lg:col-span-2 bg-white rounded-lg  p-6 shadow-lg  border border-gray-200">
+                            <div class="flex items-center space-x-2 mb-6 justify-center sm:justify-self-start">
                                 <i data-lucide="heart" class="h-6 w-6 text-purple-600"></i>
-                                <h2 class="text-2xl md:text-3xl font-bold text-purple-600">Personalize Your Story</h2>
+                                <h2 class="lg:text-3xl  md:text-2xl text-xl font-bold text-purple-600">Personalize Your Story</h2>
                             </div>
 
                             <!-- Progress Bar -->
@@ -201,12 +202,24 @@
                                     <span class="text-xs text-gray-600">Photos</span>
                                 </div>
                             </div>
+                            <div class="selected-book py-6">
+                                <div class="flex items-center space-x-2 mb-4">
+                                    <i data-lucide="book-open" class="h-6 w-6 text-purple-600"></i>
+                                    <h3 class="tlg:text-3xl md:text-2xl text-xl font-semibold text-gray-900">Selected Book</h3>
+                                </div>
+                                <select name="book" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
+                                    <option selected>The Magical Adventure of Luna</option>
+                                </select>
+                            </div>
+
+
+
 
                             <form id="personalizationForm" class="space-y-8">
                                 <!-- Step 1: Child Details -->
                                 <div id="step1" class="step-content">
                                     <div class="space-y-6">
-                                        <h3 class="text-xl font-semibold text-gray-900 flex items-center space-x-2 mb-6">
+                                        <h3 class="md:text-2xl text-xl font-semibold text-gray-900 flex items-center space-x-2 mb-6">
                                             <i data-lucide="user" class="h-6 w-6 text-purple-600"></i>
                                             <span>Child Details</span>
                                         </h3>
@@ -272,7 +285,6 @@
                                                     <option value="">Select gender</option>
                                                     <option value="boy">Boy</option>
                                                     <option value="girl">Girl</option>
-                                                    <option value="prefer-not-to-say">Prefer not to say</option>
                                                 </select>
                                             </div>
 
@@ -380,20 +392,20 @@
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <div class="flex justify-between pt-6 border-t border-gray-200">
+                                <div class="flex justify-between gap-2 pt-6 border-t border-gray-200 sticky bottom-0 left-0 right-0 z-10 bg-white">
                                     <button type="button" id="prevBtn"
-                                        class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium hidden">
+                                        class="px-6 w-full text-base sm:text-xl py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium hidden">
                                         <i data-lucide="arrow-left" class="inline h-4 w-4 mr-2"></i>
                                         Previous
                                     </button>
                                     <div class="flex-1"></div>
                                     <button type="button" id="nextBtn"
-                                        class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-200">
+                                        class="px-6 w-full text-base sm:text-xl py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium  hover:opacity-90 transition-all duration-200">
                                         Next
                                         <i data-lucide="arrow-right" class="inline h-4 w-4 ml-2"></i>
                                     </button>
                                     <button type="button" id="previewBtn"
-                                        class="px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-200 hidden">
+                                        class="px-6 py-3 text-base sm:text-xl w-full bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-200 hidden">
                                         <i data-lucide="eye" class="inline h-4 w-4 mr-2"></i>
                                         Preview Book
                                     </button>
@@ -402,7 +414,7 @@
                         </div>
 
                         <!-- Right: Swiper Slider -->
-                        <div class="lg:col-span-1 bg-white rounded-lg shadow-lg p-6">
+                        <div class="lg:col-span-1 bg-white rounded-lg p-6 shadow-lg   border border-gray-200">
                             <div>
                                 <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
                                     <i data-lucide="sparkles" class="h-5 w-5 text-purple-500"></i>
@@ -435,7 +447,7 @@
                             </div>
 
                             <div
-                                class="flex flex-col gap-6 rounded-xl border py-6 bg-green-50 border-green-200 shadow-lg mt-6">
+                                class="flex flex-col gap-6 rounded-xl border py-6 bg-green-50 border-green-200 mt-6">
                                 <div class="p-6 text-center">
                                     <div
                                         class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
