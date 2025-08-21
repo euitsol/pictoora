@@ -133,7 +133,7 @@
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
                 <div
-                    class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg mt-8 p-6 border border-gray-200">
+                    class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg sm:shadow-lg shadow-sm mt-8 p-6 border border-gray-200">
                     <div class="flex items-center space-x-2 mb-4">
                         <i data-lucide="book-open" class="h-6 w-6 text-purple-600"></i>
                         <h2 class="text-2xl md:text-3xl font-bold text-purple-600">Selected Book</h2>
@@ -173,11 +173,11 @@
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
                 <div
-                    {{-- class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg shadow-lg p-6 border border-gray-200"> --}}
+                    {{-- class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg sm:shadow-lg shadow-sm p-6 border border-gray-200"> --}}
                     class=" rounded-lg ">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <!-- Left: Multi-Step Personalization Form -->
-                        <div class="lg:col-span-2 bg-white rounded-lg  p-6 shadow-lg  border border-gray-200">
+                        <div class="lg:col-span-2 bg-white rounded-lg  p-6 sm:shadow-lg shadow-sm  border border-gray-200">
                             <div class="flex items-center space-x-2 mb-6 justify-center sm:justify-self-start">
                                 <i data-lucide="heart" class="h-6 w-6 text-purple-600"></i>
                                 <h2 class="lg:text-3xl  md:text-2xl text-xl font-bold text-purple-600">Personalize Your Story</h2>
@@ -414,7 +414,7 @@
                         </div>
 
                         <!-- Right: Swiper Slider -->
-                        <div class="lg:col-span-1 bg-white rounded-lg p-6 shadow-lg   border border-gray-200">
+                        <div class="lg:col-span-1 bg-white rounded-lg p-6 sm:shadow-lg shadow-sm   border border-gray-200">
                             <div>
                                 <h3 class="font-semibold text-lg mb-2 flex items-center gap-2">
                                     <i data-lucide="sparkles" class="h-5 w-5 text-purple-500"></i>
@@ -730,7 +730,7 @@ function showAlert(message, type = 'info') {
     const iconName = type === 'error' ? 'alert-circle' : 'info';
 
     const alert = $(`
-        <div class="fixed top-4 right-4 z-50 ${alertClass} border-l-4 p-4 rounded-lg shadow-lg max-w-sm transform transition-all duration-300 translate-x-full opacity-0">
+        <div class="fixed top-4 right-4 z-50 ${alertClass} border-l-4 p-4 rounded-lg sm:shadow-lg shadow-sm max-w-sm transform transition-all duration-300 translate-x-full opacity-0">
             <div class="flex items-center">
                 <i data-lucide="${iconName}" class="h-5 w-5 mr-3"></i>
                 <p class="font-medium">${message}</p>
