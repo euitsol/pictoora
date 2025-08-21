@@ -509,8 +509,6 @@ function bindEvents() {
 
     // Only bind to the upload area itself, not its children
     $('#uploadArea').off('click').on('click', function(e) {
-        // Only trigger if the click is directly on the upload area or its direct children
-        // but not on the browse button
         if (e.target.id !== 'browseBtn' && !$(e.target).closest('#browseBtn').length) {
             e.preventDefault();
             e.stopPropagation();
@@ -538,7 +536,6 @@ function bindEvents() {
         .on('dragleave', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            // Check if we're leaving the upload area completely
             const rect = this.getBoundingClientRect();
             const x = e.originalEvent.clientX;
             const y = e.originalEvent.clientY;
@@ -584,7 +581,6 @@ function triggerFileInput() {
     console.log('Triggering file input...');
     const fileInput = document.getElementById('photoInput');
     if (fileInput) {
-        // Create a new click event to ensure it works
         const event = new MouseEvent('click', {
             view: window,
             bubbles: false,
@@ -650,8 +646,6 @@ function processFiles(files) {
         showAlert('Please select images smaller than 10MB', 'error');
         return;
     }
-
-    // Add new files to uploaded files array
     uploadedFiles = [...uploadedFiles, ...imageFiles];
     console.log('Uploaded files:', uploadedFiles);
 
@@ -668,8 +662,6 @@ function displayImagePreview() {
         reader.onload = function(e) {
             const previewItem = createPreviewItem(e.target.result, index, file.name);
             previewContainer.append(previewItem);
-
-            // Recreate icons after adding new elements
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
