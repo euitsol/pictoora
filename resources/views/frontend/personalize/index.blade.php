@@ -205,7 +205,7 @@
                             <div class="selected-book py-6">
                                 <div class="flex items-center space-x-2 mb-4">
                                     <i data-lucide="book-open" class="h-6 w-6 text-purple-600"></i>
-                                    <h3 class="tlg:text-3xl md:text-2xl text-xl font-semibold text-gray-900">Selected Book</h3>
+                                    <h3 class="md:text-xl text-base font-semibold text-gray-900">Selected Book</h3>
                                 </div>
                                 <select name="book" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
                                     <option selected>The Magical Adventure of Luna</option>
@@ -219,7 +219,7 @@
                                 <!-- Step 1: Child Details -->
                                 <div id="step1" class="step-content">
                                     <div class="space-y-6">
-                                        <h3 class="md:text-2xl text-xl font-semibold text-gray-900 flex items-center space-x-2 mb-6">
+                                        <h3 class="md:text-xl text-base font-semibold text-gray-900 flex items-center space-x-2 mb-6">
                                             <i data-lucide="user" class="h-6 w-6 text-purple-600"></i>
                                             <span>Child Details</span>
                                         </h3>
@@ -289,7 +289,7 @@
                                             </div>
 
                                             <div>
-                                                <label class="block text-sm font-medium text-gray-700 mb-3">Skin
+                                                <label class="block text-sm font-medium text-gray-700 mb-3 text-center">Skin
                                                     Tone</label>
                                                 <div class="flex space-x-4 justify-center" id="skinToneButtons">
                                                     <div class="text-center">
@@ -697,7 +697,7 @@ function createPreviewItem(src, index, filename) {
                     <i data-lucide="x" class="h-4 w-4"></i>
                 </button>
             </div>
-            <div class="mt-3 text-center">
+            <div class="my-3 text-center">
                 <p class="text-sm font-medium text-gray-700">Photo ${index + 1}</p>
                 <p class="text-xs text-gray-500">${formatFileSize(uploadedFiles[index].size)}</p>
             </div>
