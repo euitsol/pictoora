@@ -25,4 +25,5 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
 
 Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
     Route::get('/personalize/{slug?}', 'index')->name('index');
+    Route::get('/personalize-preview', 'preview')->name('preview');
 });

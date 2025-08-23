@@ -17,4 +17,9 @@ class PersonalizePageController extends FontendBaseController
         );
         return view('frontend.personalize.index');
     }
+
+    public function preview()
+    {
+        return view('frontend.personalize.preview');
+    }
 }
