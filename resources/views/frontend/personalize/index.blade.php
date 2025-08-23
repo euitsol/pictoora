@@ -392,7 +392,7 @@
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <div class="flex justify-between gap-2 pt-6 border-t border-gray-200 sticky bottom-0 left-0 right-0 z-10 bg-white">
+                                <div class="flex justify-between gap-2 pt-3 pb-3 border-t border-gray-200 sticky bottom-0 left-0 right-0 z-10 bg-white">
                                     <button type="button" id="prevBtn"
                                         class="px-6 w-full text-base sm:text-xl py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium hidden">
                                         <i data-lucide="arrow-left" class="inline h-4 w-4 mr-2"></i>

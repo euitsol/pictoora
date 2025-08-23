@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\FontendBaseController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\FontendBaseController;
 
-class PersonalizePageController extends FontendBaseController
+class PreviewPageController extends FontendBaseController
 {
-
     public function index()
     {
         $this->setupSEO(
