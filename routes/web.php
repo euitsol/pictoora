@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\HomePageController;
 use App\Http\Controllers\Frontend\BooksPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
+use App\Http\Controllers\Frontend\PreviewPageController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -25,5 +26,9 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
 
 Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
     Route::get('/personalize/{slug?}', 'index')->name('index');
-    Route::get('/personalize-preview', 'preview')->name('preview');
 });
+
+Route::controller(PreviewPageController::class)->name('preview.')->group(function () {
+    Route::get('/preview/{slug?}', 'index')->name('index');
+});
+

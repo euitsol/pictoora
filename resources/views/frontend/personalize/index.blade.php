@@ -172,15 +172,17 @@
     <section class="bg-white mb-6">
         <div class="container mx-auto px-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-8">
-                <div
-                    {{-- class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg sm:shadow-lg shadow-sm p-6 border border-gray-200"> --}}
+                <div {{--
+                    class="bg-gradient-to-br from-slate-50 to-purple-50/30 rounded-lg sm:shadow-lg shadow-sm p-6 border border-gray-200">
+                    --}}
                     class=" rounded-lg ">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <!-- Left: Multi-Step Personalization Form -->
                         <div class="lg:col-span-2 bg-white rounded-lg  p-6 sm:shadow-lg shadow-sm  border border-gray-200">
                             <div class="flex items-center space-x-2 mb-6 justify-center sm:justify-self-start">
                                 <i data-lucide="heart" class="h-6 w-6 text-purple-600"></i>
-                                <h2 class="lg:text-3xl  md:text-2xl text-xl font-bold text-purple-600">Personalize Your Story</h2>
+                                <h2 class="lg:text-3xl  md:text-2xl text-xl font-bold text-purple-600">Personalize Your
+                                    Story</h2>
                             </div>
 
                             <!-- Progress Bar -->
@@ -207,7 +209,8 @@
                                     <i data-lucide="book-open" class="h-6 w-6 text-purple-600"></i>
                                     <h3 class="md:text-xl text-base font-semibold text-gray-900">Selected Book</h3>
                                 </div>
-                                <select name="book" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
+                                <select name="book"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
                                     <option selected>The Magical Adventure of Luna</option>
                                 </select>
                             </div>
@@ -219,7 +222,8 @@
                                 <!-- Step 1: Child Details -->
                                 <div id="step1" class="step-content">
                                     <div class="space-y-6">
-                                        <h3 class="md:text-xl text-base font-semibold text-gray-900 flex items-center space-x-2 mb-6">
+                                        <h3
+                                            class="md:text-xl text-base font-semibold text-gray-900 flex items-center space-x-2 mb-6">
                                             <i data-lucide="user" class="h-6 w-6 text-purple-600"></i>
                                             <span>Child Details</span>
                                         </h3>
@@ -359,8 +363,7 @@
                                                 class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium">
                                                 Choose Files
                                             </button>
-                                            <input type="file" id="photoInput" multiple accept="image/*"
-                                                class="hidden">
+                                            <input type="file" id="photoInput" multiple accept="image/*" class="hidden">
                                             <div class="mt-6 text-xs text-gray-500 space-y-1">
                                                 <p>• Min. 500x500px recommended</p>
                                                 <p>• Clear, front-facing photos</p>
@@ -392,7 +395,8 @@
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <div class="flex justify-between gap-2 pt-6 border-t border-gray-200 sticky bottom-0 left-0 right-0 z-10 bg-white">
+                                <div
+                                    class="flex justify-between gap-2 pt-3 pb-3 border-t border-gray-200 sticky bottom-0 z-10 bg-white">
                                     <button type="button" id="prevBtn"
                                         class="px-6 w-full text-base sm:text-xl py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium hidden">
                                         <i data-lucide="arrow-left" class="inline h-4 w-4 mr-2"></i>
@@ -446,8 +450,7 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="flex flex-col gap-6 rounded-xl border py-6 bg-green-50 border-green-200 mt-6">
+                            <div class="flex flex-col gap-6 rounded-xl border py-6 bg-green-50 border-green-200 mt-6">
                                 <div class="p-6 text-center">
                                     <div
                                         class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -470,437 +473,437 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Global variables
-let currentStep = 1;
-const totalSteps = 3;
-let selectedAge = null;
-let selectedSkinTone = null;
-let uploadedFiles = [];
-const maxFiles = 2;
-const maxFileSize = 10 * 1024 * 1024; // 10MB
+        let currentStep = 1;
+        const totalSteps = 3;
+        let selectedAge = null;
+        let selectedSkinTone = null;
+        let uploadedFiles = [];
+        const maxFiles = 2;
+        const maxFileSize = 10 * 1024 * 1024; // 10MB
 
-$(document).ready(function() {
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
-    // Show first step
-    showStep(1);
-
-    // Initialize Swiper (only if library is loaded)
-    if (typeof Swiper !== 'undefined') {
-        initializeSwiper();
-    }
-
-    // Bind all events
-    bindEvents();
-
-    // Initialize skin tone buttons
-    initializeSkinToneButtons();
-});
-
-function bindEvents() {
-    // Age button events
-    $(document).on('click', '.age-btn', function(e) {
-        e.preventDefault();
-        handleAgeSelection($(this));
-    });
-
-    // Character count for dedication
-    $('#dedication').on('input', function() {
-        updateCharacterCount();
-    });
-
-    // File upload events - Separate handlers to avoid conflicts
-    $('#browseBtn').off('click').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('Browse button clicked');
-        self.triggerFileInput();
-    });
-
-    // Only bind to the upload area itself, not its children
-    $('#uploadArea').off('click').on('click', function(e) {
-        if (e.target.id !== 'browseBtn' && !$(e.target).closest('#browseBtn').length) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Upload area clicked');
-            self.triggerFileInput();
-        }
-    });
-
-    $('#photoInput').off('change').on('change', function(e) {
-        console.log('File input changed');
-        handleFileSelect(e);
-    });
-
-    // Drag and drop events - FIXED
-    $('#uploadArea')
-        .on('dragover', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).addClass('border-purple-500 bg-purple-50');
-        })
-        .on('dragenter', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        })
-        .on('dragleave', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const rect = this.getBoundingClientRect();
-            const x = e.originalEvent.clientX;
-            const y = e.originalEvent.clientY;
-
-            if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
-                $(this).removeClass('border-purple-500 bg-purple-50');
-            }
-        })
-        .on('drop', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).removeClass('border-purple-500 bg-purple-50');
-
-            const files = Array.from(e.originalEvent.dataTransfer.files);
-            processFiles(files);
-        });
-
-    // Remove image events
-    $(document).on('click', '.remove-image-btn', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        removeImage($(this));
-    });
-
-    // Navigation events
-    $('#nextBtn').on('click', function(e) {
-        e.preventDefault();
-        nextStep();
-    });
-
-    $('#prevBtn').on('click', function(e) {
-        e.preventDefault();
-        prevStep();
-    });
-
-    $('#previewBtn').on('click', function(e) {
-        e.preventDefault();
-        previewBook();
-    });
-}
-
-function triggerFileInput() {
-    console.log('Triggering file input...');
-    const fileInput = document.getElementById('photoInput');
-    if (fileInput) {
-        const event = new MouseEvent('click', {
-            view: window,
-            bubbles: false,
-            cancelable: true
-        });
-        fileInput.dispatchEvent(event);
-    } else {
-        console.error('File input not found!');
-    }
-}
-
-function initializeSkinToneButtons() {
-    $('.skin-tone-button').on('click', function() {
-        $('.skin-tone-button').removeClass('selected');
-        $(this).addClass('selected');
-        selectedSkinTone = $(this).data('value');
-    });
-}
-
-function handleAgeSelection($element) {
-    $('.age-btn').removeClass('bg-purple-500 text-white border-purple-500');
-    $element.addClass('bg-purple-500 text-white border-purple-500');
-    selectedAge = $element.data('age');
-}
-
-function updateCharacterCount() {
-    const count = $('#dedication').val().length;
-    $('#charCount').text(count);
-
-    if (count > 180) {
-        $('#charCount').addClass('text-red-500');
-    } else {
-        $('#charCount').removeClass('text-red-500');
-    }
-}
-
-function handleFileSelect(e) {
-    const files = Array.from(e.target.files);
-    console.log('Files selected:', files.length);
-
-    if (files.length > 0) {
-        processFiles(files);
-    }
-}
-
-function processFiles(files) {
-    console.log('Processing files:', files);
-
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-
-    if (imageFiles.length === 0) {
-        showAlert('Please select image files only (JPG, PNG)', 'error');
-        return;
-    }
-
-    if (uploadedFiles.length + imageFiles.length > maxFiles) {
-        showAlert(`Please select maximum ${maxFiles} photos`, 'error');
-        return;
-    }
-
-    const oversizedFiles = imageFiles.filter(file => file.size > maxFileSize);
-    if (oversizedFiles.length > 0) {
-        showAlert('Please select images smaller than 10MB', 'error');
-        return;
-    }
-    uploadedFiles = [...uploadedFiles, ...imageFiles];
-    console.log('Uploaded files:', uploadedFiles);
-
-    displayImagePreview();
-    clearFileInput();
-}
-
-function displayImagePreview() {
-    const previewContainer = $('#imagePreview');
-    previewContainer.empty();
-
-    uploadedFiles.forEach((file, index) => {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const previewItem = createPreviewItem(e.target.result, index, file.name);
-            previewContainer.append(previewItem);
+        $(document).ready(function () {
+            // Initialize Lucide icons
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
-        };
-        reader.readAsDataURL(file);
-    });
-}
 
-function createPreviewItem(src, index, filename) {
-    return $(`
-        <div class="image-preview-item" data-index="${index}">
-            <div class="relative group">
-                <img src="${src}" alt="Preview ${index + 1}" class="w-full h-40 object-cover rounded-lg">
-                <div class="image-preview-overlay">
-                    <div class="text-white text-center">
-                        <i data-lucide="image" class="h-8 w-8 mx-auto mb-2"></i>
-                        <p class="text-sm font-medium">${filename}</p>
-                    </div>
-                </div>
-                <button type="button" class="remove-image-btn remove-btn" data-index="${index}">
-                    <i data-lucide="x" class="h-4 w-4"></i>
-                </button>
-            </div>
-            <div class="my-3 text-center">
-                <p class="text-sm font-medium text-gray-700">Photo ${index + 1}</p>
-                <p class="text-xs text-gray-500">${formatFileSize(uploadedFiles[index].size)}</p>
-            </div>
-        </div>
-    `);
-}
+            // Show first step
+            showStep(1);
 
-function formatFileSize(bytes) {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-}
+            // Initialize Swiper (only if library is loaded)
+            if (typeof Swiper !== 'undefined') {
+                initializeSwiper();
+            }
 
-function removeImage($element) {
-    const index = parseInt($element.data('index'));
-    uploadedFiles.splice(index, 1);
-    displayImagePreview();
-    clearFileInput();
-}
+            // Bind all events
+            bindEvents();
 
-function clearFileInput() {
-    $('#photoInput').val('');
-}
-
-function showAlert(message, type = 'info') {
-    const alertClass = type === 'error' ? 'bg-red-100 border-red-500 text-red-700' :
-        'bg-blue-100 border-blue-500 text-blue-700';
-    const iconName = type === 'error' ? 'alert-circle' : 'info';
-
-    const alert = $(`
-        <div class="fixed top-4 right-4 z-50 ${alertClass} border-l-4 p-4 rounded-lg sm:shadow-lg shadow-sm max-w-sm transform transition-all duration-300 translate-x-full opacity-0">
-            <div class="flex items-center">
-                <i data-lucide="${iconName}" class="h-5 w-5 mr-3"></i>
-                <p class="font-medium">${message}</p>
-            </div>
-        </div>
-    `);
-
-    $('body').append(alert);
-
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
-    // Animate in
-    setTimeout(() => {
-        alert.removeClass('translate-x-full opacity-0');
-    }, 10);
-
-    // Remove after 4 seconds
-    setTimeout(() => {
-        alert.addClass('translate-x-full opacity-0');
-        setTimeout(() => alert.remove(), 300);
-    }, 4000);
-}
-
-function showStep(step) {
-    $('.step-content').addClass('hidden');
-    $(`#step${step}`).removeClass('hidden');
-
-    // Update progress
-    const progress = (step / totalSteps) * 100;
-    $('#progressBar').css('width', progress + '%');
-    $('#currentStep').text(step);
-    $('#progressPercent').text(Math.round(progress));
-
-    updateNavigationButtons(step);
-
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-}
-
-function updateNavigationButtons(step) {
-    const prevBtn = $('#prevBtn');
-    const nextBtn = $('#nextBtn');
-    const previewBtn = $('#previewBtn');
-
-    if (step === 1) {
-        prevBtn.addClass('hidden');
-        nextBtn.removeClass('hidden');
-        previewBtn.addClass('hidden');
-    } else if (step === totalSteps) {
-        prevBtn.removeClass('hidden');
-        nextBtn.addClass('hidden');
-        previewBtn.removeClass('hidden');
-    } else {
-        prevBtn.removeClass('hidden');
-        nextBtn.removeClass('hidden');
-        previewBtn.addClass('hidden');
-    }
-}
-
-function validateStep(step) {
-    switch (step) {
-        case 1:
-            return validateStep1();
-        case 2:
-            return validateStep2();
-        case 3:
-            return validateStep3();
-        default:
-            return true;
-    }
-}
-
-function validateStep1() {
-    const childName = $('#childName').val().trim();
-    if (!childName) {
-        showAlert('Please enter your child\'s name', 'error');
-        $('#childName').focus();
-        return false;
-    }
-    if (!selectedAge) {
-        showAlert('Please select an age', 'error');
-        return false;
-    }
-    return true;
-}
-
-function validateStep2() {
-    const dedication = $('#dedication').val().trim();
-    if (!dedication) {
-        showAlert('Please write a dedication message', 'error');
-        $('#dedication').focus();
-        return false;
-    }
-    if (dedication.length > 200) {
-        showAlert('Dedication message must be 200 characters or less', 'error');
-        $('#dedication').focus();
-        return false;
-    }
-    return true;
-}
-
-function validateStep3() {
-    if (uploadedFiles.length === 0) {
-        showAlert('Please upload at least one photo', 'error');
-        return false;
-    }
-    if (!$('#copyright').is(':checked')) {
-        showAlert('Please agree to the image rights agreement', 'error');
-        $('#copyright').focus();
-        return false;
-    }
-    return true;
-}
-
-function nextStep() {
-    if (validateStep(currentStep)) {
-        currentStep++;
-        showStep(currentStep);
-    }
-}
-
-function prevStep() {
-    currentStep--;
-    showStep(currentStep);
-}
-
-function previewBook() {
-    if (validateStep(currentStep)) {
-        const formData = collectFormData();
-        console.log('Form Data:', formData);
-        showAlert('Preview functionality would redirect to preview page!', 'info');
-    }
-}
-
-function collectFormData() {
-    return {
-        childName: $('#childName').val().trim(),
-        age: selectedAge,
-        gender: $('#gender').val(),
-        skinTone: selectedSkinTone,
-        dedication: $('#dedication').val().trim(),
-        photos: uploadedFiles,
-        copyright: $('#copyright').is(':checked')
-    };
-}
-
-function initializeSwiper() {
-    try {
-        new Swiper(".mySwiper", {
-            loop: true,
-            spaceBetween: 20,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            },
+            // Initialize skin tone buttons
+            initializeSkinToneButtons();
         });
-    } catch (error) {
-        console.log('Swiper not initialized:', error);
-    }
-}
+
+        function bindEvents() {
+            // Age button events
+            $(document).on('click', '.age-btn', function (e) {
+                e.preventDefault();
+                handleAgeSelection($(this));
+            });
+
+            // Character count for dedication
+            $('#dedication').on('input', function () {
+                updateCharacterCount();
+            });
+
+            // File upload events - Separate handlers to avoid conflicts
+            $('#browseBtn').off('click').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Browse button clicked');
+                self.triggerFileInput();
+            });
+
+            // Only bind to the upload area itself, not its children
+            $('#uploadArea').off('click').on('click', function (e) {
+                if (e.target.id !== 'browseBtn' && !$(e.target).closest('#browseBtn').length) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Upload area clicked');
+                    self.triggerFileInput();
+                }
+            });
+
+            $('#photoInput').off('change').on('change', function (e) {
+                console.log('File input changed');
+                handleFileSelect(e);
+            });
+
+            // Drag and drop events - FIXED
+            $('#uploadArea')
+                .on('dragover', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(this).addClass('border-purple-500 bg-purple-50');
+                })
+                .on('dragenter', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                })
+                .on('dragleave', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const rect = this.getBoundingClientRect();
+                    const x = e.originalEvent.clientX;
+                    const y = e.originalEvent.clientY;
+
+                    if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
+                        $(this).removeClass('border-purple-500 bg-purple-50');
+                    }
+                })
+                .on('drop', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(this).removeClass('border-purple-500 bg-purple-50');
+
+                    const files = Array.from(e.originalEvent.dataTransfer.files);
+                    processFiles(files);
+                });
+
+            // Remove image events
+            $(document).on('click', '.remove-image-btn', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                removeImage($(this));
+            });
+
+            // Navigation events
+            $('#nextBtn').on('click', function (e) {
+                e.preventDefault();
+                nextStep();
+            });
+
+            $('#prevBtn').on('click', function (e) {
+                e.preventDefault();
+                prevStep();
+            });
+
+            $('#previewBtn').on('click', function (e) {
+                e.preventDefault();
+                previewBook();
+            });
+        }
+
+        function triggerFileInput() {
+            console.log('Triggering file input...');
+            const fileInput = document.getElementById('photoInput');
+            if (fileInput) {
+                const event = new MouseEvent('click', {
+                    view: window,
+                    bubbles: false,
+                    cancelable: true
+                });
+                fileInput.dispatchEvent(event);
+            } else {
+                console.error('File input not found!');
+            }
+        }
+
+        function initializeSkinToneButtons() {
+            $('.skin-tone-button').on('click', function () {
+                $('.skin-tone-button').removeClass('selected');
+                $(this).addClass('selected');
+                selectedSkinTone = $(this).data('value');
+            });
+        }
+
+        function handleAgeSelection($element) {
+            $('.age-btn').removeClass('bg-purple-500 text-white border-purple-500');
+            $element.addClass('bg-purple-500 text-white border-purple-500');
+            selectedAge = $element.data('age');
+        }
+
+        function updateCharacterCount() {
+            const count = $('#dedication').val().length;
+            $('#charCount').text(count);
+
+            if (count > 180) {
+                $('#charCount').addClass('text-red-500');
+            } else {
+                $('#charCount').removeClass('text-red-500');
+            }
+        }
+
+        function handleFileSelect(e) {
+            const files = Array.from(e.target.files);
+            console.log('Files selected:', files.length);
+
+            if (files.length > 0) {
+                processFiles(files);
+            }
+        }
+
+        function processFiles(files) {
+            console.log('Processing files:', files);
+
+            const imageFiles = files.filter(file => file.type.startsWith('image/'));
+
+            if (imageFiles.length === 0) {
+                showAlert('Please select image files only (JPG, PNG)', 'error');
+                return;
+            }
+
+            if (uploadedFiles.length + imageFiles.length > maxFiles) {
+                showAlert(`Please select maximum ${maxFiles} photos`, 'error');
+                return;
+            }
+
+            const oversizedFiles = imageFiles.filter(file => file.size > maxFileSize);
+            if (oversizedFiles.length > 0) {
+                showAlert('Please select images smaller than 10MB', 'error');
+                return;
+            }
+            uploadedFiles = [...uploadedFiles, ...imageFiles];
+            console.log('Uploaded files:', uploadedFiles);
+
+            displayImagePreview();
+            clearFileInput();
+        }
+
+        function displayImagePreview() {
+            const previewContainer = $('#imagePreview');
+            previewContainer.empty();
+
+            uploadedFiles.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const previewItem = createPreviewItem(e.target.result, index, file.name);
+                    previewContainer.append(previewItem);
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function createPreviewItem(src, index, filename) {
+            return $(`
+            <div class="image-preview-item" data-index="${index}">
+                <div class="relative group">
+                    <img src="${src}" alt="Preview ${index + 1}" class="w-full h-40 object-cover rounded-lg">
+                    <div class="image-preview-overlay">
+                        <div class="text-white text-center">
+                            <i data-lucide="image" class="h-8 w-8 mx-auto mb-2"></i>
+                            <p class="text-sm font-medium">${filename}</p>
+                        </div>
+                    </div>
+                    <button type="button" class="remove-image-btn remove-btn" data-index="${index}">
+                        <i data-lucide="x" class="h-4 w-4"></i>
+                    </button>
+                </div>
+                <div class="my-3 text-center">
+                    <p class="text-sm font-medium text-gray-700">Photo ${index + 1}</p>
+                    <p class="text-xs text-gray-500">${formatFileSize(uploadedFiles[index].size)}</p>
+                </div>
+            </div>
+        `);
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function removeImage($element) {
+            const index = parseInt($element.data('index'));
+            uploadedFiles.splice(index, 1);
+            displayImagePreview();
+            clearFileInput();
+        }
+
+        function clearFileInput() {
+            $('#photoInput').val('');
+        }
+
+        function showAlert(message, type = 'info') {
+            const alertClass = type === 'error' ? 'bg-red-100 border-red-500 text-red-700' :
+                'bg-blue-100 border-blue-500 text-blue-700';
+            const iconName = type === 'error' ? 'alert-circle' : 'info';
+
+            const alert = $(`
+            <div class="fixed top-4 right-4 z-50 ${alertClass} border-l-4 p-4 rounded-lg sm:shadow-lg shadow-sm max-w-sm transform transition-all duration-300 translate-x-full opacity-0">
+                <div class="flex items-center">
+                    <i data-lucide="${iconName}" class="h-5 w-5 mr-3"></i>
+                    <p class="font-medium">${message}</p>
+                </div>
+            </div>
+        `);
+
+            $('body').append(alert);
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Animate in
+            setTimeout(() => {
+                alert.removeClass('translate-x-full opacity-0');
+            }, 10);
+
+            // Remove after 4 seconds
+            setTimeout(() => {
+                alert.addClass('translate-x-full opacity-0');
+                setTimeout(() => alert.remove(), 300);
+            }, 4000);
+        }
+
+        function showStep(step) {
+            $('.step-content').addClass('hidden');
+            $(`#step${step}`).removeClass('hidden');
+
+            // Update progress
+            const progress = (step / totalSteps) * 100;
+            $('#progressBar').css('width', progress + '%');
+            $('#currentStep').text(step);
+            $('#progressPercent').text(Math.round(progress));
+
+            updateNavigationButtons(step);
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function updateNavigationButtons(step) {
+            const prevBtn = $('#prevBtn');
+            const nextBtn = $('#nextBtn');
+            const previewBtn = $('#previewBtn');
+
+            if (step === 1) {
+                prevBtn.addClass('hidden');
+                nextBtn.removeClass('hidden');
+                previewBtn.addClass('hidden');
+            } else if (step === totalSteps) {
+                prevBtn.removeClass('hidden');
+                nextBtn.addClass('hidden');
+                previewBtn.removeClass('hidden');
+            } else {
+                prevBtn.removeClass('hidden');
+                nextBtn.removeClass('hidden');
+                previewBtn.addClass('hidden');
+            }
+        }
+
+        function validateStep(step) {
+            switch (step) {
+                case 1:
+                    return validateStep1();
+                case 2:
+                    return validateStep2();
+                case 3:
+                    return validateStep3();
+                default:
+                    return true;
+            }
+        }
+
+        function validateStep1() {
+            const childName = $('#childName').val().trim();
+            if (!childName) {
+                showAlert('Please enter your child\'s name', 'error');
+                $('#childName').focus();
+                return false;
+            }
+            if (!selectedAge) {
+                showAlert('Please select an age', 'error');
+                return false;
+            }
+            return true;
+        }
+
+        function validateStep2() {
+            const dedication = $('#dedication').val().trim();
+            if (!dedication) {
+                showAlert('Please write a dedication message', 'error');
+                $('#dedication').focus();
+                return false;
+            }
+            if (dedication.length > 200) {
+                showAlert('Dedication message must be 200 characters or less', 'error');
+                $('#dedication').focus();
+                return false;
+            }
+            return true;
+        }
+
+        function validateStep3() {
+            if (uploadedFiles.length === 0) {
+                showAlert('Please upload at least one photo', 'error');
+                return false;
+            }
+            if (!$('#copyright').is(':checked')) {
+                showAlert('Please agree to the image rights agreement', 'error');
+                $('#copyright').focus();
+                return false;
+            }
+            return true;
+        }
+
+        function nextStep() {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+
+        function prevStep() {
+            currentStep--;
+            showStep(currentStep);
+        }
+
+        function previewBook() {
+            if (validateStep(currentStep)) {
+                const formData = collectFormData();
+                console.log('Form Data:', formData);
+                showAlert('Preview functionality would redirect to preview page!', 'info');
+            }
+        }
+
+        function collectFormData() {
+            return {
+                childName: $('#childName').val().trim(),
+                age: selectedAge,
+                gender: $('#gender').val(),
+                skinTone: selectedSkinTone,
+                dedication: $('#dedication').val().trim(),
+                photos: uploadedFiles,
+                copyright: $('#copyright').is(':checked')
+            };
+        }
+
+        function initializeSwiper() {
+            try {
+                new Swiper(".mySwiper", {
+                    loop: true,
+                    spaceBetween: 20,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev"
+                    },
+                });
+            } catch (error) {
+                console.log('Swiper not initialized:', error);
+            }
+        }
     </script>
 @endpush
