@@ -260,184 +260,212 @@
                                 </div>
                                 <h3 class="text-xl font-bold text-purple-900">Book Pages</h3>
                             </div>
-                            <div id="" class="space-y-4">
+                            <div id="thumbnail-container" class="space-y-4">
                                 <!-- Cover Page -->
-                                <div
+                                <div id="thumbnail-cover"
                                     class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
-                                    <button
-                                        class="thumbnail-btn w-full aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                        data-page="0">
-                                        <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                            <img src="https://placehold.co/400x600?text=Cover+Page&font=roboto"
-                                                alt="Cover Page" class="w-full h-full object-cover">
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                    <a href="#page-0" class="block">
+                                        <button
+                                            class="thumbnail-btn w-full aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                            data-page="0">
+                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                <img src="https://placehold.co/400x600?text=Cover+Page&font=roboto"
+                                                    alt="Cover Page" class="w-full h-full object-cover">
+                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                </div>
+                                                <div
+                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                    Cover
+                                                </div>
                                             </div>
-                                            <div
-                                                class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                Cover
-                                            </div>
-                                        </div>
-                                    </button>
+                                        </button>
+                                    </a>
                                 </div>
 
                                 <!-- Pages 1-2 -->
-                                <div
+                                <div id="thumbnail-pages-1-2"
                                     class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
                                     <div class="grid grid-cols-2 gap-1">
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="1">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+1&font=roboto"
-                                                    alt="Page 1" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                        <a href="#page-1" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="1">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+1&font=roboto"
+                                                        alt="Page 1" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        1
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    1
+                                            </button>
+                                        </a>
+                                        <a href="#page-2" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="2">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+2&font=roboto"
+                                                        alt="Page 2" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        2
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </button>
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="2">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+2&font=roboto"
-                                                    alt="Page 2" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
-                                                </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    2
-                                                </div>
-                                            </div>
-                                        </button>
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
 
                                 <!-- Pages 3-4 -->
-                                <div
+                                <div id="thumbnail-pages-3-4"
                                     class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
                                     <div class="grid grid-cols-2 gap-1">
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="3">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+3&font=roboto"
-                                                    alt="Page 3" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                        <a href="#page-3" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="3">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+3&font=roboto"
+                                                        alt="Page 3" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        3
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    3
+                                            </button>
+                                        </a>
+                                        <a href="#page-4" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="4">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+4&font=roboto"
+                                                        alt="Page 4" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        4
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </button>
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="4">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+4&font=roboto"
-                                                    alt="Page 4" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
-                                                </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    4
-                                                </div>
-                                            </div>
-                                        </button>
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
 
                                 <!-- Pages 5-6 -->
-                                <div
+                                <div id="thumbnail-pages-5-6"
                                     class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
                                     <div class="grid grid-cols-2 gap-1">
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="5">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+5&font=roboto"
-                                                    alt="Page 5" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                        <a href="#page-5" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="5">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+5&font=roboto"
+                                                        alt="Page 5" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        5
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    5
+                                            </button>
+                                        </a>
+                                        <a href="#page-6" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="6">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+6&font=roboto"
+                                                        alt="Page 6" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        6
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </button>
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="6">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+6&font=roboto"
-                                                    alt="Page 6" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
-                                                </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    6
-                                                </div>
-                                            </div>
-                                        </button>
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
 
                                 <!-- Pages 7-8 -->
-                                <div
+                                <div id="thumbnail-pages-7-8"
                                     class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
                                     <div class="grid grid-cols-2 gap-1">
-                                        <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="7">
-                                            <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+7&font=roboto"
-                                                    alt="Page 7" class="w-full h-full object-cover">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                        <a href="#page-7" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="7">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+7&font=roboto"
+                                                        alt="Page 7" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        7
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    7
+                                            </button>
+                                        </a>
+                                        <a href="#page-8" class="block">
+                                            <button
+                                                class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                                data-page="8">
+                                                <div class="relative w-full h-full rounded-lg overflow-hidden">
+                                                    <img src="https://placehold.co/400x600?text=Page+8&font=roboto"
+                                                        alt="Page 8" class="w-full h-full object-cover">
+                                                    <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                    </div>
+                                                    <div
+                                                        class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
+                                                        8
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </button>
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- End Page -->
+                                <div id="thumbnail-end"
+                                    class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
+                                    <a href="#page-9" class="block">
                                         <button
-                                            class="thumbnail-btn aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                            data-page="8">
+                                            class="thumbnail-btn w-full aspect-[3/4] transition-all duration-200 hover:scale-105"
+                                            data-page="9">
                                             <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                                <img src="https://placehold.co/400x600?text=Page+8&font=roboto"
-                                                    alt="Page 8" class="w-full h-full object-cover">
+                                                <img src="https://placehold.co/400x600?text=End+Page&font=roboto"
+                                                    alt="End Page" class="w-full h-full object-cover">
                                                 <div
                                                     class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
                                                 </div>
                                                 <div
                                                     class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                    8
+                                                    End
                                                 </div>
                                             </div>
                                         </button>
-                                    </div>
-                                </div>
-
-                                <!-- End Page -->
-                                <div
-                                    class="thumbnail-hover rounded-xl overflow-hidden border-2 border-purple-200 hover:border-purple-300">
-                                    <button
-                                        class="thumbnail-btn w-full aspect-[3/4] transition-all duration-200 hover:scale-105"
-                                        data-page="9">
-                                        <div class="relative w-full h-full rounded-lg overflow-hidden">
-                                            <img src="https://placehold.co/400x600?text=End+Page&font=roboto"
-                                                alt="End Page" class="w-full h-full object-cover">
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
-                                            </div>
-                                            <div
-                                                class="absolute bottom-2 left-2 page-number text-white text-xs px-2 py-1 rounded-md font-semibold">
-                                                End
-                                            </div>
-                                        </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -499,8 +527,33 @@
                                     </div>
                                 </div>
 
+                                <!-- Page 2 (separate for individual navigation) -->
+                                <div class="page-spread" data-page="2" id="page-2">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <div class="flex h-[190px] md:h-[500px] items-center justify-center">
+                                            <div class="w-full max-w-5xl h-full flex">
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+1&font=roboto"
+                                                            alt="Page 1" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                                <div class="w-2 book-binding rounded-lg"></div>
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+2&font=roboto"
+                                                            alt="Page 2" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Pages 3-4 -->
-                                <div class="page-spread " data-page="3" id="page-3">
+                                <div class="page-spread" data-page="3" id="page-3">
                                     <div class="rounded-xl overflow-hidden">
                                         <div class="h-[190px] md:h-[500px] items-center justify-center">
                                             <div class="w-full max-w-5xl h-full flex">
@@ -529,10 +582,35 @@
                                     </div>
                                 </div>
 
-                                <!-- Pages 5-6 -->
-                                <div class="page-spread " data-page="5" id="page-5">
+                                <!-- Page 4 (separate for individual navigation) -->
+                                <div class="page-spread" data-page="4" id="page-4">
                                     <div class="rounded-xl overflow-hidden">
-                                        <div class="flex  h-[190px] md:h-[500px] items-center justify-center">
+                                        <div class="h-[190px] md:h-[500px] items-center justify-center">
+                                            <div class="w-full max-w-5xl h-full flex">
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+3&font=roboto"
+                                                            alt="Page 3" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                                <div class="w-2 book-binding rounded-lg"></div>
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+4&font=roboto"
+                                                            alt="Page 4" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pages 5-6 -->
+                                <div class="page-spread" data-page="5" id="page-5">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <div class="flex h-[190px] md:h-[500px] items-center justify-center">
                                             <div class="w-full max-w-5xl h-full flex">
                                                 <div class="w-1/2 h-full">
                                                     <div
@@ -559,10 +637,35 @@
                                     </div>
                                 </div>
 
-                                <!-- Pages 7-8 -->
-                                <div class="page-spread " data-page="7" id="page-7">
+                                <!-- Page 6 (separate for individual navigation) -->
+                                <div class="page-spread" data-page="6" id="page-6">
                                     <div class="rounded-xl overflow-hidden">
-                                        <div class="flex  h-[190px] md:h-[500px] items-center justify-center">
+                                        <div class="flex h-[190px] md:h-[500px] items-center justify-center">
+                                            <div class="w-full max-w-5xl h-full flex">
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+5&font=roboto"
+                                                            alt="Page 5" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                                <div class="w-2 book-binding rounded-lg"></div>
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+6&font=roboto"
+                                                            alt="Page 6" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pages 7-8 -->
+                                <div class="page-spread" data-page="7" id="page-7">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <div class="flex h-[190px] md:h-[500px] items-center justify-center">
                                             <div class="w-full max-w-5xl h-full flex">
                                                 <div class="w-1/2 h-full">
                                                     <div
@@ -589,8 +692,33 @@
                                     </div>
                                 </div>
 
+                                <!-- Page 8 (separate for individual navigation) -->
+                                <div class="page-spread" data-page="8" id="page-8">
+                                    <div class="rounded-xl overflow-hidden">
+                                        <div class="flex h-[190px] md:h-[500px] items-center justify-center">
+                                            <div class="w-full max-w-5xl h-full flex">
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+7&font=roboto"
+                                                            alt="Page 7" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                                <div class="w-2 book-binding rounded-lg"></div>
+                                                <div class="w-1/2 h-full">
+                                                    <div
+                                                        class="relative w-full h-full page-shadow rounded-xl overflow-hidden">
+                                                        <img src="https://placehold.co/400x600?text=Page+8&font=roboto"
+                                                            alt="Page 8" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- End Page -->
-                                <div class="page-spread " data-page="9" id="page-9">
+                                <div class="page-spread" data-page="9" id="page-9">
                                     <div class="relative rounded-xl overflow-hidden">
                                         <div class="flex h-[190px] md:h-[500px] items-center justify-center">
                                             <div class="w-full max-w-2xl h-full">
@@ -607,7 +735,8 @@
                                     </div>
                                 </div>
 
-                                <div class="page-spread " data-page="9" id="page-9">
+                                <!-- Checkout Section -->
+                                <div class="page-spread" data-page="10" id="page-10">
                                     <div class="relative rounded-sm overflow-hidden">
                                         <div class="btn gradient-bg p-4 text-white text-center">Checkout</div>
                                     </div>
@@ -626,32 +755,106 @@
 @push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Page mapping for thumbnail groups
+            const pageGroups = {
+                0: 'thumbnail-cover',
+                1: 'thumbnail-pages-1-2',
+                2: 'thumbnail-pages-1-2',
+                3: 'thumbnail-pages-3-4',
+                4: 'thumbnail-pages-3-4',
+                5: 'thumbnail-pages-5-6',
+                6: 'thumbnail-pages-5-6',
+                7: 'thumbnail-pages-7-8',
+                8: 'thumbnail-pages-7-8',
+                9: 'thumbnail-end'
+            };
+
             // Get all thumbnail buttons
             const thumbnailButtons = document.querySelectorAll('.thumbnail-btn');
+            const thumbnailContainers = document.querySelectorAll('[id^="thumbnail-"]');
 
-            // Add click event listener to each thumbnail
+            // Function to remove active class from all thumbnails
+            function clearActiveThumbnails() {
+                thumbnailContainers.forEach(container => {
+                    container.classList.remove('thumbnail-active');
+                });
+            }
+
+            // Function to activate thumbnail group
+            function activateThumbnailGroup(pageNumber) {
+                clearActiveThumbnails();
+                const groupId = pageGroups[pageNumber];
+                if (groupId) {
+                    const container = document.getElementById(groupId);
+                    if (container) {
+                        container.classList.add('thumbnail-active');
+                    }
+                }
+            }
+
+            // Add click event listeners to thumbnail buttons
             thumbnailButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetPage = this.getAttribute('data-page');
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageNumber = parseInt(this.getAttribute('data-page'));
 
-                    // Remove active class from all thumbnails
-                    document.querySelectorAll('.thumbnail-hover').forEach(thumb => {
-                        thumb.classList.remove('thumbnail-active');
-                    });
+                    // Activate the corresponding thumbnail group
+                    activateThumbnailGroup(pageNumber);
 
-                    // Add active class to clicked thumbnail
-                    this.closest('.thumbnail-hover').classList.add('thumbnail-active');
-
-                    // Find and scroll to target page
-                    const targetElement = document.querySelector(`[data-page="${targetPage}"]`);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
+                    // Scroll to the page
+                    const targetPage = document.getElementById(`page-${pageNumber}`);
+                    if (targetPage) {
+                        targetPage.scrollIntoView({
                             behavior: 'smooth',
-                            block: 'center'
+                            block: 'start'
                         });
                     }
                 });
             });
+
+            // Intersection Observer to highlight active thumbnail based on scroll position
+            const pageSpreads = document.querySelectorAll('.page-spread');
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '-20% 0px -20% 0px'
+            };
+
+            const pageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const pageNumber = parseInt(entry.target.getAttribute('data-page'));
+                        activateThumbnailGroup(pageNumber);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all page spreads
+            pageSpreads.forEach(spread => {
+                pageObserver.observe(spread);
+            });
+
+            // Handle anchor links for smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Activate corresponding thumbnail
+                        const pageNumber = parseInt(targetElement.getAttribute('data-page'));
+                        activateThumbnailGroup(pageNumber);
+                    }
+                });
+            });
+
+            // Initialize with first page active
+            activateThumbnailGroup(0);
         });
     </script>
 @endpush
