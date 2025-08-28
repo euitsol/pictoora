@@ -3,4 +3,3 @@
 {{-- <script src="{{ asset('frontend/js/custom.js') }}"></script> --}}
 
 @stack('scripts')
-

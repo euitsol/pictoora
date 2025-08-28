@@ -128,6 +128,20 @@
     </style>
 @endpush
 @section('content')
+
+    <section
+        class="bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 px-6 py-4 sticky top-0 z-20 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h2 class="text-lg sm:text-xl font-bold text-purple-900">The Magical Adventure of Luna</h2>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Selected Book Section -->
     {{-- <section class="bg-white">
         <div class="container mx-auto px-4">
@@ -204,19 +218,6 @@
                                     <span class="text-xs text-gray-600">Photos</span>
                                 </div>
                             </div>
-                            <div class="selected-book py-6">
-                                <div class="flex items-center space-x-2 mb-4">
-                                    <i data-lucide="book-open" class="h-6 w-6 text-purple-600"></i>
-                                    <h3 class="md:text-xl text-base font-semibold text-gray-900">Selected Book</h3>
-                                </div>
-                                <select name="book"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
-                                    <option selected>The Magical Adventure of Luna</option>
-                                </select>
-                            </div>
-
-
-
 
                             <form id="personalizationForm" class="space-y-8">
                                 <!-- Step 1: Child Details -->
@@ -241,42 +242,21 @@
                                         <!-- Age -->
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-3">Age *</label>
-                                            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3"
-                                                id="ageButtons">
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="2">2</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="3">3</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="4">4</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="5">5</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="6">6</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="7">7</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="8">8</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="9">9</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="10">10</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="11">11</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="12">12</button>
-                                            </div>
+                                            <select id="age" name="age"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600 focus:ring-purple-600 focus:ring-2 transition-all">
+                                                <option value="">Select age</option>
+                                                <option value="2">2 years</option>
+                                                <option value="3">3 years</option>
+                                                <option value="4">4 years</option>
+                                                <option value="5">5 years</option>
+                                                <option value="6">6 years</option>
+                                                <option value="7">7 years</option>
+                                                <option value="8">8 years</option>
+                                                <option value="9">9 years</option>
+                                                <option value="10">10 years</option>
+                                                <option value="11">11 years</option>
+                                                <option value="12">12 years</option>
+                                            </select>
                                         </div>
 
                                         <!-- Gender & Skin Tone -->
@@ -396,7 +376,7 @@
 
                                 <!-- Navigation Buttons -->
                                 <div
-                                    class="flex justify-between gap-2 pt-3 pb-3 border-t border-gray-200 sticky bottom-0 z-10 bg-white">
+                                    class="flex justify-between gap-2 pt-3 pb-3 border-t border-gray-200 bg-white">
                                     <button type="button" id="prevBtn"
                                         class="px-6 w-full text-base sm:text-xl py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium hidden">
                                         <i data-lucide="arrow-left" class="inline h-4 w-4 mr-2"></i>
@@ -504,8 +484,7 @@
 
         function bindEvents() {
             // Age button events
-            $(document).on('click', '.age-btn', function (e) {
-                e.preventDefault();
+            $(document).on('change', '#age', function (e) {
                 handleAgeSelection($(this));
             });
 
@@ -616,9 +595,7 @@
         }
 
         function handleAgeSelection($element) {
-            $('.age-btn').removeClass('bg-purple-500 text-white border-purple-500');
-            $element.addClass('bg-purple-500 text-white border-purple-500');
-            selectedAge = $element.data('age');
+            selectedAge = $element.val();
         }
 
         function updateCharacterCount() {
