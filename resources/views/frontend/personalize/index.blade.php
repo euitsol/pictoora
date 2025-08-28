@@ -128,6 +128,20 @@
     </style>
 @endpush
 @section('content')
+
+<section
+class="bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 px-6 py-4 sticky top-0 z-20 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+        <div class="flex items-center gap-4">
+            <div class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+                <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+            </div>
+            <h2 class="text-lg sm:text-xl font-bold text-purple-900">The Magical Adventure of Luna</h2>
+        </div>
+    </div>
+</div>
+</section>
     <!-- Selected Book Section -->
     {{-- <section class="bg-white">
         <div class="container mx-auto px-4">
@@ -241,41 +255,21 @@
                                         <!-- Age -->
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700 mb-3">Age *</label>
-                                            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3"
+                                            <div class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-3"
                                                 id="ageButtons">
                                                 <button type="button"
                                                     class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="2">2</button>
+                                                    data-age="2">2 - 5</button>
                                                 <button type="button"
                                                     class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="3">3</button>
+                                                    data-age="3">6 - 8</button>
                                                 <button type="button"
                                                     class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="4">4</button>
+                                                    data-age="4">10 - 12</button>
                                                 <button type="button"
                                                     class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="5">5</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="6">6</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="7">7</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="8">8</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="9">9</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="10">10</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="11">11</button>
-                                                <button type="button"
-                                                    class="age-btn px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium transition-all duration-200 hover:border-purple-500 hover:bg-purple-50"
-                                                    data-age="12">12</button>
+                                                    data-age="5">13 - 15</button>
+
                                             </div>
                                         </div>
 
