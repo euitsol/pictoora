@@ -256,6 +256,12 @@
                                                 <option value="10">10 years</option>
                                                 <option value="11">11 years</option>
                                                 <option value="12">12 years</option>
+                                                <option value="13">13 years</option>
+                                                <option value="14">14 years</option>
+                                                <option value="15">15 years</option>
+                                                <option value="16">16 years</option>
+                                                <option value="17">17 years</option>
+                                                <option value="18">18 years</option>
                                             </select>
                                         </div>
 
