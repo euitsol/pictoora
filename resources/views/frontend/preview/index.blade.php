@@ -288,37 +288,10 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-    $(document).ready(function() {
 
-        let currentPage = 0;
-        let viewMode = 'spread';
-        const isMobile = $(window).width() < 768;
-
-        if (isMobile) {
-            viewMode = 'single';
-        }
-
-        updateViewModeButtons();
-        updatePageVisibility();
-
-
-        $('#single-view-btn').click(function() {
-            viewMode = 'single';
-            updateViewModeButtons();
-            updatePageVisibility();
-        });
-        $('#spread-view-btn').click(function() {
-            viewMode = 'spread';
-            updateViewModeButtons();
-            updatePageVisibility();
-        });
-        $(document).on('click', '.thumbnail-item', function() {
-            const pageId = parseInt($(this).data('page-id'));
-            $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
-            $(this).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
-            scrollToPage(pageId);
-        });
-    });
+    var currentPage = 0;
+    var viewMode = 'spread';
+    const isMobile = $(window).width() < 768 ? true : false;
 
     function scrollToPage(pageId) {
         currentPage = pageId;
@@ -348,7 +321,32 @@
         }
     }
 
+    $(document).ready(function() {
+        if (isMobile) {
+            viewMode = 'single';
+        }
 
+        updateViewModeButtons();
+        updatePageVisibility();
+
+
+        $('#single-view-btn').click(function() {
+            viewMode = 'single';
+            updateViewModeButtons();
+            updatePageVisibility();
+        });
+        $('#spread-view-btn').click(function() {
+            viewMode = 'spread';
+            updateViewModeButtons();
+            updatePageVisibility();
+        });
+        $(document).on('click', '.thumbnail-item', function() {
+            const pageId = parseInt($(this).data('page-id'));
+            $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
+            $(this).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
+            scrollToPage(pageId);
+        });
+    });
 </script>
 
 
