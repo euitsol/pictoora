@@ -75,8 +75,8 @@
 
     <section class="bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 shadow-sm sticky top-0 z-20 backdrop-blur-sm">
         <div class="container mx-auto px-4 py-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-between lg:justify-start">
-                <div class="flex items-center gap-3 justify-center">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                         <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
                     </div>
@@ -85,17 +85,15 @@
                     </div>
                 </div>
 
-                <div id="view-toggle" class="flex p-1 justify-center lg:justify-end">
-                    <div class="flex items-center justify-end bg-white rounded-lg">
-                        <button id="single-view-btn" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-white text-purple-600">
-                            <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i>
-                            Single
-                        </button>
-                        <button id="spread-view-btn" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-purple-600 text-white">
-                            <i data-lucide="book-open-check" class="w-4 h-4"></i>
-                            Spread
-                        </button>
-                    </div>
+                <div id="view-toggle" class="flex items-center gap-2 bg-white rounded-lg p-1">
+                    <button id="single-view-btn" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-white text-purple-600 hover:bg-purple-50">
+                        <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i>
+                        Single
+                    </button>
+                    <button id="spread-view-btn" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-purple-600 text-white">
+                        <i data-lucide="book-open-check" class="w-4 h-4"></i>
+                        Spread
+                    </button>
                 </div>
             </div>
         </div>
@@ -104,7 +102,7 @@
     <div class="bg-gradient-to-r from-blue-50 to-blue-50">
         <div class="container mx-auto px-4 py-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <div class="lg:col-span-2 order-2 lg:order-1 hidden lg:block">
+                <div class="lg:col-span-2 order-2 lg:order-1 sticky top-24 ">
                     <div class="shadow-lg border-0 bg-white/70 backdrop-blur-sm rounded-lg">
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-6">
@@ -116,17 +114,16 @@
                             </div>
 
                             <div id="thumbnails" class="space-y-3">
-
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-blue-500 bg-blue-50 shadow-md" data-page-id="0">
-                                    <div class="thumbnail-page rounded-lg overflow-hidden relative p-1">
-                                        <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Page 2" class="w-full h-full object-cover">
-                                        <div class="absolute bottom-1 left-1">
-                                            <span class="px-1 py-0.5 text-xs font-medium bg-slate-900 text-white rounded">Cover</span>
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-blue-500 bg-blue-50 shadow-md" data-index="0" data-page-id="0">
+                                    <div class="thumbnail-page rounded-lg overflow-hidden">
+                                        <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Cover" class="w-full h-full object-cover">
+                                        <div class="absolute bottom-2 left-2">
+                                            <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md">Cover</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="1">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-index="1" data-page-id="1">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Page 1" class="w-full h-full object-cover">
@@ -143,21 +140,22 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="2">
-                                    <div class="thumbnail-page rounded-lg overflow-hidden relative p-1">
-                                        <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Page 2" class="w-full h-full object-cover">
-                                        <div class="absolute bottom-1 left-1">
-                                            <span class="px-1 py-0.5 text-xs font-medium bg-slate-900 text-white rounded">End</span>
+
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-index="5" data-page-id="9">
+                                    <div class="thumbnail-page rounded-lg overflow-hidden">
+                                        <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover">
+                                        <div class="absolute bottom-2 left-2">
+                                            <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md">End</span>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="lg:col-span-10 order-1 lg:order-2">
+
+
+                <div class="lg:col-span-9 order-1 lg:order-2">
                     <div id="main-content" class="space-y-8">
                         <div id="page-0" class="scroll-mt-24">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
@@ -179,8 +177,7 @@
                             </div>
                         </div>
 
-
-                        <div id="page-1-spread" class="scroll-mt-24 spread-view">
+                        <div id="page-1" class="scroll-mt-24 spread-view">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -212,49 +209,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-1-single" class="scroll-mt-24 single-view" style="display: none">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
-                                <div class="p-0">
-                                    <div class="flex justify-center p-8">
-                                        <div class="flex max-w-2xl gap-2">
-                                            <div class="relative">
-                                                <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Page 1" class="w-full h-full object-cover">
-                                                </div>
-                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                                </button>
-                                                <div class="absolute bottom-4 left-4">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 1</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
-                                <div class="p-0">
-                                    <div class="flex justify-center p-8">
-                                        <div class="flex max-w-2xl gap-2">
-                                            <div class="relative">
-                                                <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="Page 1" class="w-full h-full object-cover">
-                                                </div>
-                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                                </button>
-                                                <div class="absolute bottom-4 left-4">
-                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 2</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="page-2" class="scroll-mt-24">
+                        <div id="page-9" class="scroll-mt-24">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -273,8 +229,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 
@@ -294,56 +248,131 @@
         let viewMode = 'spread';
         const isMobile = $(window).width() < 768;
 
+        // Check if mobile and update view mode
+        function checkMobile() {
+            if (isMobile) {
+                viewMode = 'single';
+                $('#view-toggle').hide();
+                switchToSingleView();
+            } else {
+                $('#view-toggle').show();
+                if (viewMode === 'spread') {
+                    switchToSpreadView();
+                }
+            }
+            updateViewModeButtons();
+        }
 
+        // Switch to single view
+        function switchToSingleView() {
+            $('.spread-view').addClass('single-mode').removeClass('spread-mode');
+            $('.spread-view').each(function() {
+                const $spread = $(this);
+                const $pages = $spread.find('.book-page').parent();
+                console.log($pages);
+
+                // Hide spread view and show individual pages
+                $spread.hide();
+
+                // Create individual page views if they don't exist
+                $pages.each(function(index) {
+                    const $page = $(this);
+                    const pageImg = $page.find('img');
+                    const pageTitle = $page.find('.absolute span').text();
+                    const pageId = $spread.attr('id');
+                    const newPageId = pageId + '-' + index;
+
+                    if ($('#' + newPageId + '-single').length === 0) {
+                        const singlePageHtml = `
+                            <div id="${newPageId}-single" class="scroll-mt-24 single-view" style="display: none;">
+                                <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
+                                    <div class="p-0">
+                                        <div class="flex justify-center p-8">
+                                            <div class="relative max-w-md w-full">
+                                                <div class="book-page overflow-hidden">
+                                                    <img src="${pageImg.attr('src')}" alt="${pageTitle}" class="w-full h-full object-cover">
+                                                </div>
+                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                                </button>
+                                                <div class="absolute bottom-4 left-4">
+                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">${pageTitle}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        $spread.before(singlePageHtml);
+                        createIcons();
+                    }
+                    $('#' + newPageId + '-single').show();
+                });
+            });
+        }
+
+        // Switch to spread view
+        function switchToSpreadView() {
+            $('.spread-view').removeClass('single-mode').addClass('spread-mode');
+            $('.single-view').hide();
+            $('.spread-view').show();
+        }
+        // Scroll to page
         function scrollToPage(pageId) {
             currentPage = pageId;
+            updateThumbnailHighlight();
 
-            const targetElement = $(`#page-${pageId}`);
+            const targetElement = viewMode === 'single' ?
+                $(`#page-${pageId}-single`) :
+                $(`#page-${pageId}`);
 
             $('html, body').animate({
                 scrollTop: targetElement.offset().top - 100
             }, 500);
         }
-
-
+        // Update thumbnail highlight
+        function updateThumbnailHighlight() {
+            $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
+            const targetIndex = Math.floor(currentPage / (viewMode === 'single' ? 1 : 2));
+            $(`.thumbnail-item[data-index="${targetIndex}"]`).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
+        }
+        // Update view mode buttons
         function updateViewModeButtons() {
             if (viewMode === 'single') {
-                $('#single-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
-                $('#spread-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
+                $('#single-view-btn').addClass('bg-purple-600 text-white').removeClass('bg-white text-purple-600 hover:bg-white');
+                $('#spread-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-purple-50');
             } else {
-                $('#spread-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
-                $('#single-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
+                $('#spread-view-btn').addClass('bg-purple-600 text-white').removeClass('bg-white text-purple-600 hover:bg-white');
+                $('#single-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-purple-50');
             }
         }
-
-        function updatePageVisibility() {
-            if (viewMode === 'single') {
-                $('.single-view').show();
-                $('.spread-view').hide();
-            } else {
-                $('.single-view').hide();
-                $('.spread-view').show();
-            }
-        }
-
+        // Event listeners
         $('#single-view-btn').click(function() {
-            viewMode = 'single';
-            updateViewModeButtons();
-            updatePageVisibility();
+            if (!isMobile) {
+                viewMode = 'single';
+                switchToSingleView();
+                updateViewModeButtons();
+            }
         });
         $('#spread-view-btn').click(function() {
-            viewMode = 'spread';
-            updateViewModeButtons();
-            updatePageVisibility();
+            if (!isMobile) {
+                viewMode = 'spread';
+                switchToSpreadView();
+                updateViewModeButtons();
+            }
         });
-
+        // Thumbnail click handler
         $(document).on('click', '.thumbnail-item', function() {
             const pageId = parseInt($(this).data('page-id'));
-            $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
-            $(this).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
             scrollToPage(pageId);
         });
-
+        // Window resize handler
+        $(window).resize(function() {
+            checkMobile();
+        });
+        // Initial setup
+        checkMobile();
     });
 </script>
 
