@@ -48,10 +48,10 @@
 
     @media (max-width: 768px) {
         :root {
-            --book-page-width: 420px;
-            --book-page-height: 280px;
-            --thumbnail-width: 100px;
-            --thumbnail-height: 80px;
+            --book-page-width: 8cm;
+            --book-page-height: 8cm;
+            --thumbnail-width: 60px;
+            --thumbnail-height: 60px;
         }
     }
 </style>
@@ -181,7 +181,7 @@
 
 
                         <div id="page-1-spread" class="scroll-mt-24 spread-view">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
+                            <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
                                         <div class="flex max-w-4xl w-full gap-2">
