@@ -294,37 +294,13 @@
         let viewMode = 'spread';
         const isMobile = $(window).width() < 768;
 
-
-        function scrollToPage(pageId) {
-            currentPage = pageId;
-
-            const targetElement = $(`#page-${pageId}`);
-
-            $('html, body').animate({
-                scrollTop: targetElement.offset().top - 100
-            }, 500);
+        if (isMobile) {
+            viewMode = 'single';
         }
 
+        updateViewModeButtons();
+        updatePageVisibility();
 
-        function updateViewModeButtons() {
-            if (viewMode === 'single') {
-                $('#single-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
-                $('#spread-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
-            } else {
-                $('#spread-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
-                $('#single-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
-            }
-        }
-
-        function updatePageVisibility() {
-            if (viewMode === 'single') {
-                $('.single-view').show();
-                $('.spread-view').hide();
-            } else {
-                $('.single-view').hide();
-                $('.spread-view').show();
-            }
-        }
 
         $('#single-view-btn').click(function() {
             viewMode = 'single';
@@ -336,15 +312,43 @@
             updateViewModeButtons();
             updatePageVisibility();
         });
-
         $(document).on('click', '.thumbnail-item', function() {
             const pageId = parseInt($(this).data('page-id'));
             $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
             $(this).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
             scrollToPage(pageId);
         });
-
     });
+
+    function scrollToPage(pageId) {
+        currentPage = pageId;
+        const targetElement = $(`#page-${pageId}`);
+        $('html, body').animate({
+            scrollTop: targetElement.offset().top - 100
+        }, 500);
+    }
+
+    function updateViewModeButtons() {
+        if (viewMode === 'single') {
+            $('#single-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
+            $('#spread-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
+        } else {
+            $('#spread-view-btn').addClass('bg-purple-600 text-white hover:bg-purple-400').removeClass('bg-white text-purple-600 hover:bg-white');
+            $('#single-view-btn').removeClass('bg-purple-600 text-white').addClass('bg-white text-purple-600 hover:bg-blue-50');
+        }
+    }
+
+    function updatePageVisibility() {
+        if (viewMode === 'single') {
+            $('.single-view').show();
+            $('.spread-view').hide();
+        } else {
+            $('.single-view').hide();
+            $('.spread-view').show();
+        }
+    }
+
+
 </script>
 
 
