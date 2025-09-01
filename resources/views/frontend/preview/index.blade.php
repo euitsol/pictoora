@@ -4,14 +4,11 @@
 <style>
     /* Added CSS global variables for book dimensions and real book feeling */
     :root {
-        --book-page-width: 12cm;
-        --book-page-height: 12cm;
+
         --book-aspect-ratio: 4/4;
-        --book-binding-width: 12px;
+        --book-binding-width: 10px;
         --book-shadow: 0 0px 0px 0px rgb(0 0 0 / 0.25);
-        --book-border-radius: 12px;
-        --thumbnail-width: 80px;
-        --thumbnail-height: 80px;
+        --book-border-radius: 0px;
     }
 
     .backdrop-blur-md {
@@ -34,16 +31,51 @@
         aspect-ratio: var(--book-aspect-ratio);
         border-radius: var(--book-border-radius);
         box-shadow: var(--book-shadow);
+        position: relative;
     }
 
-    .book-binding {
-        width: var(--book-binding-width);
+    .book-page.cover-page::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 3%;
+        width: 50px; /* width of spine area */
+        height: 100%;
+        background:
+            linear-gradient(
+            to right,
+            rgba(0,0,0,0.15) 0px,     /* outer shadow edge */
+            rgba(0,0,0,0.05) 4px,
+            rgba(255,255,255,0.6) 6px, /* highlight */
+            rgba(255,255,255,0.4) 10px,     /* inner crease shadow */
+            rgba(255,255,255,0.6) 14px, /* second highlight */
+            rgba(0,0,0,0) 40px        /* fade out */
+            );
+        pointer-events: none;
     }
+
+
 
     .thumbnail-page {
         width: var(--thumbnail-width);
         height: var(--thumbnail-height);
         aspect-ratio: var(--book-aspect-ratio);
+    }
+
+    .book-binding {
+        width: var(--book-binding-width);
+        position: relative;
+        right: 50%;
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(255,255,255,0.6) 30%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(255,255,255,0.6) 70%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+        box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+        border-radius: 3px;
     }
 
     @media (max-width: 768px) {
@@ -106,9 +138,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <div class="lg:col-span-2 order-2 lg:order-1 hidden lg:block">
                     <div class="shadow-lg border-0 bg-white/70 backdrop-blur-sm rounded-lg">
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <div class="p-2 lg:p-3 xl:p-6">
+                            <div class="flex items-center gap-1 xl:gap-3 mb-6">
+                                <div class="p-2 w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                                     <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
                                 </div>
                                 <h3 class="font-semibold text-slate-900">Pages</h3>
@@ -117,7 +149,7 @@
 
                             <div id="thumbnails" class="space-y-3">
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-blue-500 bg-blue-50 shadow-md" data-page-id="1">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-blue-500 bg-blue-50 shadow-md" data-section-id="1">
                                     <div class="thumbnail-page rounded-lg overflow-hidden relative p-1">
                                         <img src="{{ asset('frontend/img/book/the-explorer/a1.png') }}" alt="Cover" class="w-full h-full object-cover">
                                         <div class="absolute bottom-1 left-1">
@@ -126,7 +158,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="2">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="2">
                                     <div class="thumbnail-page rounded-lg overflow-hidden relative p-1">
                                         <img src="{{ asset('frontend/img/book/the-explorer/b1.png') }}" alt="Page 1" class="w-full h-full object-cover">
                                         <div class="absolute bottom-1 left-1">
@@ -135,7 +167,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="3">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="3">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 2" class="w-full h-full object-cover">
@@ -152,7 +184,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="4">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="4">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 4" class="w-full h-full object-cover">
@@ -169,7 +201,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="5">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="5">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover">
@@ -187,7 +219,7 @@
                                 </div>
 
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="6">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="6">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover">
@@ -204,7 +236,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="7">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="7">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover">
@@ -221,7 +253,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="8">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="8">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover">
@@ -238,7 +270,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="9">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="9">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover">
@@ -255,7 +287,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="10">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="10">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover">
@@ -272,7 +304,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="11">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="11">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover">
@@ -289,7 +321,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="12">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="12">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover">
@@ -306,7 +338,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="13">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="13">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover">
@@ -323,7 +355,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="14">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="14">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover">
@@ -341,7 +373,7 @@
                                 </div>
 
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="15">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="15">
                                     <div class="grid grid-cols-2 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover">
@@ -358,8 +390,8 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="16">
-                                    <div class="grid grid-cols-2 gap-1 p-1">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="16">
+                                    <div class="grid grid-cols-1 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover">
                                             <div class="absolute bottom-1 left-1">
@@ -369,8 +401,8 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-page-id="17">
-                                    <div class="grid grid-cols-2 gap-1 p-1">
+                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="17">
+                                    <div class="grid grid-cols-1 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover">
                                             <div class="absolute bottom-1 left-1">
@@ -387,39 +419,23 @@
                 </div>
                 <div class="lg:col-span-10 order-1 lg:order-2">
                     <div id="main-content" class="space-y-8">
-                        <div id="page-1" class="scroll-mt-24">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
-                                <div class="p-0">
-                                    <div class="flex justify-center p-8">
-                                        <div class="relative max-w-md w-full">
-                                            <div class="book-page overflow-hidden">
-                                                <img src="{{ asset('frontend/img/book/the-explorer/a1.png') }}" alt="Cover" class="w-full h-full object-cover">
-                                            </div>
-                                            <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                            </button>
-                                            <div class="absolute bottom-4 left-4">
-                                                <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Cover</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="page-2" class="scroll-mt-24 ">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
-                                <div class="p-0">
-                                    <div class="flex justify-center p-8">
-                                        <div class="relative max-w-md w-full">
-                                            <div class="book-page overflow-hidden">
-                                                <img src="{{ asset('frontend/img/book/the-explorer/b1.png') }}" alt="Cover" class="w-full h-full object-cover">
-                                            </div>
-                                            <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                            </button>
-                                            <div class="absolute bottom-4 left-4">
-                                                <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 1</span>
+                        <div class="scroll-mt-24 section-1">
+                            <div class="scroll-mt-24 section-1">
+                                <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
+                                    <div class="p-0">
+                                        <div class="flex justify-center p-8">
+                                            <div class="flex max-w-2xl gap-2">
+                                                <div class="relative">
+                                                    <div class="book-page cover-page overflow-hidden">
+                                                        <img src="{{ asset('frontend/img/book/the-explorer/a1.png') }}" alt="Cover" class="w-full h-full object-cover">
+                                                    </div>
+                                                    <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                                        <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                                    </button>
+                                                    <div class="absolute bottom-4 left-4">
+                                                        <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Cover</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -427,11 +443,33 @@
                             </div>
                         </div>
 
-                        <div id="page-3" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 section-2">
+                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
+                                <div class="p-0">
+                                    <div class="flex justify-center p-8">
+                                        <div class="flex max-w-2xl gap-2">
+                                            <div class="relative">
+                                                <div class="book-page overflow-hidden">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/b1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                </div>
+                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                                </button>
+                                                <div class="absolute bottom-4 left-4">
+                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scroll-mt-24 spread-view section-3">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 1" class="w-full h-full object-cover">
@@ -443,9 +481,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 2</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/c2.png') }}" alt="Page 2" class="w-full h-full object-cover">
@@ -454,12 +489,15 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 3</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="page-3" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-3" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -501,11 +539,12 @@
                             </div>
                         </div>
 
-                        <div id="page-4" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-4">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
+
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 1" class="w-full h-full object-cover">
@@ -517,9 +556,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 4</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/d2.png') }}" alt="Page 2" class="w-full h-full object-cover">
@@ -528,12 +564,15 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 5</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="page-4" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-4" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -579,7 +618,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover">
@@ -591,9 +630,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 6</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/e2.png') }}" alt="Page 7" class="w-full h-full object-cover">
@@ -602,6 +638,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 7</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -653,7 +692,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover">
@@ -665,9 +704,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 8</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/f2.png') }}" alt="Page 9" class="w-full h-full object-cover">
@@ -676,6 +712,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 9</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -727,7 +766,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover">
@@ -739,9 +778,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 10</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/g2.png') }}" alt="Page 11" class="w-full h-full object-cover">
@@ -750,6 +786,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 11</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -801,7 +840,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover">
@@ -813,9 +852,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 12</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/h2.png') }}" alt="Page 13" class="w-full h-full object-cover">
@@ -824,6 +860,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 13</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -875,7 +914,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover">
@@ -887,9 +926,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 14</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/i2.png') }}" alt="Page 15" class="w-full h-full object-cover">
@@ -898,6 +934,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 15</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -949,7 +988,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover">
@@ -961,9 +1000,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 16</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/j2.png') }}" alt="Page 17" class="w-full h-full object-cover">
@@ -972,6 +1008,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 17</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1023,7 +1062,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover">
@@ -1035,9 +1074,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 18</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/k2.png') }}" alt="Page 19" class="w-full h-full object-cover">
@@ -1046,6 +1082,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 19</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1097,7 +1136,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover">
@@ -1109,9 +1148,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 20</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/l2.png') }}" alt="Page 21" class="w-full h-full object-cover">
@@ -1120,6 +1156,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 21</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1171,7 +1210,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover">
@@ -1183,9 +1222,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 22</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/m2.png') }}" alt="Page 23" class="w-full h-full object-cover">
@@ -1194,6 +1230,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 23</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1245,7 +1284,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover">
@@ -1257,9 +1296,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 24</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/n2.png') }}" alt="Page 25" class="w-full h-full object-cover">
@@ -1268,6 +1304,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 25</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1319,7 +1358,7 @@
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="flex max-w-4xl w-full gap-2">
+                                        <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover">
@@ -1331,9 +1370,6 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 26</span>
                                                 </div>
                                             </div>
-
-                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
-
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
                                                     <img src="{{ asset('frontend/img/book/the-explorer/o2.png') }}" alt="Page 27" class="w-full h-full object-cover">
@@ -1342,6 +1378,9 @@
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 27</span>
                                                 </div>
                                             </div>
+
+                                            <div class="book-binding bg-gradient-to-r from-slate-300 via-slate-400 to-slate-300 rounded-full shadow-inner"></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1389,19 +1428,21 @@
                             </div>
                         </div>
 
-                        <div id="page-17" class="scroll-mt-24">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
+                        <div id="page-16" class="scroll-mt-24">
+                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="relative max-w-md w-full">
-                                            <div class="book-page overflow-hidden">
-                                                <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover">
-                                            </div>
-                                            <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                            </button>
-                                            <div class="absolute bottom-4 left-4">
-                                                <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 28</span>
+                                        <div class="flex max-w-2xl gap-2">
+                                            <div class="relative">
+                                                <div class="book-page overflow-hidden">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover">
+                                                </div>
+                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                                </button>
+                                                <div class="absolute bottom-4 left-4">
+                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 28</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1409,19 +1450,21 @@
                             </div>
                         </div>
 
-                        <div id="page-18" class="scroll-mt-24">
-                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg">
+                        <div id="page-17" class="scroll-mt-24">
+                            <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
-                                        <div class="relative max-w-md w-full">
-                                            <div class="book-page overflow-hidden">
-                                                <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover">
-                                            </div>
-                                            <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
-                                            </button>
-                                            <div class="absolute bottom-4 left-4">
-                                                <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">End</span>
+                                        <div class="flex max-w-2xl gap-2">
+                                            <div class="relative">
+                                                <div class="book-page overflow-hidden">
+                                                    <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover">
+                                                </div>
+                                                <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                                </button>
+                                                <div class="absolute bottom-4 left-4">
+                                                    <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">End</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1447,9 +1490,11 @@
     var viewMode = 'spread';
     const isMobile = $(window).width() < 768 ? true : false;
 
-    function scrollToPage(pageId) {
-        currentPage = pageId;
-        const targetElement = $(`#page-${pageId}`);
+    function scrollToPage(sectionId) {
+        currentPage = sectionId;
+        const targetElement = $(`.section-${sectionId}:visible`);
+        console.log("Section ID: ", sectionId);
+        console.log("Target Element: ", targetElement);
         $('html, body').animate({
             scrollTop: targetElement.offset().top - 100
         }, 500);
@@ -1495,10 +1540,10 @@
             updatePageVisibility();
         });
         $(document).on('click', '.thumbnail-item', function() {
-            const pageId = parseInt($(this).data('page-id'));
+            const sectionId = parseInt($(this).data('section-id'));
             $('.thumbnail-item').removeClass('border-blue-500 bg-blue-50 shadow-md').addClass('border-slate-200');
             $(this).removeClass('border-slate-200').addClass('border-blue-500 bg-blue-50 shadow-md');
-            scrollToPage(pageId);
+            scrollToPage(sectionId);
         });
     });
 </script>
