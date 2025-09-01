@@ -407,7 +407,7 @@
                                 <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="16">
                                     <div class="grid grid-cols-1 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
-                                            <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover">
+                                            <img src="{{ asset('frontend/img/book/the-explorer/pp1.png') }}" alt="Page 28" class="w-full h-full object-cover">
                                             <div class="absolute bottom-1 left-1">
                                                 <span class="px-1 py-0.5 text-xs font-medium bg-slate-900 text-white rounded">28</span>
                                             </div>
@@ -1449,7 +1449,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover rounded-r-lg">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/pp1.png') }}" alt="Page 28" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
