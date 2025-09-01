@@ -77,15 +77,6 @@
         box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
         border-radius: 3px;
     }
-
-    @media (max-width: 768px) {
-        :root {
-            --book-page-width: 8cm;
-            --book-page-height: 8cm;
-            --thumbnail-width: 60px;
-            --thumbnail-height: 60px;
-        }
-    }
 </style>
 @endpush
 
@@ -614,7 +605,7 @@
                             </div>
                         </div>
 
-                        <div id="page-5" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-5">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -646,7 +637,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-5" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-5" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -688,7 +679,7 @@
                             </div>
                         </div>
 
-                        <div id="page-6" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-6">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -720,7 +711,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-6" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-6" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -762,7 +753,7 @@
                             </div>
                         </div>
 
-                        <div id="page-7" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-7">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -794,7 +785,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-7" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-7" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -836,7 +827,7 @@
                             </div>
                         </div>
 
-                        <div id="page-8" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-8">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -868,7 +859,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-8" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-8" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -910,7 +901,7 @@
                             </div>
                         </div>
 
-                        <div id="page-9" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-9">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -942,7 +933,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-9" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-9" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -984,7 +975,7 @@
                             </div>
                         </div>
 
-                        <div id="page-10" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-10">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1016,7 +1007,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-10" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-10" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1058,7 +1049,7 @@
                             </div>
                         </div>
 
-                        <div id="page-11" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-11">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1090,7 +1081,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-11" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-11" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1132,7 +1123,7 @@
                             </div>
                         </div>
 
-                        <div id="page-12" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-12">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1164,7 +1155,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-12" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-12" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1206,7 +1197,7 @@
                             </div>
                         </div>
 
-                        <div id="page-13" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-13">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1238,7 +1229,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-13" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-13" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1280,7 +1271,7 @@
                             </div>
                         </div>
 
-                        <div id="page-14" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-14">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1312,7 +1303,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-14" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-14" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1354,7 +1345,7 @@
                             </div>
                         </div>
 
-                        <div id="page-15" class="scroll-mt-24 spread-view">
+                        <div class="scroll-mt-24 spread-view section-15">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1386,7 +1377,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="page-15" class="scroll-mt-24 single-view" style="display: none">
+                        <div class="scroll-mt-24 single-view section-15" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1428,7 +1419,7 @@
                             </div>
                         </div>
 
-                        <div id="page-16" class="scroll-mt-24">
+                        <div class="scroll-mt-24 section-16">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
@@ -1450,7 +1441,7 @@
                             </div>
                         </div>
 
-                        <div id="page-17" class="scroll-mt-24">
+                        <div class="scroll-mt-24 section-17">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-8">
