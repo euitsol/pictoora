@@ -32,6 +32,7 @@
         border-radius: var(--book-border-radius);
         box-shadow: var(--book-shadow);
         position: relative;
+        border-radius: inherit;
     }
 
     .book-page.cover-page::before {
