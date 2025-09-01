@@ -6,7 +6,7 @@
     :root {
 
         --book-aspect-ratio: 4/4;
-        --book-binding-width: 10px;
+        --book-binding-width: 8px;
         --book-shadow: 0 0px 0px 0px rgb(0 0 0 / 0.25);
         --book-border-radius: 0px;
     }
@@ -69,11 +69,11 @@
         right: 50%;
         background: linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.15) 0%,
-            rgba(255,255,255,0.6) 30%,
+            rgba(250, 248, 248, 0.1) 0%,
+            rgba(255,255,255,0.4) 30%,
             rgba(0, 0, 0, 0) 50%,
-            rgba(255,255,255,0.6) 70%,
-            rgba(0, 0, 0, 0.15) 100%
+            rgba(255,255,255,0.4) 70%,
+            rgba(250, 248, 248, 0.1) 100%
         );
         box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
         border-radius: 3px;
@@ -92,6 +92,13 @@
         box-shadow: inset 15px 0 25px -10px rgba(0,0,0,0.35),
                 0 8px 20px rgba(0,0,0,0.2);
     }
+
+    @media (max-width: 767px) {
+        :root {
+            --book-binding-width: 4px;
+        }
+    }
+
 
 </style>
 @endpush
