@@ -77,6 +77,21 @@
         box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
         border-radius: 3px;
     }
+
+    .book-page img {
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .book-page:first-child img {
+        box-shadow: inset -15px 0 25px -10px rgba(0,0,0,0.35),
+                0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .book-page:last-child img {
+        box-shadow: inset 15px 0 25px -10px rgba(0,0,0,0.35),
+                0 8px 20px rgba(0,0,0,0.2);
+    }
+
 </style>
 @endpush
 
@@ -418,7 +433,7 @@
                                             <div class="flex max-w-2xl gap-2">
                                                 <div class="relative">
                                                     <div class="book-page cover-page overflow-hidden">
-                                                        <img src="{{ asset('frontend/img/book/the-explorer/a1.png') }}" alt="Cover" class="w-full h-full object-cover">
+                                                        <img src="{{ asset('frontend/img/book/the-explorer/a1.png') }}" alt="Cover" class="w-full h-full object-cover rounded-r-lg">
                                                     </div>
                                                     <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                         <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -441,7 +456,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/b1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/b1.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -463,7 +478,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -474,7 +489,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/c2.png') }}" alt="Page 2" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/c2.png') }}" alt="Page 2" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 3</span>
@@ -495,7 +510,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/c1.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -515,7 +530,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/c2.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/c2.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -538,7 +553,7 @@
 
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -549,7 +564,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/d2.png') }}" alt="Page 2" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/d2.png') }}" alt="Page 2" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 5</span>
@@ -570,7 +585,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/d1.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -590,7 +605,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/d2.png') }}" alt="Page 1" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/d2.png') }}" alt="Page 1" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -612,7 +627,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -623,7 +638,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/e2.png') }}" alt="Page 7" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/e2.png') }}" alt="Page 7" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 7</span>
@@ -644,7 +659,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/e1.png') }}" alt="Page 6" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -664,7 +679,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/e2.png') }}" alt="Page 7" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/e2.png') }}" alt="Page 7" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -686,7 +701,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -697,7 +712,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/f2.png') }}" alt="Page 9" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/f2.png') }}" alt="Page 9" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 9</span>
@@ -718,7 +733,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/f1.png') }}" alt="Page 8" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -738,7 +753,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/f2.png') }}" alt="Page 9" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/f2.png') }}" alt="Page 9" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -760,7 +775,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -771,7 +786,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/g2.png') }}" alt="Page 11" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/g2.png') }}" alt="Page 11" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 11</span>
@@ -792,7 +807,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/g1.png') }}" alt="Page 10" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -812,7 +827,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/g2.png') }}" alt="Page 11" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/g2.png') }}" alt="Page 11" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -834,7 +849,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -845,7 +860,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/h2.png') }}" alt="Page 13" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/h2.png') }}" alt="Page 13" class="w-full h-full object-cove rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 13</span>
@@ -866,7 +881,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/h1.png') }}" alt="Page 12" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -886,7 +901,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/h2.png') }}" alt="Page 13" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/h2.png') }}" alt="Page 13" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -908,7 +923,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -919,7 +934,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/i2.png') }}" alt="Page 15" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/i2.png') }}" alt="Page 15" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 15</span>
@@ -940,7 +955,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/i1.png') }}" alt="Page 14" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -960,7 +975,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/i2.png') }}" alt="Page 15" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/i2.png') }}" alt="Page 15" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -982,7 +997,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -993,7 +1008,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/j2.png') }}" alt="Page 17" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/j2.png') }}" alt="Page 17" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 17</span>
@@ -1014,7 +1029,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/j1.png') }}" alt="Page 16" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1034,7 +1049,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/j2.png') }}" alt="Page 17" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/j2.png') }}" alt="Page 17" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1056,7 +1071,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1067,7 +1082,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/k2.png') }}" alt="Page 19" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/k2.png') }}" alt="Page 19" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 19</span>
@@ -1088,7 +1103,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/k1.png') }}" alt="Page 18" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1108,7 +1123,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/k2.png') }}" alt="Page 19" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/k2.png') }}" alt="Page 19" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1130,7 +1145,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1141,7 +1156,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/l2.png') }}" alt="Page 21" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/l2.png') }}" alt="Page 21" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 21</span>
@@ -1162,7 +1177,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/l1.png') }}" alt="Page 20" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1182,7 +1197,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/l2.png') }}" alt="Page 21" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/l2.png') }}" alt="Page 21" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1204,7 +1219,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1215,7 +1230,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/m2.png') }}" alt="Page 23" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/m2.png') }}" alt="Page 23" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 23</span>
@@ -1236,7 +1251,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/m1.png') }}" alt="Page 22" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1256,7 +1271,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/m2.png') }}" alt="Page 23" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/m2.png') }}" alt="Page 23" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1278,7 +1293,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1289,7 +1304,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/n2.png') }}" alt="Page 25" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/n2.png') }}" alt="Page 25" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 25</span>
@@ -1310,7 +1325,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/n1.png') }}" alt="Page 24" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1330,7 +1345,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/n2.png') }}" alt="Page 25" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/n2.png') }}" alt="Page 25" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1352,7 +1367,7 @@
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover rounded-l-lg shadow-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1363,7 +1378,7 @@
                                             </div>
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/o2.png') }}" alt="Page 27" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/o2.png') }}" alt="Page 27" class="w-full h-full object-cover rounded-r-lg shadow-lg">
                                                 </div>
                                                 <div class="absolute bottom-4 right-4">
                                                     <span class="px-2 py-1 text-xs font-medium bg-slate-900 text-white rounded-md shadow-lg">Page 27</span>
@@ -1384,7 +1399,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/o1.png') }}" alt="Page 26" class="w-full h-full object-cover rounded-l-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1404,7 +1419,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/o2.png') }}" alt="Page 27" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/o2.png') }}" alt="Page 27" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1426,7 +1441,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/book/the-explorer/p1.png') }}" alt="Page 28" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
@@ -1448,7 +1463,7 @@
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
-                                                    <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover">
+                                                    <img src="{{ asset('frontend/img/placeholder.svg') }}" alt="End" class="w-full h-full object-cover rounded-r-lg">
                                                 </div>
                                                 <button class="absolute top-4 right-4 shadow-lg bg-white/90 hover:bg-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                                     <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
