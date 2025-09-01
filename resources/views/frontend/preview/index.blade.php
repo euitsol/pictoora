@@ -414,7 +414,7 @@
                             <div class="scroll-mt-24 section-1">
                                 <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                     <div class="p-0">
-                                        <div class="flex justify-center p-8">
+                                        <div class="flex justify-center p-4 lg:p-8">
                                             <div class="flex max-w-2xl gap-2">
                                                 <div class="relative">
                                                     <div class="book-page cover-page overflow-hidden">
@@ -437,7 +437,7 @@
                         <div class="scroll-mt-24 section-2">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -459,7 +459,7 @@
                         <div class="scroll-mt-24 spread-view section-3">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -491,7 +491,7 @@
                         <div class="scroll-mt-24 single-view section-3" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -511,7 +511,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -533,7 +533,7 @@
                         <div class="scroll-mt-24 spread-view section-4">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
 
                                             <div class="flex-1 relative">
@@ -566,7 +566,7 @@
                         <div class="scroll-mt-24 single-view section-4" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -586,7 +586,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -608,7 +608,7 @@
                         <div class="scroll-mt-24 spread-view section-5">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -640,7 +640,7 @@
                         <div class="scroll-mt-24 single-view section-5" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -660,7 +660,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -682,7 +682,7 @@
                         <div class="scroll-mt-24 spread-view section-6">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -714,7 +714,7 @@
                         <div class="scroll-mt-24 single-view section-6" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -734,7 +734,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -756,7 +756,7 @@
                         <div class="scroll-mt-24 spread-view section-7">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -788,7 +788,7 @@
                         <div class="scroll-mt-24 single-view section-7" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -808,7 +808,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -830,7 +830,7 @@
                         <div class="scroll-mt-24 spread-view section-8">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -862,7 +862,7 @@
                         <div class="scroll-mt-24 single-view section-8" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -882,7 +882,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -904,7 +904,7 @@
                         <div class="scroll-mt-24 spread-view section-9">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -936,7 +936,7 @@
                         <div class="scroll-mt-24 single-view section-9" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -956,7 +956,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -978,7 +978,7 @@
                         <div class="scroll-mt-24 spread-view section-10">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1010,7 +1010,7 @@
                         <div class="scroll-mt-24 single-view section-10" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1030,7 +1030,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1052,7 +1052,7 @@
                         <div class="scroll-mt-24 spread-view section-11">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1084,7 +1084,7 @@
                         <div class="scroll-mt-24 single-view section-11" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1104,7 +1104,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1126,7 +1126,7 @@
                         <div class="scroll-mt-24 spread-view section-12">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1158,7 +1158,7 @@
                         <div class="scroll-mt-24 single-view section-12" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1178,7 +1178,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1200,7 +1200,7 @@
                         <div class="scroll-mt-24 spread-view section-13">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1232,7 +1232,7 @@
                         <div class="scroll-mt-24 single-view section-13" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1252,7 +1252,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1274,7 +1274,7 @@
                         <div class="scroll-mt-24 spread-view section-14">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1306,7 +1306,7 @@
                         <div class="scroll-mt-24 single-view section-14" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1326,7 +1326,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1348,7 +1348,7 @@
                         <div class="scroll-mt-24 spread-view section-15">
                             <div class="overflow-auto shadow-xl border-0 bg-white rounded-lg">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-4xl w-full">
                                             <div class="flex-1 relative">
                                                 <div class="book-page overflow-hidden">
@@ -1380,7 +1380,7 @@
                         <div class="scroll-mt-24 single-view section-15" style="display: none">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1400,7 +1400,7 @@
 
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1422,7 +1422,7 @@
                         <div class="scroll-mt-24 section-16">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
@@ -1444,7 +1444,7 @@
                         <div class="scroll-mt-24 section-17">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
-                                    <div class="flex justify-center p-8">
+                                    <div class="flex justify-center p-4 lg:p-8">
                                         <div class="flex max-w-2xl gap-2">
                                             <div class="relative">
                                                 <div class="book-page overflow-hidden">
