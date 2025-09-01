@@ -404,7 +404,7 @@
                                     </div>
                                 </div>
 
-                                <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="16">
+                                {{-- <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="16">
                                     <div class="grid grid-cols-1 gap-1 p-1">
                                         <div class="thumbnail-page rounded overflow-hidden relative">
                                             <img src="{{ asset('frontend/img/book/the-explorer/pp1.png') }}" alt="Page 28" class="w-full h-full object-cover">
@@ -413,7 +413,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="thumbnail-item rounded-lg border-2 transition-all duration-200 cursor-pointer hover:shadow-md border-slate-200 hover:border-slate-300" data-section-id="17">
                                     <div class="grid grid-cols-1 gap-1 p-1">
@@ -1442,7 +1442,7 @@
                             </div>
                         </div>
 
-                        <div class="scroll-mt-24 section-16">
+                        {{-- <div class="scroll-mt-24 section-16">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
                                 <div class="p-0">
                                     <div class="flex justify-center p-4 lg:p-8">
@@ -1462,7 +1462,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="scroll-mt-24 section-17">
                             <div class="overflow-hidden shadow-xl border-0 bg-white rounded-lg mt-8 mb-8">
