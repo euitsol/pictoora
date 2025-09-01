@@ -112,7 +112,7 @@
         </div>
     </section> --}}
 
-    <section class="bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 shadow-sm sticky top-0 z-20 backdrop-blur-sm">
+    <section class="bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 shadow-sm sticky top-0 z-100 backdrop-blur-sm">
         <div class="container mx-auto px-4 py-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-between lg:justify-start">
                 <div class="flex items-center gap-3 justify-center">
