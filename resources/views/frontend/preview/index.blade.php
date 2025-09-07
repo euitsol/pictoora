@@ -1486,6 +1486,15 @@
                             </div>
                         </div>
 
+
+                    </div>
+
+
+                    <div class="sticky md:relative lg:relative bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-50 via-purple-100 to-purple-50 border-b border-purple-200 backdrop-blur-sm">
+                        <a href="{{ route('checkout.index') }}" class="w-full block text-center px-6 py-3 text-base sm:text-xl bg-purple-600  hover:bg-purple-700  text-white rounded-lg font-medium hover:opacity-90 transition-all duration-200">
+                            <i data-lucide="shopping-cart" class="inline h-4 w-4 mr-2"></i>
+                            Order Now
+                        </a>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createIcons, Calendar,Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart, Users, Shield, Truck, MapPin, ShieldCheck, Eye, Award, ChevronUp, ChevronDown, Gift, CheckCircle, Mail, Funnel, FunnelX, BookOpen, Languages, Share2, ArrowRight, ArrowLeft, Check, Printer, BadgeCheck, Bookmark, RotateCcw, BookOpenCheck, RectangleHorizontal, Layers } from 'lucide';
+import { createIcons, Calendar,Home, User, Settings, Menu, X, Clock, ShieldUser, Star, Heart, Users, Shield, Truck, MapPin, ShieldCheck, Eye, Award, ChevronUp, ChevronDown, Gift, CheckCircle, Mail, Funnel, FunnelX, BookOpen, Languages, Share2, ArrowRight, ArrowLeft, Check, Printer, BadgeCheck, Bookmark, RotateCcw, BookOpenCheck, RectangleHorizontal, Layers, CreditCard, ShoppingCart, PlusCircle, Receipt, Tag } from 'lucide';
 import $ from 'jquery';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
@@ -50,6 +50,11 @@ createIcons({
         RotateCcw,
         RectangleHorizontal,
         BookOpenCheck,
-        Layers
+        Layers,
+        CreditCard,
+        ShoppingCart,
+        PlusCircle,
+        Receipt,
+        Tag
     } // List all imported icons
 });
