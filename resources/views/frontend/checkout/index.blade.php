@@ -153,32 +153,39 @@
                             </h4>
                         </div>
                         <div class="space-y-6">
-                            <div class="p-6 bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl checkout-card">
+                            <div
+                                class="p-6 bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl checkout-card">
                                 <!-- Mobile Layout: Image full width, content below -->
                                 <div class="block md:hidden">
                                     <div class="relative mb-4">
-                                        <img src="{{ asset('frontend/img/book/book-1.webp') }}"
-                                             alt="Kerry's Fun in the Sun"
-                                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                                        <img src="{{ asset('frontend/img/book/book-1.webp') }}" alt="Kerry's Fun in the Sun"
+                                            class="w-full h-48 object-cover rounded-lg shadow-md">
                                     </div>
                                     <div class="space-y-3">
                                         <div class="flex items-start justify-between">
                                             <h3 class="font-bold text-lg text-gray-900">Kerry's Fun in the Sun</h3>
                                             <button class="p-2 hover:bg-red-100 rounded-full transition-colors group">
-                                                <i data-lucide="x" class="w-5 h-5 text-gray-500 group-hover:text-red-500"></i>
+                                                <i data-lucide="x"
+                                                    class="w-5 h-5 text-gray-500 group-hover:text-red-500"></i>
                                             </button>
                                         </div>
                                         <div class="flex items-center gap-2">
                                             <div class="flex items-center">
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
                                                 <span class="ml-2 text-sm text-gray-600">(4.8)</span>
                                             </div>
                                         </div>
-                                        <button class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
+                                        <button
+                                            class="px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
                                             <i data-lucide="pencil-line" class="w-4 h-4"></i>
                                             Edit Book
                                         </button>
@@ -192,23 +199,28 @@
                                 <!-- Desktop Layout: Side by side -->
                                 <div class="hidden md:flex items-start gap-4">
                                     <div class="relative flex-shrink-0">
-                                        <img src="{{ asset('frontend/img/book/book-1.webp') }}"
-                                             alt="Kerry's Fun in the Sun"
-                                             class="w-24 h-28 object-cover rounded-lg shadow-md">
+                                        <img src="{{ asset('frontend/img/book/book-1.webp') }}" alt="Kerry's Fun in the Sun"
+                                            class="w-24 h-28 object-cover rounded-lg shadow-md">
                                     </div>
                                     <div class="flex-1 min-w-0">
                                         <h3 class="font-bold text-xl text-gray-900 mb-1">Kerry's Fun in the Sun</h3>
                                         <div class="flex items-center gap-2 mb-2">
                                             <div class="flex items-center">
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
-                                                <i data-lucide="star" class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
+                                                <i data-lucide="star"
+                                                    class="w-4 h-4 mr-1 text-yellow-400 fill-yellow-400"></i>
                                                 <span class="ml-2 text-sm text-gray-600">(4.8)</span>
                                             </div>
                                         </div>
-                                        <button class="mb-3 px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
+                                        <button
+                                            class="mb-3 px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors flex items-center gap-2">
                                             <i data-lucide="pencil-line" class="w-4 h-4"></i>
                                             Edit Book
                                         </button>
@@ -217,7 +229,8 @@
                                             <span class="text-xl font-bold gradient-text-checkout">€39.99</span>
                                         </div>
                                     </div>
-                                    <button class="p-2 hover:bg-red-100 rounded-full transition-colors group flex-shrink-0">
+                                    <button
+                                        class="p-2 hover:bg-red-100 rounded-full transition-colors group flex-shrink-0">
                                         <i data-lucide="x" class="w-5 h-5 text-gray-500 group-hover:text-red-500"></i>
                                     </button>
                                 </div>
@@ -229,36 +242,68 @@
                                     <i data-lucide="info" class="w-5 h-5"></i>
                                     What happens after checkout?
                                 </h5>
-                                <div class="space-y-3">
-                                    <div class="flex items-start gap-3">
+
+                                <!-- 3 concise benefits -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                                    <!-- Full Preview Access -->
+                                    <div class="flex items-start gap-3 bg-white/60 border border-blue-200 rounded-lg p-3">
                                         <div
-                                            class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                                            1</div>
+                                            class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br bg-blue-500/80 text-white flex-shrink-0 shadow-md">
+                                            <i data-lucide="search" class="w-5 h-5"></i>
+                                        </div>
                                         <div>
-                                            <p class="font-semibold text-blue-900">Instant Confirmation</p>
-                                            <p class="text-sm text-blue-700">You'll receive an order confirmation email
-                                                immediately</p>
+                                            <p class="font-semibold text-blue-900">Full Preview Access</p>
+                                            <p class="text-sm text-blue-700">See all pages & customize</p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-3">
+
+                                    <!-- Personalize -->
+                                    <div class="flex items-start gap-3 bg-white/60 border border-blue-200 rounded-lg p-3">
                                         <div
-                                            class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                                            2</div>
+                                            class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br bg-purple-500/80 text-white flex-shrink-0 shadow-md">
+                                            <i data-lucide="palette" class="w-5 h-5"></i>
+                                        </div>
                                         <div>
-                                            <p class="font-semibold text-blue-900">Book Production</p>
-                                            <p class="text-sm text-blue-700">Your personalized book will be printed within
-                                                2-3 business days</p>
+                                            <p class="font-semibold text-blue-900">Personalize</p>
+                                            <p class="text-sm text-blue-700">Choose your favorite images</p>
                                         </div>
                                     </div>
+
+                                    <!-- Printed & Delivered -->
+                                    <div class="flex items-start gap-3 bg-white/60 border border-blue-200 rounded-lg p-3">
+                                        <div
+                                            class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br bg-amber-500/80 text-white flex-shrink-0 shadow-md">
+                                            <i data-lucide="truck" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-blue-900">Printed & Delivered</p>
+                                            <p class="text-sm text-blue-700">5–7 days to your door</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-3 bg-white/60 border border-blue-200 rounded-lg p-3">
+                                        <div
+                                            class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br bg-indigo-500/80 text-white flex-shrink-0 shadow-md">
+                                            <i data-lucide="download" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-blue-900">Download Full Book</p>
+                                            <p class="text-sm text-blue-700">Full access to your digital copy</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Risk-free note -->
+                                <div class="mt-4 border border-green-200 bg-green-50 rounded-lg p-3 md:p-4">
                                     <div class="flex items-start gap-3">
                                         <div
-                                            class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                                            3</div>
-                                        <div>
-                                            <p class="font-semibold text-blue-900">Fast Delivery</p>
-                                            <p class="text-sm text-blue-700">Free shipping to your door in 5-7 business days
-                                            </p>
+                                            class="w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-br bg-green-500/80 text-white flex-shrink-0 shadow-md">
+                                            <i data-lucide="shield-check" class="w-5 h-5"></i>
                                         </div>
+                                        <p class="text-sm md:text-base text-green-800"><span class="font-semibold">100%
+                                                Risk‑Free:</span> Not happy after seeing the pages? Full refund, no
+                                            questions asked.</p>
                                     </div>
                                 </div>
                             </div>
