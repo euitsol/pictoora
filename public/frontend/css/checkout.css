@@ -1,0 +1,107 @@
+.step-active {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    border-color: #8b5cf6;
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.text-active {
+    color: #8b5cf6;
+    font-weight: 600;
+}
+
+.text-inactive {
+    color: #6b7280;
+}
+
+.step-inactive {
+    border-color: #e5e7eb;
+    color: #6b7280;
+    background: white;
+}
+
+.progress-line-active {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+.progress-line-inactive {
+    background-color: #e5e7eb;
+}
+
+.radio-checked {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.coupon-applied {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.checkout-card {
+    transition: all 0.3s ease;
+}
+
+.gradient-text-checkout {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.floating-steps {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: white;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .floating-steps {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.trust-indicator {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    border: 2px solid #8b5cf6;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #4c1d95;
+}
+
+.trust-indicator i {
+    color: #8b5cf6;
+    font-size: 1.5rem;
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    border: 2px dashed #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    border-radius: 12px;
+}
+
+.shipping-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.shipping-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+}
+
+.shipping-option.selected {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    border: 2px solid #8b5cf6;
+}
