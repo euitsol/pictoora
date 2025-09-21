@@ -135,5 +135,6 @@ return [
     'description' => env('APP_DESCRIPTION', 'Create magical, personalized storybooks for your child with Pictoora'),
     'keywords' => env('APP_KEYWORDS', 'pictoora, personalized storybooks, children books'),
     'image' => env('APP_IMAGE', '/frontend/img/logo.webp'),
+    'gmap_api_key' => env('GOOGLE_MAP_API_KEY', ''),
 
 ];

@@ -5,6 +5,8 @@ use App\Http\Controllers\Frontend\HomePageController;
 use App\Http\Controllers\Frontend\BooksPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
+use App\Http\Controllers\Frontend\PreviewPageController;
+use App\Http\Controllers\Frontend\CheckoutPageController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -26,3 +28,13 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
 Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
     Route::get('/personalize/{slug?}', 'index')->name('index');
 });
+
+Route::controller(PreviewPageController::class)->name('preview.')->group(function () {
+    Route::get('/preview/{slug?}', 'index')->name('index');
+});
+
+Route::controller(CheckoutPageController::class)->name('checkout.')->group(function () {
+    Route::get('/checkout/{slug?}', 'index')->name('index');
+});
+
+
