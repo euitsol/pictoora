@@ -38,3 +38,10 @@ Route::controller(CheckoutPageController::class)->name('checkout.')->group(funct
 });
 
 
+
+// common page frontend
+Route::get('/about', [aboutController::class, 'index']);
+Route::get('/contact', [contact_us_controller::class, 'index']);
+Route::get('/faq', [faq_controller::class, 'index']);
+Route::get('/policy', [policy_controller::class, 'index']);
+
