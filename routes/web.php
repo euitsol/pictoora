@@ -1,12 +1,17 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Frontend\AboutPageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomePageController;
 use App\Http\Controllers\Frontend\BooksPageController;
-use App\Http\Controllers\Frontend\BookDetailsPageController;
-use App\Http\Controllers\Frontend\PersonalizePageController;
 use App\Http\Controllers\Frontend\PreviewPageController;
 use App\Http\Controllers\Frontend\CheckoutPageController;
+use App\Http\Controllers\Frontend\BookDetailsPageController;
+use App\Http\Controllers\Frontend\ContactUsController;
+use App\Http\Controllers\Frontend\FaqController;
+use App\Http\Controllers\Frontend\PersonalizePageController;
+use App\Http\Controllers\Frontend\PolicyController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -36,12 +41,19 @@ Route::controller(PreviewPageController::class)->name('preview.')->group(functio
 Route::controller(CheckoutPageController::class)->name('checkout.')->group(function () {
     Route::get('/checkout/{slug?}', 'index')->name('index');
 });
+Route::controller(AboutPageController::class)->name('about.')->group(function () {
+    Route::get('/about', 'index')->name('index');
+});
+Route::controller(ContactUsController::class)->name('contact.')->group(function () {
+    Route::get('/contact', 'index')->name('index');
+});
+Route::controller(FaqController::class)->name('faq.')->group(function () {
+    Route::get('/faq', 'index')->name('index');
+});
+Route::controller(PolicyController::class)->name('policy.')->group(function () {
+    Route::get('/policy', 'index')->name('index');
+});
 
 
 
-// common page frontend
-Route::get('/about', [aboutController::class, 'index']);
-Route::get('/contact', [contact_us_controller::class, 'index']);
-Route::get('/faq', [faq_controller::class, 'index']);
-Route::get('/policy', [policy_controller::class, 'index']);
 
