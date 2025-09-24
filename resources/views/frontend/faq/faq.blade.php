@@ -48,12 +48,12 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="bg-[#EEF2FF] py-16 mt-[30px]">
+<section class="bg-blue-50 py-16 mt-6">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-3xl sm:text-3xl lg:text-5xl font-bold gradient-text mb-6">
+        <h1 class="text-4xl sm:text-4xl lg:text-4xl font-bold gradient-text mb-6">
             Frequently Asked Questions
         </h1>
-        <p class="text-lg text-[#374151] max-w-1xl mx-auto">
+        <p class="text-lg text-gray-700 max-w-1xl mx-auto">
             Find answers to common questions about Pictoora's personalized children's books and services.
         </p>
     </div>
@@ -69,19 +69,19 @@
                
                 <div class="space-y-4">
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             What is Pictoora?
                         </div>
-                        <div class="faq-answer pt-4 ">
+                        <div class="faq-answer pt-4 text-gray-700">
                             Pictoora is a platform that creates personalized children's books, where your child becomes the star of their own story. We combine storytelling with customization to make reading more engaging and personal.
                         </div>
                     </div>
 
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             How long does the creation process take?
                         </div>
-                        <div class="faq-answer pt-4 text-[#374151]">
+                        <div class="faq-answer pt-4 text-gray-700">
                             The creation process typically takes 2-3 business days from order to completion. This includes personalization, quality checks, and preparation for shipping.
                         </div>
                     </div>
@@ -93,19 +93,19 @@
                
                 <div class="space-y-4">
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             How can I track my order?
                         </div>
-                        <div class="faq-answer pt-4 text-[#374151]">
+                        <div class="faq-answer pt-4 text-gray-700">
                             Once your order ships, you'll receive a tracking number via email. You can use this to track your package's journey to your doorstep.
                         </div>
                     </div>
 
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             What are your shipping options?
                         </div>
-                        <div class="faq-answer pt-4 text-[#374151]">
+                        <div class="faq-answer pt-4 text-gray-700">
                             We offer standard shipping (5-7 business days) and express shipping (2-3 business days) options. International shipping is available for select countries.
                         </div>
                     </div>
@@ -117,19 +117,19 @@
              
                 <div class="space-y-4">
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             What can I customize in the book?
                         </div>
-                        <div class="faq-answer pt-4 text-[#374151]">
+                        <div class="faq-answer pt-4 text-gray-700">
                             You can customize your child's name, appearance, and certain story elements. Some books also allow for personalized dedications and photo inclusions.
                         </div>
                     </div>
 
                     <div class="faq-item bg-white rounded-lg shadow-md p-6">
-                        <div class="faq-question text-lg font-semibold text-[#374151]">
+                        <div class="faq-question text-lg font-semibold text-gray-700">
                             Can I preview my customized book?
                         </div>
-                        <div class="faq-answer pt-4 text-[#374151]">
+                        <div class="faq-answer pt-4 text-gray-700">
                             Yes! Our interactive preview system allows you to see exactly how your personalized book will look before placing your order.
                         </div>
                     </div>

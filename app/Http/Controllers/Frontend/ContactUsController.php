@@ -8,6 +8,6 @@ use App\Http\Controllers\FontendBaseController;
 class ContactUsController extends FontendBaseController
 {
     public function index(){
-        return view('frontend.contact.contact');
+        return view('frontend.contact_us.contact');
     }
 }

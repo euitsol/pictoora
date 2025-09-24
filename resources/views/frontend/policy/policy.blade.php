@@ -5,12 +5,12 @@
 @endpush
 @section('content')
    <!-- Hero / Banner -->
-  <section class="bg-[#EEF2FF] py-20 mt-[30px]">
+  <section class="bg-blue-50 py-20 mt-6">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-3xl md:text-5xl lg:text-5xl font-bold gradient-text mb-6">
+      <h1 class="text-4xl md:text-4xl lg:text-4xl font-bold gradient-text mb-6">
         Privacy Policy
       </h1>
-      <p class="text-lg text-[#374151] max-w-2xl mx-auto">
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
         At Pictoora, we take your privacy seriously. This policy outlines how we collect, use, and protect your personal information.
       </p>
     </div>
@@ -21,10 +21,10 @@
     <div class="max-w-4xl mx-auto space-y-12">
       <div class="space-y-6">
         <h2 class="text-2xl font-bold gradient-text">Information We Collect</h2>
-        <p class="text-[#374151]">
+        <p class="text-gray-700">
           We collect information that you provide directly to us, including:
         </p>
-        <ul class="list-disc pl-6 text-[#374151] space-y-2">
+        <ul class="list-disc pl-6 text-gray-700 space-y-2">
           <li>Name and contact information</li>
           <li>Billing and shipping information</li>
           <li>Order history and preferences</li>
@@ -34,10 +34,10 @@
 
       <div class="space-y-6">
         <h2 class="text-2xl font-bold gradient-text">How We Use Your Information</h2>
-        <p class="text-[#374151]">
+        <p class="text-gray-700">
           We use the information we collect to:
         </p>
-        <ul class="list-disc pl-6 text-[#374151] space-y-2">
+        <ul class="list-disc pl-6 text-gray-700 space-y-2">
           <li>Process and fulfill your orders</li>
           <li>Communicate with you about your orders</li>
           <li>Improve our products and services</li>
@@ -47,17 +47,17 @@
 
       <div class="space-y-6">
         <h2 class="text-2xl font-bold gradient-text">Data Security</h2>
-        <p class="text-[#374151]">
+        <p class="text-gray-700">
           We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
         </p>
       </div>
 
       <div class="space-y-6">
         <h2 class="text-2xl font-bold gradient-text">Your Rights</h2>
-        <p class="text-[#374151]">
+        <p class="text-gray-700">
           You have the right to:
         </p>
-        <ul class="list-disc pl-6 text-[#374151] space-y-2">
+        <ul class="list-disc pl-6 text-gray-700 space-y-2">
           <li>Access your personal information</li>
           <li>Correct inaccurate information</li>
           <li>Request deletion of your information</li>
@@ -71,10 +71,10 @@
   <section class="bg-[#EEF2FF] py-16">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-2xl font-bold gradient-text mb-4">Questions About Our Policy?</h2>
-      <p class="text-[#374151] mb-6">
+      <p class="text-gray-700 mb-6">
         If you have any questions about our privacy policy, please contact us at:
       </p>
-      <p class="text-[#374151]">
+      <p class="text-gray-700">
         Email: privacy@pictoora.com<br>
         Phone: +1 (800) 123-4567
       </p>
