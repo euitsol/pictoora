@@ -13,6 +13,6 @@ class ContactUsController extends FontendBaseController
             'Create magical stories where your child becomes the hero of their own adventure | Pictoora',
             'pictoora, personalized storybooks, children books, books page, books landing page, products page',
         );
-        return view('frontend.contact_us.contact');
+        return view('frontend.contact-us.contact');
     }
 }

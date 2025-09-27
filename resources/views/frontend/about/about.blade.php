@@ -3,7 +3,7 @@
 @endpush
 @section('content')
    <!-- Hero / Banner -->
-  <section class=" py-20 ">
+  <section class="py-20 bg-purple-100">
     <div class="container mx-auto px-6 text-center">
       <h1 class="text-4xl sm:text-4xl font-extrabold gradient-text">
         About Pictoora
