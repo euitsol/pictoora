@@ -5,7 +5,7 @@
 @endpush
 @section('content')
    <!-- Hero / Banner -->
-  <section class="bg-blue-50 py-20 mt-6">
+  <section class=" py-20 ">
     <div class="container mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-4xl lg:text-4xl font-bold gradient-text mb-6">
         Privacy Policy
