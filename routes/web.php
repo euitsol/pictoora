@@ -48,7 +48,7 @@ Route::controller(ContactUsController::class)->name('contact.')->group(function 
     Route::get('/contact', 'index')->name('index');
 });
 Route::controller(FaqController::class)->name('faq.')->group(function () {
-    Route::get('/faq', 'index')->name('index');
+    Route::get('/frequently-asked-questions', 'index')->name('index');
 });
 Route::controller(PolicyController::class)->name('policy.')->group(function () {
     Route::get('/policy', 'index')->name('index');

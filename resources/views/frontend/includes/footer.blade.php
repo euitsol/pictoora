@@ -10,24 +10,24 @@
                 <ul class="space-y-2 text-gray-400">
                     <li><a href="{{ route('home.index') }}" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="{{ route('books.index') }}" class="hover:text-white transition-colors">Stories</a></li>
-                    <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="{{ route('about.index') }}" class="hover:text-white transition-colors">About Us</a></li>
                     <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
                 </ul>
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-4">Support</h3>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="{{ route('faq.index') }}" class="hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="{{ route('contact.index') }}" class="hover:text-white transition-colors">Contact Us</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Shipping Info</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                <h3 class="text-lg font-semibold mb-4">Policy</h3>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-facebook-f text-xl"></i>
+                    <a href="{{ route('policy.index') }}" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>Policy
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <i class="fab fa-instagram text-xl"></i>
