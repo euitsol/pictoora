@@ -1,17 +1,19 @@
 <?php
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Frontend\AboutPageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\FaqController;
+use App\Http\Controllers\Frontend\PolicyController;
 use App\Http\Controllers\Frontend\HomePageController;
+use App\Http\Controllers\Frontend\AboutPageController;
 use App\Http\Controllers\Frontend\BooksPageController;
+use App\Http\Controllers\Frontend\ContactUsController;
+use App\Http\Controllers\Frontend\FailedPageController;
 use App\Http\Controllers\Frontend\PreviewPageController;
+use App\Http\Controllers\Frontend\SuccessPageController;
 use App\Http\Controllers\Frontend\CheckoutPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
-use App\Http\Controllers\Frontend\ContactUsController;
-use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
-use App\Http\Controllers\Frontend\PolicyController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -52,6 +54,12 @@ Route::controller(FaqController::class)->name('faq.')->group(function () {
 });
 Route::controller(PolicyController::class)->name('policy.')->group(function () {
     Route::get('/policy', 'index')->name('index');
+});
+Route::controller(SuccessPageController::class)->name('success.')->group(function () {
+    Route::get('/success', 'index')->name('index');
+});
+Route::controller(FailedPageController::class)->name('failed.')->group(function () {
+    Route::get('/failed', 'index')->name('index');
 });
 
 

@@ -5,9 +5,9 @@
    <!-- Hero / Banner -->
   <section class="py-20 bg-purple-100">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl sm:text-4xl font-extrabold gradient-text">
+      <h2 class="text-4xl sm:text-4xl font-extrabold gradient-text">
         About Pictoora
-      </h1>
+      </h2>
       <p class="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
         At Pictoora, we believe in weaving wonder and personalization into every story. We bring your child’s imagination into the heart of every book — where their name, their style, and their adventures shine.
       </p>

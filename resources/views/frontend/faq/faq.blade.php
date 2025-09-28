@@ -25,7 +25,7 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 24px;
-        color: #4F46E5;
+        color: #667eea;
         transition: all 0.3s ease;
     }
 
@@ -43,11 +43,11 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="py-16">
+<section class=" bg-purple-100 py-16">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl sm:text-4xl lg:text-4xl font-bold gradient-text mb-6">
+        <h2 class="text-4xl sm:text-4xl lg:text-4xl font-bold gradient-text mb-6">
             Frequently Asked Questions
-        </h1>
+        </h2>
         <p class="text-lg text-gray-700 max-w-1xl mx-auto">
             Find answers to common questions about Pictoora's personalized children's books and services.
         </p>
@@ -58,7 +58,7 @@
 <section class="py-16">
     <div class="container mx-auto px-6">
        
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What is Pictoora?
                         </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             How long does the creation process take?
                         </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
            
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             How can I track my order?
                         </div>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What are your shipping options?
                         </div>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
          
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6  mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6  ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What can I customize in the book?
                         </div>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 mb-3">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             Can I preview my customized book?
                         </div>
@@ -117,9 +117,8 @@
 @endsection
 
 @push('scripts')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function () {
     $('.faq-question').on('click', function() {
         const $item = $(this).closest('.faq-item');
         const $answer = $item.find('.faq-answer');
