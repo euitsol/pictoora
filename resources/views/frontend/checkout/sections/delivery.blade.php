@@ -105,12 +105,12 @@
 
                             <!-- Street Address -->
                             <div>
-                                <label for="street" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    Street Address *
+                                <label for="fullAddress" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Full Address *
                                 </label>
-                                <input type="text" id="street" name="street" required
+                                <textarea rows="2" id="fullAddress" name="fullAddress" required
                                     class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                                    placeholder="123 Main Street">
+                                    placeholder="123 Main Street, New York, NY 10001"></textarea>
                             </div>
 
                             <!-- City and Postal Code -->
@@ -136,13 +136,11 @@
                             <!-- State/Province -->
                             <div>
                                 <label for="state" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    Select State/Province *
+                                    State/Province *
                                 </label>
-                                <select id="state" name="state" required
-                                    class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
-                                    <option value="">Choose your state/province</option>
-                                    <option value="AL">Alabama</option>
-                                </select>
+                                <input type="text" id="state" name="state" required
+                                    class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                    placeholder="New York">
                             </div>
                         </form>
                     </div>

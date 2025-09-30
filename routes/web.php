@@ -41,7 +41,7 @@ Route::controller(PreviewPageController::class)->name('preview.')->group(functio
 });
 
 Route::controller(CheckoutPageController::class)->name('checkout.')->group(function () {
-    Route::get('/checkout/{slug?}', 'index')->name('index');
+    Route::get('/checkout', 'index')->name('index');
 });
 Route::controller(AboutPageController::class)->name('about.')->group(function () {
     Route::get('/about', 'index')->name('index');

@@ -2,6 +2,54 @@
 
 @push('styles')
    <link rel="stylesheet" href="{{ asset('frontend/css/checkout.css') }}">
+   <style>
+    .gm-style-iw-chr {
+        position: absolute !important;
+        right: 0 !important;
+    }
+    .custom-info-window {
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        min-height: 5rem !important;
+    }
+
+    .info-window-header {
+        background: linear-gradient(135deg, #6A6FD5, #8E94F2);
+        color: white;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .info-window-header h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .info-window-header small {
+        font-size: 8px;
+    }
+
+    .info-window-body {
+        padding: 16px;
+        background: white;
+    }
+
+    .gm-style .gm-style-iw-c {
+        padding: 0 !important;
+        border-radius: 12px !important;
+    }
+
+    .gm-style .gm-style-iw-d {
+        overflow: hidden !important;
+    }
+    .gm-style .gm-style-iw-t::after {
+        background: linear-gradient(135deg, #6A6FD5, #8E94F2) !important;
+    }
+   </style>
 @endpush
 
 @section('content')
@@ -95,6 +143,11 @@
 
 @push('scripts')
     <script src="{{ asset('frontend/js/checkout.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&libraries=places"></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&libraries=places" async></script> --}}
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&loading=async&callback=initMap">
+    </script>
+
+
     <script src="{{ asset('frontend/js/map.js') }}"></script>
 @endpush
