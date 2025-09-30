@@ -3,11 +3,11 @@
 @endpush
 @section('content')
    <!-- Hero / Banner -->
-  <section class="bg-blue-50 py-20 mt-6">
+  <section class="py-20 bg-purple-100">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl sm:text-4xl font-extrabold gradient-text">
+      <h2 class="text-4xl sm:text-4xl font-extrabold gradient-text">
         About Pictoora
-      </h1>
+      </h2>
       <p class="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
         At Pictoora, we believe in weaving wonder and personalization into every story. We bring your child’s imagination into the heart of every book — where their name, their style, and their adventures shine.
       </p>
@@ -21,10 +21,10 @@
     </div>
     <div class="md:w-1/2 space-y-6 text-gray-700">
       <h2 class="text-3xl font-bold gradient-text">Our Journey</h2>
-      <p>
+      <p class="text-justify sm:text-justify">
         Founded by story-lovers and creatives, Pictoora started with a simple mission: to make children feel *seen* in the stories they explore. We saw that many storybooks treat characters as distant or generic — so we set out to change that.
       </p>
-      <p>
+      <p class="text-justify sm:text-justify">
         From custom illustrations to dynamic styles, every feature in our platform is designed to reflect *your child’s personality*. Over time, we’ve grown into a community of parents, artists, and dreamers who believe in magic, kindness, and creativity.
       </p>
     </div>

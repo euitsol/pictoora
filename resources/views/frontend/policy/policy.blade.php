@@ -5,11 +5,11 @@
 @endpush
 @section('content')
    <!-- Hero / Banner -->
-  <section class="bg-blue-50 py-20 mt-6">
+  <section class="bg-purple-100 py-20 ">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-4xl lg:text-4xl font-bold gradient-text mb-6">
+      <h2 class="text-4xl md:text-4xl lg:text-4xl font-bold gradient-text mb-6">
         Privacy Policy
-      </h1>
+      </h2>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">
         At Pictoora, we take your privacy seriously. This policy outlines how we collect, use, and protect your personal information.
       </p>

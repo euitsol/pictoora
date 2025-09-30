@@ -53,11 +53,11 @@
 </style>
 @endpush
 @section('content')
-<section class="bg-blue-50 py-16 mt-6">
+<section class="bg-purple-100 py-16 ">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-4xl font-bold text-indigo-700 mb-6 gradient-text">
+        <h2 class="text-4xl md:text-4xl font-bold text-indigo-700 mb-6 gradient-text">
             Contact Us
-        </h1>
+        </h2>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto">
             Have questions or need assistance? We're here to help! Reach out to us and we'll get back to you as soon as possible.
         </p>
@@ -87,7 +87,7 @@
                         <textarea id="message" name="message" rows="6" class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Write your message" required></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" style="background-color: #4338ca;" class=" text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <button type="submit" style="background-color: #667eea;" class=" text-white px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                             Send Message
                         </button>
                     </div>
@@ -102,21 +102,15 @@
                 </p>
                 <ul class="space-y-4 text-gray-700">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 mr-3 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M3 10h4V6h6V2l5 5-5 5V8H7v2H3z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                        <i data-lucide="map-pin-house" class="mr-3 text-indigo-600"></i>
                         <span>123 Pictoora Lane, Creativity City, Imagination State</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M16 2v6H8V2H4v20h16V2h-4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                       <i data-lucide="mail-check" class="mr-3 text-indigo-600"></i>
                         <span>Email: support@pictoora.com</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M3 5h16M3 10h16M3 15h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                          <i data-lucide="phone" class="mr-3 text-indigo-600"></i>
                         <span>Phone: +1 (800) 123-4567</span>
                     </li>
                 </ul>

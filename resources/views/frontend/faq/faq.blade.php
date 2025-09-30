@@ -1,4 +1,5 @@
 @extends('frontend.layouts.master')
+
 @push('styles')
 <style>
     .faq-container {
@@ -14,17 +15,17 @@
     .faq-question {
         cursor: pointer;
         position: relative;
-        padding-right: 40px;
         text-align: center;
     }
-.faq-question::after {
+
+    .faq-question::after {
         content: '+';
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
         font-size: 24px;
-        color: #4F46E5;
+        color: #667eea;
         transition: all 0.3s ease;
     }
 
@@ -33,26 +34,20 @@
         transform: translateY(-50%);
     }
 
+    /* Removed max-height and added display: none for JS control */
     .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        display: none;
     }
-
-    .faq-item.active .faq-answer {
-        max-height: 500px;
-    }
-
 </style>
 @endpush
 
 @section('content')
 <!-- Hero Section -->
-<section class="bg-blue-50 py-16 mt-6">
+<section class=" bg-purple-100 py-16">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl sm:text-4xl lg:text-4xl font-bold gradient-text mb-6">
+        <h2 class="text-4xl sm:text-4xl lg:text-4xl font-bold gradient-text mb-6">
             Frequently Asked Questions
-        </h1>
+        </h2>
         <p class="text-lg text-gray-700 max-w-1xl mx-auto">
             Find answers to common questions about Pictoora's personalized children's books and services.
         </p>
@@ -60,15 +55,10 @@
 </section>
 
 <!-- FAQ Section -->
-<!-- FAQ Section -->
 <section class="py-16">
     <div class="container mx-auto px-6">
-        <div class="space-y-16">
-            <!-- General Questions -->
-            <div id="general" class="faq-container">
-               
-                <div class="space-y-4">
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+       
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What is Pictoora?
                         </div>
@@ -77,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             How long does the creation process take?
                         </div>
@@ -85,14 +75,8 @@
                             The creation process typically takes 2-3 business days from order to completion. This includes personalization, quality checks, and preparation for shipping.
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Ordering & Shipping -->
-            <div id="ordering" class="faq-container mt-[20px]">
-               
-                <div class="space-y-4">
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+           
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             How can I track my order?
                         </div>
@@ -101,7 +85,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What are your shipping options?
                         </div>
@@ -109,14 +93,8 @@
                             We offer standard shipping (5-7 business days) and express shipping (2-3 business days) options. International shipping is available for select countries.
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Book Customization -->
-            <div id="customization" class="faq-container mt-[20px]">
-             
-                <div class="space-y-4">
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+         
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6  ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             What can I customize in the book?
                         </div>
@@ -125,7 +103,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6">
+                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
                         <div class="faq-question text-lg font-semibold text-gray-700">
                             Can I preview my customized book?
                         </div>
@@ -133,36 +111,31 @@
                             Yes! Our interactive preview system allows you to see exactly how your personalized book will look before placing your order.
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+       
     </div>
 </section>
-
+@endsection
 
 @push('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all other items
-            faqItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-            });
-            
-            // Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    $('.faq-question').on('click', function() {
+        const $item = $(this).closest('.faq-item');
+        const $answer = $item.find('.faq-answer');
+        const isActive = $item.hasClass('active');
+
+        // Close all other items
+        $('.faq-item').not($item).removeClass('active').find('.faq-answer').slideUp(200);
+
+        // Toggle current item
+        if (!isActive) {
+            $item.addClass('active');
+            $answer.slideDown(200);
+        } else {
+            $item.removeClass('active');
+            $answer.slideUp(200);
+        }
     });
 });
 </script>
 @endpush
-@endsection

@@ -9,6 +9,11 @@ use App\Http\Controllers\FontendBaseController;
 class PolicyController extends FontendBaseController
 {
     public function index(){
+         $this->setupSEO(
+            'The ultimate policeman | A Story for Everyone, Tailored Just Right | Pictoora',
+            'Create magical stories where your child becomes the hero of their own adventure | Pictoora',
+            'pictoora, personalized storybooks, children books, books page, books landing page, products page',
+        );
         return view('frontend.policy.policy');
     }
 }
