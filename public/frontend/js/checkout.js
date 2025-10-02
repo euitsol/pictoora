@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $(function () {
         let currentStep = 1;
 
-        switchToStep(2);
+        switchToStep(1);
 
         //Active deactivate step
         $('.step, .step-text').click(function () {

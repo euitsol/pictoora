@@ -49,6 +49,181 @@
     .gm-style .gm-style-iw-t::after {
         background: linear-gradient(135deg, #6A6FD5, #8E94F2) !important;
     }
+
+    .map-controls-top {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .search-container {
+        position: relative;
+        width: 300px;
+    }
+
+    .search-input {
+        width: 100%;
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        outline: none;
+        transition: box-shadow 0.3s ease;
+
+        background: rgba(197, 201, 245, 0.23);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.7px);
+        -webkit-backdrop-filter: blur(9.7px);
+        border: 1px solid rgba(197, 201, 245, 1);
+    }
+
+    .search-input:focus {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .location-button {
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .location-button:hover {
+        background: #f8f9fa;
+        transform: scale(1.05);
+        color: #6A6FD5;
+    }
+
+    .location-button:active {
+        transform: scale(0.95);
+    }
+
+    .location-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+        color: #999;
+    }
+
+    /* Zoom Controls */
+    .zoom-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        margin-right: 10px;
+    }
+
+    .zoom-button {
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .zoom-in {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .zoom-out {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .zoom-button:hover {
+        background: #f8f9fa;
+        color: #6A6FD5;
+    }
+
+    .zoom-button:active {
+        background: #e9ecef;
+    }
+
+    /* Style for the autocomplete dropdown */
+    .pac-container {
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        border: none;
+        margin-top: 5px;
+    }
+
+    .pac-item {
+        padding: 10px 15px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+
+    .pac-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .pac-item-query {
+        font-size: 14px;
+        color: #333;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .search-container {
+            width: 250px;
+        }
+
+        .map-controls-top {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .zoom-controls {
+            margin-right: 5px;
+        }
+
+        .zoom-button {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .search-container {
+            width: 200px;
+        }
+
+        .search-input {
+            font-size: 13px;
+        }
+
+        .location-button {
+            width: 40px;
+            height: 40px;
+        }
+
+        .zoom-button {
+            width: 36px;
+            height: 36px;
+        }
+
+        .location-button svg,
+        .zoom-button svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
    </style>
 @endpush
 
@@ -143,11 +318,6 @@
 
 @push('scripts')
     <script src="{{ asset('frontend/js/checkout.js') }}"></script>
-    {{-- <script src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&libraries=places" async></script> --}}
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&loading=async&callback=initMap">
-    </script>
-
-
+    <script async src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&loading=async"></script>
     <script src="{{ asset('frontend/js/map.js') }}"></script>
 @endpush
