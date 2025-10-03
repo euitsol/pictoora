@@ -10,7 +10,7 @@
       <!-- Close button -->
       <button onclick="window.location.href='{{ url('/') }}'" 
         class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-        ✕
+         <i data-lucide="x" class="mr-3 text-indigo-600"></i>
       </button>
 
       <!-- Success Icon -->

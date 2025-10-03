@@ -8,9 +8,9 @@
     <section class="py-20 bg-purple-100 min-h-screen flex items-center justify-center">
         <div class="bg-white rounded-2xl shadow-xl p-10 max-w-md text-center relative">
             <!-- Close button -->
-            <button onclick="window.location.href='{{ url('/') }}'"
+            <button onclick="window.location.href='{{ route('home.index') }}'"
                 class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                ✕
+                 <i data-lucide="x" class="mr-3 text-indigo-600"></i>
             </button>
 
             <!-- Success Icon -->
