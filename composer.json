@@ -22,7 +22,8 @@
         "spatie/laravel-rate-limited-job-middleware": "^2.8",
         "spatie/laravel-settings": "^3.4",
         "spatie/laravel-sitemap": "^7.3",
-        "spatie/schema-org": "^3.23"
+        "spatie/schema-org": "^3.23",
+        "stripe/stripe-php": "^18.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.15",

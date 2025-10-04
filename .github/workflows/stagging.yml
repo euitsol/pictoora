@@ -22,9 +22,14 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
             cd www/staging.pictoora.com/public_html
-            git fetch --all
+            
+            git fetch origin
             git reset --hard origin/main
+            git clean -fd
+            
             composer install --no-dev --optimize-autoloader
             /usr/local/php82/bin/php-cli artisan optimize:clear
             /usr/local/php82/bin/php-cli artisan migrate --force
+
+            
 

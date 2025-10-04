@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\PolicyController;
@@ -15,10 +16,16 @@ use App\Http\Controllers\Frontend\CheckoutPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
 use App\Http\Controllers\Frontend\OrderTrackController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
+use App\Http\Controllers\Frontend\PaymentController;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/optimize-clear', function () {
+    Artisan::call('optimize:clear');
+    return "Optimize cleared";
+});
 
 Route::controller(HomePageController::class)->name('home.')->group(function () {
     Route::get('/', 'index')->name('index');
@@ -32,7 +39,6 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
     Route::get('/book-details/{slug?}', 'index')->name('index');
 });
 
-
 Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
     Route::get('/personalize/{slug?}', 'index')->name('index');
 });
@@ -42,8 +48,13 @@ Route::controller(PreviewPageController::class)->name('preview.')->group(functio
 });
 
 Route::controller(CheckoutPageController::class)->name('checkout.')->group(function () {
-    Route::get('/checkout/{slug?}', 'index')->name('index');
+    Route::get('/checkout', 'index')->name('index');
 });
+
+Route::controller(PaymentController::class)->name('payment.')->prefix('payment')->group(function () {
+    Route::post('/stripe', 'stripeInit')->name('stripe');
+});
+
 Route::controller(AboutPageController::class)->name('about.')->group(function () {
     Route::get('/about', 'index')->name('index');
 });
@@ -57,10 +68,10 @@ Route::controller(PolicyController::class)->name('policy.')->group(function () {
     Route::get('/policy', 'index')->name('index');
 });
 Route::controller(SuccessPageController::class)->name('success.')->group(function () {
-    Route::get('/success', 'index')->name('index');
+    Route::get('payment/success', 'index')->name('index');
 });
 Route::controller(FailedPageController::class)->name('failed.')->group(function () {
-    Route::get('/failed', 'index')->name('index');
+    Route::get('payment/failed', 'index')->name('index');
 });
 Route::controller(OrderTrackController::class)->name('order-track.')->group(function () {
     Route::get('/order-track', 'index')->name('index');

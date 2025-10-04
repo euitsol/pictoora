@@ -28,7 +28,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-4">
                                         <div class="w-6 h-6 border-2 border-purple-300 rounded-full flex items-center justify-center">
-                                            <div class="w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
+                                            <div class="shipping-option-checkmark w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
                                         </div>
                                         <div>
                                             <h5 class="font-bold text-lg text-gray-900">Standard</h5>
@@ -46,7 +46,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-4">
                                         <div class="w-6 h-6 border-2 border-purple-300 rounded-full flex items-center justify-center">
-                                            <div class="w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
+                                            <div class="shipping-option-checkmark w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
                                         </div>
                                         <div>
                                             <h5 class="font-bold text-lg text-gray-900">Express</h5>
@@ -105,12 +105,12 @@
 
                             <!-- Street Address -->
                             <div>
-                                <label for="street" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    Street Address *
+                                <label for="fullAddress" class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Full Address *
                                 </label>
-                                <input type="text" id="street" name="street" required
+                                <textarea rows="2" id="fullAddress" name="fullAddress" required
                                     class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                                    placeholder="123 Main Street">
+                                    placeholder="123 Main Street, New York, NY 10001"></textarea>
                             </div>
 
                             <!-- City and Postal Code -->
@@ -136,15 +136,23 @@
                             <!-- State/Province -->
                             <div>
                                 <label for="state" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    Select State/Province *
+                                    State/Province *
                                 </label>
-                                <select id="state" name="state" required
-                                    class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
-                                    <option value="">Choose your state/province</option>
-                                    <option value="AL">Alabama</option>
-                                </select>
+                                <input type="text" id="state" name="state" required
+                                    class="w-full px-4 py-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                    placeholder="New York">
                             </div>
                         </form>
+
+
+                        <!-- Continue Button -->
+                        <button class="payment-step-btn w-full py-4 px-6 mt-6 text-white font-bold rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <div class="flex items-center justify-center gap-3">
+                                <span>Continue to Payment</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </div>
+                        </button>
+
                     </div>
                 </div>
 
