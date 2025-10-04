@@ -1,45 +1,5 @@
 @extends('frontend.layouts.master')
 
-@push('styles')
-<style>
-    .faq-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .faq-item {
-        border-bottom: 1px solid #E5E7EB;
-        transition: all 0.3s ease;
-    }
-
-    .faq-question {
-        cursor: pointer;
-        position: relative;
-        text-align: center;
-    }
-
-    .faq-question::after {
-        content: '+';
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 24px;
-        color: #667eea;
-        transition: all 0.3s ease;
-    }
-
-    .faq-item.active .faq-question::after {
-        content: '-';
-        transform: translateY(-50%);
-    }
-
-    /* Removed max-height and added display: none for JS control */
-    .faq-answer {
-        display: none;
-    }
-</style>
-@endpush
 
 @section('content')
 <!-- Hero Section -->
@@ -54,88 +14,80 @@
     </div>
 </section>
 
-<!-- FAQ Section -->
-<section class="py-16">
+<section id="faq" class="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
     <div class="container mx-auto px-6">
-       
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            What is Pictoora?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            Pictoora is a platform that creates personalized children's books, where your child becomes the star of their own story. We combine storytelling with customization to make reading more engaging and personal.
-                        </div>
-                    </div>
+        <div class="max-w-3xl mx-auto">
+            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in-2 visible">
+                <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">How long does it take to create my book?</h3>
+                    <i data-lucide="chevron-down" class="transition-transform"></i>
+                </div>
+                <div class="faq-answer p-6 pt-0 hidden" style="display: none;">
+                    <p class="text-gray-700">Your personalized book is created within 2-3 business days and delivered within 2 weeks. You'll receive tracking information once it ships.</p>
+                </div>
+            </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            How long does the creation process take?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            The creation process typically takes 2-3 business days from order to completion. This includes personalization, quality checks, and preparation for shipping.
-                        </div>
-                    </div>
-           
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            How can I track my order?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            Once your order ships, you'll receive a tracking number via email. You can use this to track your package's journey to your doorstep.
-                        </div>
-                    </div>
+            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in-3 visible">
+                <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">What photo quality do I need?</h3>
+                    <i data-lucide="chevron-down" class="transition-transform rotate-180"></i>
+                </div>
+                <div class="faq-answer p-6 pt-0 hidden" style="display: block;">
+                    <p class="text-gray-700">Any clear, well-lit photo works great! We recommend photos where your child is facing forward and smiling. Our AI technology can work with most smartphone photos.</p>
+                </div>
+            </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            What are your shipping options?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            We offer standard shipping (5-7 business days) and express shipping (2-3 business days) options. International shipping is available for select countries.
-                        </div>
-                    </div>
-         
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6  ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            What can I customize in the book?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            You can customize your child's name, appearance, and certain story elements. Some books also allow for personalized dedications and photo inclusions.
-                        </div>
-                    </div>
+            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in-4 visible">
+                <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">Can I preview the book before ordering?</h3>
+                    <i data-lucide="chevron-down" class="transition-transform"></i>
+                </div>
+                <div class="faq-answer p-6 pt-0 hidden">
+                    <p class="text-gray-700">You can see the entire personalized book before purchasing. This ensures you're completely happy with how your child appears in the story.</p>
+                </div>
+            </div>
 
-                    <div class="faq-item bg-white rounded-lg shadow-md p-6 ">
-                        <div class="faq-question text-lg font-semibold text-gray-700">
-                            Can I preview my customized book?
-                        </div>
-                        <div class="faq-answer pt-4 text-gray-700">
-                            Yes! Our interactive preview system allows you to see exactly how your personalized book will look before placing your order.
-                        </div>
-                    </div>
-       
+            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in-5 visible">
+                <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">What if I'm not satisfied?</h3>
+                    <i data-lucide="chevron-down" class="transition-transform"></i>
+                </div>
+                <div class="faq-answer p-6 pt-0 hidden">
+                    <p class="text-gray-700">We offer a 100% satisfaction guarantee. If you're not completely delighted with your book, we'll provide a full refund - no questions asked.</p>
+                </div>
+            </div>
+
+            <div class="faq-item bg-gray-50 rounded-lg mb-4 fade-in-6 visible">
+                <div class="faq-question p-6 cursor-pointer flex justify-between items-center">
+                    <h3 class="text-lg font-semibold">Are the books suitable for all ages?</h3>
+                    <i data-lucide="chevron-down" class="transition-transform"></i>
+                </div>
+                <div class="faq-answer p-6 pt-0 hidden">
+                    <p class="text-gray-700">Our books are designed for children ages 2-10, with age-appropriate content and reading levels. Each story is crafted to inspire and delight young readers.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+
 @endsection
 
 @push('scripts')
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    $('.faq-question').on('click', function() {
-        const $item = $(this).closest('.faq-item');
-        const $answer = $item.find('.faq-answer');
-        const isActive = $item.hasClass('active');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $(function () {
+                $('.faq-question').click(function() {
+                    var $answer = $(this).next('.faq-answer');
+                    var $icon = $(this).find('.lucide');
 
-        // Close all other items
-        $('.faq-item').not($item).removeClass('active').find('.faq-answer').slideUp(200);
+                    $('.faq-answer').not($answer).slideUp();
+                    $('.faq-question .lucide').not($icon).removeClass('rotate-180');
 
-        // Toggle current item
-        if (!isActive) {
-            $item.addClass('active');
-            $answer.slideDown(200);
-        } else {
-            $item.removeClass('active');
-            $answer.slideUp(200);
-        }
-    });
-});
-</script>
+                    $answer.slideToggle();
+                    $icon.toggleClass('rotate-180');
+                });
+            });
+        });
+    </script>
 @endpush
