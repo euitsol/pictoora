@@ -262,8 +262,8 @@
                     </div>
                     <div class="trust-indicator">
                         <i data-lucide="truck" class="w-8 h-8 mx-auto mb-2"></i>
-                        <div class="text-sm font-bold">Fast & Free Delivery</div>
-                        <div class="text-xs mt-1">5-7 business days</div>
+                        <div class="text-sm font-bold">Fast Delivery</div>
+                        <div class="text-xs mt-1">5-10 business days</div>
                     </div>
                 </div>
             </div>

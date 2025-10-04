@@ -232,15 +232,20 @@ async function init(lat, lng) {
 
     function createInfoWindowContent(address) {
         return `
-            <div class="custom-info-window">
-                <div class="info-window-header">
-                    <h3>Selected Location</h3> <br>
-                    <small>Drag/Click to adjust position</small>
+           <div class="rounded-xl shadow-md overflow-hidden min-h-20">
+                <div class="bg-gradient-to-br from-indigo-500 to-indigo-300 text-white px-4 py-3 flex items-center gap-1">
+                    <div>
+                    <h3 class="m-0 text-base font-semibold leading-tight">Selected Location</h3>
+                    <small class="text-xs hidden md:block">Drag/Click to adjust position</small>
+                    </div>
                 </div>
-                <div class="info-window-body">
-                    <p class="address">${address}</p>
+                <div class="bg-white p-2 md:p-4">
+                    <p class="text-gray-700 text-[10px] md:text-sm break-words">
+                    ${address}
+                    </p>
                 </div>
             </div>
+
         `;
     }
 
