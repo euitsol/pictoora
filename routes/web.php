@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\PolicyController;
@@ -19,6 +20,11 @@ use App\Http\Controllers\Frontend\PaymentController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/optimize-clear', function () {
+    Artisan::call('optimize:clear');
+    return "Optimize cleared";
+});
 
 Route::controller(HomePageController::class)->name('home.')->group(function () {
     Route::get('/', 'index')->name('index');
