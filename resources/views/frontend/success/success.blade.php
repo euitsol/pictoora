@@ -24,7 +24,7 @@
       </div>
 
       <!-- Heading -->
-      <h2 class="text-2xl font-bold text-gray-800 mb-2">Payment Successful</h2>
+      <h2 class="text-2xl font-bold gradient-text mb-2">Payment Successful</h2>
 
       <!-- Message -->
       <p class="text-gray-600 mb-6">
@@ -34,7 +34,7 @@
 
       <!-- Button -->
       <a href="{{ route('home.index') }}" 
-         class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
         Continue Shopping
       </a>
     </div>
