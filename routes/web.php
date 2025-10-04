@@ -67,10 +67,10 @@ Route::controller(PolicyController::class)->name('policy.')->group(function () {
     Route::get('/policy', 'index')->name('index');
 });
 Route::controller(SuccessPageController::class)->name('success.')->group(function () {
-    Route::get('/success', 'index')->name('index');
+    Route::get('payment/success', 'index')->name('index');
 });
 Route::controller(FailedPageController::class)->name('failed.')->group(function () {
-    Route::get('/failed', 'index')->name('index');
+    Route::get('payment/failed', 'index')->name('index');
 });
 
 
