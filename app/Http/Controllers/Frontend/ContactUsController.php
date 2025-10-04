@@ -9,9 +9,9 @@ class ContactUsController extends FontendBaseController
 {
     public function index(){
          $this->setupSEO(
-            'The ultimate policeman | A Story for Everyone, Tailored Just Right | Pictoora',
+            'Contact Us | A Story for Everyone, Tailored Just Right | Pictoora',
             'Create magical stories where your child becomes the hero of their own adventure | Pictoora',
-            'pictoora, personalized storybooks, children books, books page, books landing page, products page',
+            'pictoora, personalized storybooks, children books, contact us, contact us page',
         );
         return view('frontend.contact-us.contact');
     }
