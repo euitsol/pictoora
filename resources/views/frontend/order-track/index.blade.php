@@ -16,7 +16,7 @@
   
 
       <!-- Heading -->
-      <h2 class="text-2xl font-bold text-gray-800 mb-2">Track Your Order</h2>
+      <h2 class="text-2xl font-bold gradient-text  mb-2">Track Your Order</h2>
 
       <!-- Message -->
       <p class="text-gray-600 mb-6">
@@ -29,7 +29,7 @@
           class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700" required>
         
         <button type="submit" 
-          class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+          class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
           Search Order
         </button>
       </form>
