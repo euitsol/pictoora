@@ -188,12 +188,17 @@
                 </div>
 
                 <!-- Pay Button -->
-                <button id="pay-button" class="w-full py-4 px-6 text-white font-bold rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    <div class="flex items-center justify-center gap-3">
-                        <span>Pay €56.99</span>
-                        <i data-lucide="lock" class="w-5 h-5"></i>
-                    </div>
-                </button>
+
+                <form id='checkout-form' method='post' action="{{ route('payment.stripe') }}">
+                    @csrf
+
+                    <button type="submit" class="w-full py-4 px-6 text-white font-bold rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center gap-3">
+                            <span>Pay €56.99</span>
+                            <i data-lucide="lock" class="w-5 h-5"></i>
+                        </div>
+                    </button>
+                </form>
             </div>
         </div>
     </div>

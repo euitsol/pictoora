@@ -320,4 +320,5 @@
     <script src="{{ asset('frontend/js/checkout.js') }}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&loading=async"></script>
     <script src="{{ asset('frontend/js/map.js') }}"></script>
+    <script src="{{ asset('frontend/js/payment.js') }}"></script>
 @endpush
