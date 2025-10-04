@@ -57,12 +57,16 @@ function switchToStep(step) {
     $('.step-text').removeClass('text-active').addClass('text-inactive');
     $('#step-' + step + '-text').removeClass('text-inactive').addClass('text-active');
 
+    $('.mobile-step').removeClass('bg-purple-600 text-white').addClass('border-gray-300 text-gray-500');
+    $('.mobile-step-' + step).removeClass('border-gray-300 text-gray-500').addClass('bg-purple-600 text-white');
+
     $('#cart-step').hide();
     $('#delivery-step').hide();
     $('#payment-step').hide();
 
     if (step === 1) {
         $('#cart-step').show();
+
         window.scrollToElement('#cart-step');
     } else if (step === 2) {
         $('#delivery-step').show();

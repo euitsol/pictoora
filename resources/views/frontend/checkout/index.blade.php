@@ -292,19 +292,19 @@
             <div class="p-4 bg-white border-t border-gray-200">
                 <div class="flex items-center justify-between text-xs">
                     <div class="flex flex-col items-center text-purple-600 cart-step-btn">
-                        <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center mb-1">
+                        <div class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center mb-1 mobile-step mobile-step-1">
                             <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                         </div>
                         <span class="font-semibold">Cart</span>
                     </div>
                     <div class="flex flex-col items-center text-gray-400 delivery-step-btn">
-                        <div class="w-8 h-8 border-2 border-gray-300 rounded-full flex items-center justify-center mb-1">
+                        <div class="w-8 h-8 border-2 border-gray-300 rounded-full flex items-center justify-center mb-1 mobile-step mobile-step-2">
                             <i data-lucide="truck" class="w-4 h-4"></i>
                         </div>
                         <span>Delivery</span>
                     </div>
                     <div class="flex flex-col items-center text-gray-400 payment-step-btn">
-                        <div class="w-8 h-8 border-2 border-gray-300 rounded-full flex items-center justify-center mb-1">
+                        <div class="w-8 h-8 border-2 border-gray-300 rounded-full flex items-center justify-center mb-1 mobile-step mobile-step-3">
                             <i data-lucide="credit-card" class="w-4 h-4"></i>
                         </div>
                         <span>Payment</span>
