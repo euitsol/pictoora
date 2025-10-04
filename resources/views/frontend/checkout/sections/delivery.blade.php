@@ -28,7 +28,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-4">
                                         <div class="w-6 h-6 border-2 border-purple-300 rounded-full flex items-center justify-center">
-                                            <div class="w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
+                                            <div class="shipping-option-checkmark w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
                                         </div>
                                         <div>
                                             <h5 class="font-bold text-lg text-gray-900">Standard</h5>
@@ -46,7 +46,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-4">
                                         <div class="w-6 h-6 border-2 border-purple-300 rounded-full flex items-center justify-center">
-                                            <div class="w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
+                                            <div class="shipping-option-checkmark w-3 h-3 bg-purple-600 rounded-full opacity-0 transition-opacity"></div>
                                         </div>
                                         <div>
                                             <h5 class="font-bold text-lg text-gray-900">Express</h5>
@@ -143,6 +143,16 @@
                                     placeholder="New York">
                             </div>
                         </form>
+
+
+                        <!-- Continue Button -->
+                        <button class="payment-step-btn w-full py-4 px-6 mt-6 text-white font-bold rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <div class="flex items-center justify-center gap-3">
+                                <span>Continue to Payment</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </div>
+                        </button>
+
                     </div>
                 </div>
 

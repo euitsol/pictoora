@@ -15,6 +15,7 @@ use App\Http\Controllers\Frontend\SuccessPageController;
 use App\Http\Controllers\Frontend\CheckoutPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
+use App\Http\Controllers\Frontend\PaymentController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -37,7 +38,6 @@ Route::controller(BookDetailsPageController::class)->name('book-details.')->grou
     Route::get('/book-details/{slug?}', 'index')->name('index');
 });
 
-
 Route::controller(PersonalizePageController::class)->name('personalize.')->group(function () {
     Route::get('/personalize/{slug?}', 'index')->name('index');
 });
@@ -49,6 +49,11 @@ Route::controller(PreviewPageController::class)->name('preview.')->group(functio
 Route::controller(CheckoutPageController::class)->name('checkout.')->group(function () {
     Route::get('/checkout', 'index')->name('index');
 });
+
+Route::controller(PaymentController::class)->name('payment.')->prefix('payment')->group(function () {
+    Route::post('/stripe', 'stripeInit')->name('stripe');
+});
+
 Route::controller(AboutPageController::class)->name('about.')->group(function () {
     Route::get('/about', 'index')->name('index');
 });

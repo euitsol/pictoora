@@ -229,7 +229,7 @@
 
 @section('content')
     <section id="checkout" class="bg-gradient-to-r from-purple-50 to-blue-50 min-h-screen">
-        <div class="max-w-6xl mx-auto p-6 hidden md:block">
+        <div class="max-w-6xl mx-auto p-6 pb-2 pt-2 hidden md:block">
             <!-- Progress Steps -->
             <div class="checkout-card mb-2 mt-8 overflow-hidden rounded-lg shadow-lg bg-white">
                 <div class="p-3 md:p-6">
@@ -268,24 +268,24 @@
                         <!-- Step 3 -->
                         <div class="flex flex-col items-center relative z-10">
                             <div id="step-3"
-                                class="step flex items-center justify-center w-12 h-12 rounded-full border-2 step-inactive cursor-pointer"
+                                class="payment-step-btn step flex items-center justify-center w-12 h-12 rounded-full border-2 step-inactive cursor-pointer"
                                 data-step="3">
                                 <i data-lucide="credit-card" class="w-6 h-6"></i>
                             </div>
                             <span id="step-3-text"
-                                class="step-text mt-3 font-semibold text-center text-inactive cursor-pointer text-sm md:text-lg"
-                                data-step="3">Payment</span>
-                            <span class="hidden md:block text-sm text-gray-500 mt-1">Secure checkout</span>
+                                class="payment-step-btn step-text mt-3 font-semibold text-center text-inactive cursor-pointer text-sm md:text-lg"
+                                data-step="3">Checkout</span>
+                            <span class="hidden md:block text-sm text-gray-500 mt-1">Secure payment</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto p-6 pb-6 md:pb-6">
+        <div class="max-w-6xl mx-auto p-6 pt-2 pb-6 md:pb-6">
             @include('frontend.checkout.sections.cart')
             @include('frontend.checkout.sections.delivery')
-            @include('frontend.checkout.sections.payment')
+            @include('frontend.checkout.sections.checkout')
         </div>
 
         <div class="max-w-6xl m-auto rounded-lg sticky md:hidden bottom-0">
@@ -303,7 +303,7 @@
                         </div>
                         <span>Delivery</span>
                     </div>
-                    <div class="flex flex-col items-center text-gray-400">
+                    <div class="flex flex-col items-center text-gray-400 payment-step-btn">
                         <div class="w-8 h-8 border-2 border-gray-300 rounded-full flex items-center justify-center mb-1">
                             <i data-lucide="credit-card" class="w-4 h-4"></i>
                         </div>
@@ -320,4 +320,5 @@
     <script src="{{ asset('frontend/js/checkout.js') }}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ config('app.gmap_api_key') }}&loading=async"></script>
     <script src="{{ asset('frontend/js/map.js') }}"></script>
+    <script src="{{ asset('frontend/js/payment.js') }}"></script>
 @endpush
