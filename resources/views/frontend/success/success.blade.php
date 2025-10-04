@@ -8,9 +8,9 @@
   <section class="py-20 bg-purple-100 min-h-screen flex items-center justify-center">
     <div class="bg-white rounded-2xl shadow-xl p-10 max-w-md text-center relative">
       <!-- Close button -->
-      <button onclick="window.location.href='{{ url('/') }}'" 
+      <button onclick="window.location.href='{{ route('home.index') }}'" 
         class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-        ✕
+         <i data-lucide="x" class="mr-3 text-indigo-600"></i>
       </button>
 
       <!-- Success Icon -->
@@ -24,7 +24,7 @@
       </div>
 
       <!-- Heading -->
-      <h2 class="text-2xl font-bold text-gray-800 mb-2">Payment Successful 🎉</h2>
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">Payment Successful</h2>
 
       <!-- Message -->
       <p class="text-gray-600 mb-6">
@@ -33,7 +33,7 @@
       </p>
 
       <!-- Button -->
-      <a href="{{ url('/') }}" 
+      <a href="{{ route('home.index') }}" 
          class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
         Continue Shopping
       </a>

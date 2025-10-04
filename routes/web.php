@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\PreviewPageController;
 use App\Http\Controllers\Frontend\SuccessPageController;
 use App\Http\Controllers\Frontend\CheckoutPageController;
 use App\Http\Controllers\Frontend\BookDetailsPageController;
+use App\Http\Controllers\Frontend\OrderTrackController;
 use App\Http\Controllers\Frontend\PersonalizePageController;
 use App\Http\Controllers\Frontend\PaymentController;
 
@@ -71,6 +72,9 @@ Route::controller(SuccessPageController::class)->name('success.')->group(functio
 });
 Route::controller(FailedPageController::class)->name('failed.')->group(function () {
     Route::get('payment/failed', 'index')->name('index');
+});
+Route::controller(OrderTrackController::class)->name('order-track.')->group(function () {
+    Route::get('/order-track', 'index')->name('index');
 });
 
 
